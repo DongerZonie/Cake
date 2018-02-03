@@ -1,0 +1,4 @@
+sceneSetups:
+- path: Assets/YarnSpinner/Examples/YarnSpinnerBasicExample.unity
+  isLoaded: 1
+  isActive: 1

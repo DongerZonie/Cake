@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2017
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nutrition eLearning Ontario", "Nutrition eLearning Ontario.csproj", "{F8BF47BA-0FB0-5CEE-B9C8-4152C4252676}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nutrition eLearning Ontario.Editor", "Nutrition eLearning Ontario.Editor.csproj", "{1264DC4E-D4CB-D59C-B804-C6D7AE8B00D2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F8BF47BA-0FB0-5CEE-B9C8-4152C4252676}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F8BF47BA-0FB0-5CEE-B9C8-4152C4252676}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F8BF47BA-0FB0-5CEE-B9C8-4152C4252676}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F8BF47BA-0FB0-5CEE-B9C8-4152C4252676}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1264DC4E-D4CB-D59C-B804-C6D7AE8B00D2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1264DC4E-D4CB-D59C-B804-C6D7AE8B00D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1264DC4E-D4CB-D59C-B804-C6D7AE8B00D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1264DC4E-D4CB-D59C-B804-C6D7AE8B00D2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
