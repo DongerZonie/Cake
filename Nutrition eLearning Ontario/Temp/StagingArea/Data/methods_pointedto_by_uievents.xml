@@ -1,0 +1,9 @@
+<linker>
+	<assembly fullname="Assembly-CSharp-firstpass">
+		<type fullname="ExampleDialogueUI">
+			<method name="SetOption"/>
+			<method name="SetOption"/>
+			<method name="SetOption"/>
+		</type>
+	</assembly>
+</linker>

@@ -67,6 +67,17 @@ public class ExampleDialogueUI : Yarn.Unity.DialogueUIBehaviour {
     /// dialogue is active and to restore them when dialogue ends
     public RectTransform gameControlsContainer;
 
+    public ExampleVariableStorage variableStorage;
+
+    public Text money, food, well;
+
+    void Update()
+    {
+        money.text = "Money  	 :$" + variableStorage.GetValue("$money").AsNumber;
+        food.text = "Insecurity:" + variableStorage.GetValue("$food").AsNumber;
+        well.text = "Wellness  :" + variableStorage.GetValue("$well").AsNumber;
+    }
+
     void Awake ()
     {
         // Start by hiding the container, line and option buttons
@@ -94,14 +105,14 @@ public class ExampleDialogueUI : Yarn.Unity.DialogueUIBehaviour {
             // Display the line one character at a time
             var stringBuilder = new StringBuilder ();
 
-            foreach (char c in line.text) {
+            foreach (char c in CheckVars(line.text)) {
                 stringBuilder.Append (c);
                 lineText.text = stringBuilder.ToString ();
                 yield return new WaitForSeconds (textSpeed);
             }
         } else {
             // Display the line immediately if textSpeed == 0
-            lineText.text = line.text;
+            lineText.text = CheckVars(line.text);
         }
 
         // Show the 'press any key' prompt when done, if we have one
@@ -207,5 +218,57 @@ public class ExampleDialogueUI : Yarn.Unity.DialogueUIBehaviour {
 
         yield break;
     }
-		
+
+    string CheckVars(string input)
+    {
+        string output = string.Empty;
+        bool checkingVar = false;
+        string currentVar = string.Empty;
+
+        int index = 0;
+        while (index < input.Length)
+        {
+            if (input[index] == '[')
+            {
+                checkingVar = true;
+                currentVar = string.Empty;
+            }
+            else if (input[index] == ']')
+            {
+                checkingVar = false;
+                output += ParseVariable(currentVar);
+                currentVar = string.Empty;
+            }
+            else if (checkingVar)
+            {
+                currentVar += input[index];
+            }
+            else
+            {
+                output += input[index];
+            }
+            index += 1;
+        }
+
+        return output;
+    }
+
+    string ParseVariable(string varName)
+    {
+        //Check YarnSpinner's variable storage first
+        if (variableStorage.GetValue(varName) != Yarn.Value.NULL)
+        {
+            return variableStorage.GetValue(varName).AsString;
+        }
+
+        //Handle other variables here
+        if (varName == "$time")
+        {
+            return Time.time.ToString();
+        }
+
+        //If no variables are found, return the variable name
+        return varName;
+    }
+
 }
