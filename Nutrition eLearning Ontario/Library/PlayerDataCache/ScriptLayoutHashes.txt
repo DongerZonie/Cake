@@ -1,4 +1,4 @@
-WebGL
+WindowsStandalone
 SceneListBegin?
 Assets/_Scenes/Dee.unity
 SceneListEnd?

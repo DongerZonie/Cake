@@ -464,6 +464,19 @@ tags:
 colorID: 0
 position: 2011,6029
 ---
+The Friendship Center is an organization that supports Indigenous people in many ways. 
+You attend their weekly community meal. It is great to meet other people and build connections. <<set $well to $well + 10>> Your level of wellbeing is now [$well]. 
+It is great to eat traditional foods. It is also one less meal you have to buy. <<set $money to $money + 30>> You now have $[$money] remaining. 
+How will you feed your family the rest of the week? 
+[[Go to the local grocery store.|Local]]
+[[Go to the bargain grocery store.|Budget]]
+[[Ask the women at the Friendship Center for ideas.|MealShare]]
+===
+title: MealShare
+tags: 
+colorID: 0
+position: 2011,6030
+---
 You ask the women at the Friendship Center how they live on a budget in the city.
 They tell you that once per week they carpool out to the Aboriginal food bank together. 
 They explain that although the Aboriginal food bank is farther away, it is better than the local one as it carries fresh fruits and vegetables. 
@@ -864,7 +877,7 @@ You will have to try something else.
 <<if visited("Nanny") is false>>
 [[Find an overnight nanny.|Nanny]]
 <<endif>>
-[[Ask people that you know if they have any ideas.|Friend]]
+[[Advertise for an overnight babysitter.|Babysitter]]
 [[Contact the Friendship Centre.|FriendshipChildcare]]
 ===
 title: Babysitter
