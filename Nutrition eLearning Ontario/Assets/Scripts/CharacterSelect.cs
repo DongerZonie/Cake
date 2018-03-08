@@ -8,31 +8,64 @@ public class CharacterSelect : MonoBehaviour {
     public Image characterObjectInScene;
     public Sprite character;
     public GameObject infoPrefab;
-    private GameObject info;
+    private GameObject info, options;
+    private Image image;
+    bool selected;
 
     private void Start()
     {
         info = GameObject.Find("Info Texts");
+        image = GetComponent<Image>();
+        selected = false;
     }
 
     public void Highlight()
     {
-        print("Mouse is over " + gameObject.name);
+        //Put code here to highlight button, also keyboard press should trigger this
+        if (!selected)
+        {
+            Color color = image.color;
+            color.a = 124;
+            image.color = color;
+        }
     }
     public void RemoveHighlight()
     {
-        print("Mouse is not over " + gameObject.name);
+        //lose focus
+        if (!selected)
+        {
+            Color color = image.color;
+            color.a = 0;
+            image.color = color;
+        }
     }
 
     public void SetCharacter()
     {
+        Color color;
         characterObjectInScene.sprite = character;
-        for(int i = 0; i <= info.transform.childCount; i++)
+        for (int i = 0; i < info.transform.childCount; i++)
         {
+
             if (info.transform.GetChild(i).gameObject == infoPrefab)
+            {
                 info.transform.GetChild(i).gameObject.SetActive(true);
+            }
             else
+            {
                 info.transform.GetChild(i).gameObject.SetActive(false);
+            }
         }
+        for(int i = 0;  i < transform.parent.childCount; i++)
+        {
+            transform.parent.GetChild(i).gameObject.GetComponent<CharacterSelect>().selected = false;
+            color = transform.parent.GetChild(i).gameObject.GetComponent<Image>().color;
+            color.a = 0;
+            transform.parent.GetChild(i).gameObject.GetComponent<Image>().color = color;
+        }
+        selected = true;
+        color = image.color;
+        color.a = 124;
+        image.color = color;
     }
 }
