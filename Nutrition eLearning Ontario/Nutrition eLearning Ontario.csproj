@@ -343,9 +343,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\CharacterSelect.cs" />
+    <Compile Include="Assets\Scripts\CharacterSelectLevel.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Assets\Dialogue\file.yarn.txt" />
+    <None Include="Assets\Dialogue\Dawn.yarn.txt" />
+    <None Include="Assets\Dialogue\Dolores.yarn.txt" />
+    <None Include="Assets\Dialogue\Saad.yarn.txt" />
     <None Include="Assets\Plugins\YarnSpinner\Examples\DemoAssets\SimpleExampleScript.yarn.txt" />
     <None Include="Assets\Plugins\YarnSpinner\Examples\DemoAssets\Space\Sally.yarn.txt" />
     <None Include="Assets\Plugins\YarnSpinner\Examples\DemoAssets\Space\Ship.yarn.txt" />

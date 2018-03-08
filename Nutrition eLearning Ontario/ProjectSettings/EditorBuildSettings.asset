@@ -8,3 +8,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_Scenes/Dee.unity
     guid: 82cda508752f6b142aa3a40b31418baf
+  - enabled: 1
+    path: Assets/_Scenes/CharacterSelect.unity
+    guid: 028594d71de86be44b09b4706a23ad4d
+  - enabled: 1
+    path: Assets/_Scenes/Saad.unity
+    guid: 5db0687241b9bdb40ade88e7664abc48
+  - enabled: 1
+    path: Assets/_Scenes/Dawn.unity
+    guid: 065f1819fa2659541b025111f67e79fa

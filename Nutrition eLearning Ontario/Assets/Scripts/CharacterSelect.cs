@@ -5,8 +5,15 @@ using UnityEngine.UI;
 
 public class CharacterSelect : MonoBehaviour {
 
-    public Image character;
-    public Sprite thisOne;
+    public Image characterObjectInScene;
+    public Sprite character;
+    public GameObject infoPrefab;
+    private GameObject info;
+
+    private void Start()
+    {
+        info = GameObject.Find("Info Texts");
+    }
 
     public void Highlight()
     {
@@ -19,6 +26,13 @@ public class CharacterSelect : MonoBehaviour {
 
     public void SetCharacter()
     {
-        character.sprite = thisOne;
+        characterObjectInScene.sprite = character;
+        for(int i = 0; i <= info.transform.childCount; i++)
+        {
+            if (info.transform.GetChild(i).gameObject == infoPrefab)
+                info.transform.GetChild(i).gameObject.SetActive(true);
+            else
+                info.transform.GetChild(i).gameObject.SetActive(false);
+        }
     }
 }
