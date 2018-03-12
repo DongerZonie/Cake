@@ -795,3 +795,69 @@ You miss sharing large celebratory meals with family and friends. You miss your 
 You know that eventually you will feel more at ease here, but for now, Canada does not yet feel like “home”. 
 [[Next.|SaadDebrief]]
 ===
+title: SaadDebrief
+tags: 
+colorID: 0
+position: 4244,12016
+---
+Congratulations! You have helped Saad and his family survive their first few months as a new arrival in Canada. Let’s see how you did.
+Saad and his family experienced numerous challenges in accessing affordable, adequate, and culturally acceptable foods as she struggled to adjust to her new city. 
+But, did they experience food insecurity?
+<<if $food < 3>>
+Based loosely on the HFSSM criteria, Saad experienced mild food insecurity. He was able to provide a sufficient amount of food for his family, but he had to make sacrifices to make this happen. 
+Even then, he was not always able to provide his family with the kinds of healthy and culturally appropriate foods that he wanted his family to consume.
+<<elseif $food < 6>>
+Based loosely on the HFSSM criteria, Saad experienced moderate food insecurity. He had to make trade-offs on both the quantity and quality of food that his family consumed. 
+He made many personal sacrifices as he chose between providing healthy foods for his wife and children and living cheaply on a budget.  
+On many occasions, he was not able to provide his family with the kinds of healthy and culturally appropriate foods that he wanted his family to consume. 
+<<elseif $food < 9>>
+Based loosely on the HFSSM criteria, Saad experienced severe food insecurity. 
+He reduced the quantity and quality of the foods that he ate and often skipped meals to ensure that his wife and children had enough to eat. 
+Long term if Saad continues make these types of personal sacrifices to feed his family, he could be putting himself at risk for malnutrition, decreased immune functioning, and severe fatigue
+<<else>>
+Based loosely on the HFSSM criteria, Saad and his famly experienced severe food insecurity. Saad and his family often went hungry. 
+Long term if Saad and his family continue to eat like this, they will be at high risk for malnutrition, decreased immune functioning, and severe fatigue. 
+Saad’s wife, Aya, may also struggle to produce enough breast milk to feed their newborn baby and their children could be at higher risk for a variety of diseases and illnesses.
+<<endif>>
+
+<<if $money < 0>>
+<<set $debt to $money * -1.20>>
+Saad and his family did not live within the budget of their fixed income. Like many families in Canada, Saad may find himself reliant on credit card debt in order to make ends meet. 
+Credit cards carry high interest rates and penalties. Indeed, although the final game balance was $[$money], 
+in reality Saad and his family will likely end up spending at least $[$debt] to pay off this credit card debt once fees and interest are taken into consideration. 
+This debt puts Saad’s family at risk of continuing food insecurity in the long term. 
+<<else>>
+Congratulations! You ended the game with $[$money] remaining. You were successful in helping Saad and his family live within their fixed income. 
+Living within a budget is an admirable quality, but when funds are tight it can be extremely stressful to continuously make sacrifices to live cheaply. 
+Long term, this stress can have consequences for a person’s mental and physical health. Living on a budget can also impact food quality. Many low expense foods are high in preservatives and high in fat and sugar. 
+Fresh fruits and vegetables, whole grains, high quality dairy, and lean proteins can be expensive, making it difficult to purchase these foods when trying to live on a tight budget.
+<<endif>>
+
+<<if $well < 25>>
+The stress of trying to adjust to a new country, stay food secure, and live within a tight government-assisted budget has taken a toll on Saad’s mental and physical health. 
+A lack of English language skills made it difficult for Saad to find employment and housing on his own, and a lack of social connections made it difficult to receive help when it was needed. 
+Hopefully, in the long term, these initial sacrifices will be worth it as Saad and his family find success adjusting to new life in Canada
+<<elseif $well < 61>>
+During the game, Saad experienced a great deal of stress and worry. Despite this, he was able to build social support and take advantage of some enrichment opportunities. 
+These steps represent a good start to ensuring social connections and helping put into place supports that can help Saad and his family have a successful transition to Canada.
+<<else>>
+Congratulations! You helped Saad and his family cope with their transition by helping them stay connected with one another, build social support, and take advantage of enrichment opportunities.
+These sources of well-being can reduce the impact of food insecurity by increasing cultural connection and enabling the sharing of food, meals, and other resources.
+<<endif>>
+SAAD IS ONE OF MANY
+Although Saad is a fictional character, his struggles with food insecurity are not unique. In Ontario alone, more than half a million households (> 500,000) face food insecurity. 
+Indeed, although Nunavut has the highest rate of food insecurity in Canada (45.2%), Ontario has the highest number of households living with food insecurity (http://proof.utoronto.ca/).
+New immigrants are increasingly at high risk for food insecurity, especially when they are reliant on social assistance that may fail to cover the full cost of 
+housing, transportation, nutritious foods, and other expenses (Dietitians of Canada, 2016). 
+New immigrants may also face vulnerabilities that put them at risk of exploitation by landlords, predatory credit card lenders, and others. This discrimination can intensify poverty.  
+As newcomers to Canada, immigrants often struggle to find culturally or ethnically appropriate foods. Language barriers can intensify these experiences (Huang, 2014). 
+Parents of small children are also at high risk for food insecurity, as parents will often sacrifice their own food security in order to ensure that children have enough to eat (Dietitians of Canada, 2016). 
+Pregnant and nursing women may also struggle to meet their extra nutritional needs when living in poverty. 
+In her Master’s Thesis, Elisabeth Huang (2015), then at McMaster University, examined barriers and facilitators of food security among refugee families. 
+She noted that refugee families often feel socially isolated when newly arrived. They may also experience many conflicting priorities focused on 
+learning a new language, finding employment, finding housing, and figuring out a new food culture. 
+Many families reported feeling torn between their desire to maintain cultural connection and their children’s desire to eat Canadian foods introduced at school and among peers. 
+Social connection and support can help mitigate the impact of food insecurity. 
+Huang, E. (2014). Assessing the barriers and facilitators to food security that influence dietary changes among refugees.
+A Thesis Submitted to the School of Graduate Studies in Partial Fulfillment of the Requirements for the Degree Master of Science (Global Health), McMaster University.
+===

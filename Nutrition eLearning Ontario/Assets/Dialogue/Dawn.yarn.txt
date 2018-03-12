@@ -699,3 +699,50 @@ You are worried about money so you order the cheapest thing on the menu <<set $f
 Walking home you pass out. Drinking wine with so little food was a bad idea! <<set $well to $well - 10 >> Your level of wellbeing is now [$well].
 [[Next|DawnDebrief]]
 ===
+title: DawnDebrief
+tags: 
+colorID: 0
+position: -399,10859
+---
+Congratulations! You have helped your character navigate the first few months of her Type 2 diagnosis. 
+One of your character’s key goals was to manage her Type 2 diabetes well enough to resume her job as a truck driver. Let’s see how well you did.
+Dawn experienced numerous challenges in accessing adequate, affordable, and nutritious foods as she struggled to adjust to her Type 2 diagnosis. But, did she experience food insecurity?
+
+<<if $food < 3>>
+Based loosely on the HFSSM criteria, Dawn experienced mild food insecurity. 
+She was able to acquire a sufficient amount of food for herself, but she had to make many personal sacrifices to make this happen. 
+Even then, she was not always able to acquire the healthy foods required to manage her diabetes.
+<<elseif $food < 6>>
+Based loosely on the HFSSM criteria, Dawn experienced mild food insecurity. 
+She was able to acquire a sufficient amount of food for herself, but she had to make many personal sacrifices to make this happen. 
+Even then, she was not always able to acquire the healthy foods required to manage her diabetes.
+<<else>>
+Based loosely on the HFSSM criteria, Dolores experienced severe food insecurity. Because of low income, she had to reduce the quantity and quality of the foods she consumed. 
+This situation is quite dangerous for Dawn given her diagnosis of Type 2 diabetes. Long term Dawn could be putting her health at serious risk if she does not get proper nutrition.
+<<endif>>
+
+<<if $money < 0>>
+<<set $debt to $money*-1.20>>
+To pay for all of her expenses, Dawn had to go into debt. Credit cards carry high interest rates and penalties. 
+Indeed, although the final game balance was $[$money], in reality Dawn will end up spending at least $[$debt] to pay off this credit card debt once fees and interest are taken into consideration. 
+The decision to go into debt to pay for immediate expenses helped Dawn survive more comfortably in the short term, 
+but it puts her at risk of continuing food insecurity in the long term, as it adds to her growing expenses, leaving her with even less funds to pay for food and other necessities each month.
+<<else>>
+Dawn ended the game with $[$money] remaining. You were successful in helping Dawn avoid the accumulation of debt. Living within a budget has pluses and minuses.
+You helped Dawn avoid debt, but to make this happen, Dawn had to make many short term sacrifices to live within her budget -- this put Dawn’s health and food security at risk. 
+Dawn is not alone in having to make these trade-offs. People living in poverty, even if only for only a short time, must make hard trade-offs between short term survival and long term sustainability. 
+<<endif>>
+
+<<if $well < 25>>
+During the game, Dawn made several decisions that put her health and her long term employability at risk. 
+As a consequence, she is not yet able to regain her driving privileges. It may still be several months before she is able to resume driving again. 
+She is likely going to need to seek alternative employment in the meantime. Underemployment could increase her risk of ongoing food insecurity.
+<<elseif $well < 61>>
+The past few months have been rough for Dawn. Despite these challenges, she has made gains towards the goal of regaining her driving privileges. 
+Dawn is not yet ready to get a medical release to resume her job as a truck driver, but she is close. 
+If she continues to eat right, exercise regularly, and monitor her glucose levels she should be able to regain personal driving privileges soon.
+<<else>>
+Congratulations! You helped Dawn make significant progress towards regaining her driving privileges. She has learned to eat more nutritiously, exercise regularly, and monitor her glucose levels. 
+The doctor has agreed to give Dawn a medical release so that she can renew her driver’s license. There are still a few things that Dawn will need to do, but she should be back to working as a truck driver soon! 
+<<endif>>
+===

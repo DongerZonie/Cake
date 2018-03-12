@@ -1,12 +1,10 @@
-﻿<Properties StartupItem="Assembly-CSharp-firstpass.csproj">
+﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Dialogue\deeFinished.yarn.txt">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Dialogue\Saad.yarn.txt">
     <Files>
-      <File FileName="Assets\Plugins\YarnSpinner\Examples\DemoScripts\ExampleDialogueUI.cs" Line="1" Column="1" />
-      <File FileName="Assets\Plugins\YarnSpinner\Examples\DemoScripts\ExampleVariableStorage.cs" Line="1" Column="1" />
-      <File FileName="Assets\Dialogue\dee.yarn.txt" Line="1" Column="1" />
-      <File FileName="Assets\Dialogue\deeFinished.yarn.txt" Line="2097" Column="82" />
-      <File FileName="Assets\Plugins\YarnSpinner\Code\DialogueRunner.cs" Line="119" Column="1" />
+      <File FileName="Assets\Dialogue\Dawn.yarn.txt" Line="1" Column="1" />
+      <File FileName="Assets\Dialogue\Dolores.yarn.txt" Line="1" Column="1" />
+      <File FileName="Assets\Dialogue\Saad.yarn.txt" Line="803" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
