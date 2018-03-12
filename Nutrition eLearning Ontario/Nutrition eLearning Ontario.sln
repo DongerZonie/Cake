@@ -1,11 +1,11 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2017
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nutrition eLearning Ontario", "Nutrition eLearning Ontario.csproj", "{F8BF47BA-0FB0-5CEE-B9C8-4152C4252676}"
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nutrition eLearning Ontario", "Assembly-CSharp.csproj", "{68BE0107-3AA8-28A0-CD16-02F7A5154141}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nutrition eLearning Ontario.Plugins", "Nutrition eLearning Ontario.Plugins.csproj", "{BD3B012C-4BF1-6835-77DF-57E3334AC375}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nutrition eLearning Ontario", "Assembly-CSharp-firstpass.csproj", "{DA773F2D-C37E-E151-8FBE-F30CD650A3E1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nutrition eLearning Ontario.Editor.Plugins", "Nutrition eLearning Ontario.Editor.Plugins.csproj", "{A8D69A4A-BE7A-23FB-C4ED-DE916C91F47D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nutrition eLearning Ontario", "Assembly-CSharp-Editor-firstpass.csproj", "{E48A5466-07E8-17DD-E6F1-035D68265FF7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,20 +13,23 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{F8BF47BA-0FB0-5CEE-B9C8-4152C4252676}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F8BF47BA-0FB0-5CEE-B9C8-4152C4252676}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F8BF47BA-0FB0-5CEE-B9C8-4152C4252676}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F8BF47BA-0FB0-5CEE-B9C8-4152C4252676}.Release|Any CPU.Build.0 = Release|Any CPU
-		{BD3B012C-4BF1-6835-77DF-57E3334AC375}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{BD3B012C-4BF1-6835-77DF-57E3334AC375}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{BD3B012C-4BF1-6835-77DF-57E3334AC375}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{BD3B012C-4BF1-6835-77DF-57E3334AC375}.Release|Any CPU.Build.0 = Release|Any CPU
-		{A8D69A4A-BE7A-23FB-C4ED-DE916C91F47D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A8D69A4A-BE7A-23FB-C4ED-DE916C91F47D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A8D69A4A-BE7A-23FB-C4ED-DE916C91F47D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A8D69A4A-BE7A-23FB-C4ED-DE916C91F47D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{68BE0107-3AA8-28A0-CD16-02F7A5154141}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{68BE0107-3AA8-28A0-CD16-02F7A5154141}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{68BE0107-3AA8-28A0-CD16-02F7A5154141}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{68BE0107-3AA8-28A0-CD16-02F7A5154141}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DA773F2D-C37E-E151-8FBE-F30CD650A3E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA773F2D-C37E-E151-8FBE-F30CD650A3E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA773F2D-C37E-E151-8FBE-F30CD650A3E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA773F2D-C37E-E151-8FBE-F30CD650A3E1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E48A5466-07E8-17DD-E6F1-035D68265FF7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E48A5466-07E8-17DD-E6F1-035D68265FF7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E48A5466-07E8-17DD-E6F1-035D68265FF7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E48A5466-07E8-17DD-E6F1-035D68265FF7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Assembly-CSharp.csproj
 	EndGlobalSection
 EndGlobal
