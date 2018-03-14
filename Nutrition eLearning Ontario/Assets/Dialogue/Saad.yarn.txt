@@ -376,7 +376,7 @@ position: 1717,5369
 You sign a rental agreement for the two bedroom apartment. The apartment costs you $1100 per month, plus $100 in utilities. <<set $money to $money - 1200>> You now have $[$money] remaining.
 Shortly after moving in, you discover the stove and refrigerator do not work. The apartment owner tells you that you are responsible for replacing them.
 [[Pay to replace the refrigerator and stove.|PayFridge]]
-[[Reach out to the RAP for assistance.|RAPfridge]]
+[[Reach out to the RAP for assistance.|RAPFridge]]
 ===
 title: PayFridge
 tags: 
@@ -644,7 +644,7 @@ colorID: 0
 position: 1103,9397
 ---
 With effort, you gather up the bags of clothing and walk to the bus station. 
-The ride is cheap ($3), but the trip is long. <set $money to $money - 3>> You now have $[$money] remaining. <<set $well to $well + 5>> Your level of wellbeing is now [$well].
+The ride is cheap ($3), but the trip is long. <<set $money to $money - 3>> You now have $[$money] remaining. <<set $well to $well + 5>> Your level of wellbeing is now [$well].
 [[Next.|SaadBlock7]]
 ===
 title: SaadBlock7
@@ -821,7 +821,7 @@ Saad’s wife, Aya, may also struggle to produce enough breast milk to feed thei
 <<endif>>
 
 <<if $money < 0>>
-<<set $debt to $money * -1.20>>
+<<set $debt to $money * -1.2>>
 Saad and his family did not live within the budget of their fixed income. Like many families in Canada, Saad may find himself reliant on credit card debt in order to make ends meet. 
 Credit cards carry high interest rates and penalties. Indeed, although the final game balance was $[$money], 
 in reality Saad and his family will likely end up spending at least $[$debt] to pay off this credit card debt once fees and interest are taken into consideration. 

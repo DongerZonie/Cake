@@ -1364,7 +1364,7 @@ MonoBehaviour:
   overrideLanguage: 10
   variableStorage: {fileID: 1491325595}
   dialogueUI: {fileID: 1491325594}
-  startNode: SaadBlock1
+  startNode: SaadBlock4
   startAutomatically: 1
   automaticCommands: 1
 --- !u!4 &1491325593
