@@ -1,4 +1,4 @@
-title: DawnBlock1
+﻿title: DawnBlock1
 tags: 
 colorID: 0
 position: 546,277
@@ -745,4 +745,18 @@ If she continues to eat right, exercise regularly, and monitor her glucose level
 Congratulations! You helped Dawn make significant progress towards regaining her driving privileges. She has learned to eat more nutritiously, exercise regularly, and monitor her glucose levels. 
 The doctor has agreed to give Dawn a medical release so that she can renew her driver’s license. There are still a few things that Dawn will need to do, but she should be back to working as a truck driver soon! 
 <<endif>>
+
+DAWN IS ONE OF MANY
+Although Dawn is a fictional character, her struggles with food insecurity are not unique. In Ontario alone, more than half a million households (> 500,000) face food insecurity. 
+Indeed, although Nunavut has the highest rate of food insecurity in Canada (45.2%), Ontario has the highest number of households living with food insecurity.
+People with diabetes are particularly at high risk for experiencing food insecurity. 
+Indeed, food insecurity is “significantly more common among Canadians with diabetes (9.3%) compared to Canadians without diabetes (6.8%)” (Chan, DeMelo, Gingras, & Gucciardi, 2015, p. 1).
+Single aging adults are also at higher risk for food insecurity. In Ontario, people do not qualify for the guaranteed income of Old Age Security until the age of 65. 
+People under the age of 65 who experience age discrimination in the workplace and/or health problems that compromise employability may find themselves experiencing low income relative to other age groups. 
+This helps to explain why the rates of food insecurity for single adults between the ages of 60 and 64 is at least double compared to seniors over the age of 65 (Dietitians of Canada, 2016).
+Dr. Jacqui Gingras of Ryerson University, along with her colleagues Justine Chan, Margaret DeMelo, and Enzi Gucciardi (Chan et al., 2015) studied how food insecurity impacts people living with diabetes. 
+They found that food insecurity negatively impacted people’s ability to manage their diabetes. 
+This was especially true for people with diabetes who had insufficient income, misperceptions about healthy food choices, co-occurring health problems, and/or a lack of social support. 
+Like Dawn, however, the people in the study also showed remarkable resiliency when learning how to manage their diabetes. 
+Viewing their condition as manageable and maintaining feelings of hope were all very important for maintaining a sense of resilience.
 ===

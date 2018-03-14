@@ -1,4 +1,4 @@
-title: SaadBlock1
+﻿title: SaadBlock1
 tags: 
 colorID: 0
 position: 548,76
@@ -858,6 +858,4 @@ She noted that refugee families often feel socially isolated when newly arrived.
 learning a new language, finding employment, finding housing, and figuring out a new food culture. 
 Many families reported feeling torn between their desire to maintain cultural connection and their children’s desire to eat Canadian foods introduced at school and among peers. 
 Social connection and support can help mitigate the impact of food insecurity. 
-Huang, E. (2014). Assessing the barriers and facilitators to food security that influence dietary changes among refugees.
-A Thesis Submitted to the School of Graduate Studies in Partial Fulfillment of the Requirements for the Degree Master of Science (Global Health), McMaster University.
 ===
