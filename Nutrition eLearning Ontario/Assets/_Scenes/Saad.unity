@@ -1076,6 +1076,7 @@ GameObject:
   - component: {fileID: 1374241722}
   - component: {fileID: 1374241724}
   - component: {fileID: 1374241723}
+  - component: {fileID: 1374241725}
   m_Layer: 5
   m_Name: Background
   m_TagString: Untagged
@@ -1120,7 +1121,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 216c72eb3d9e1f14abd0aef852d15a27, type: 3}
+  m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1134,6 +1135,18 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1374241721}
+--- !u!114 &1374241725
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1374241721}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 869e9a9d229dfd94eb32d15c1f33f523, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  background: {fileID: 0}
 --- !u!1 &1429910255
 GameObject:
   m_ObjectHideFlags: 0
@@ -1364,7 +1377,7 @@ MonoBehaviour:
   overrideLanguage: 10
   variableStorage: {fileID: 1491325595}
   dialogueUI: {fileID: 1491325594}
-  startNode: SaadBlock4
+  startNode: SaadBlock1
   startAutomatically: 1
   automaticCommands: 1
 --- !u!4 &1491325593

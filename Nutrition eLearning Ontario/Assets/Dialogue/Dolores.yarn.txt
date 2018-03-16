@@ -183,7 +183,7 @@ To secure the apartment you must pay the first month’s rent ($800) and the las
 You will also need to pay for utilities (electricity, heat, water, etc.), including initial hook-up fees. The cost is $400! <<set $money to $money - 400>> You now have $[$money] remaining. 
 To get to work, you need a car. The initial costs of a down payment, insurance, gas, and parking costs you $400. <<set $money to $money - 400>> You now have $[$money] remaining 
 Moving forward, your rent, utilities, car costs, and student loan payments will cost you $2000 per month.
-You are worried about how you will afford to buy food on top of all of these expenses! <<set $food to $food + 0.5>> Your food insecurity score is now [$food].
+You are worried about how you will afford to buy food on top of all of these expenses! <<set $food to $food + 0.5>> Your food insecurity score is now [$food].<<set $well to $well - 5>>Your wellness is now [$well]
 [[Move to the new city.|DeeBlock3]]
 ===
 title: RentApartmentB
