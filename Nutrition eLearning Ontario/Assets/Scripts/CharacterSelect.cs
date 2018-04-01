@@ -8,13 +8,13 @@ public class CharacterSelect : MonoBehaviour {
     public Image characterObjectInScene;
     public Sprite character;
     public GameObject infoPrefab;
-    private GameObject info, options;
+    public GameObject info;
     private Image image;
     bool selected;
+    public Button nutton;
 
     private void Start()
     {
-        info = GameObject.Find("Info Texts");
         image = GetComponent<Image>();
         selected = false;
     }
@@ -63,6 +63,8 @@ public class CharacterSelect : MonoBehaviour {
             color.a = 0;
             transform.parent.GetChild(i).gameObject.GetComponent<Image>().color = color;
         }
+        if(nutton!=null)
+            nutton.gameObject.SetActive(true);
         selected = true;
         color = image.color;
         color.a = 124;
