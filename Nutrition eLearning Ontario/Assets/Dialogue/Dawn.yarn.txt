@@ -3,14 +3,15 @@ tags:
 colorID: 0
 position: 546,277
 ---
+<<changeBackground Background Hospital>>
 <<set $money to 1500>>
 <<set $well to 50>>
 <<set $food to 0>>
-You start the game with $[$money]. Your current level of wellbeing is [$well]. You start the game with a food insecurity score of [$food].
-Your doctor has just told you that you have Type 2 Diabetes. You will need to start taking insulin immediately. 
-It costs you $300 just to get started. <<set $money to $money - 300>> You now have $[$money] remaining.
-You are a truck driver and reliant on driving for an income, but are told that you will need to stop driving until you get your diabetes under control.  
-You are urged to attend a diabetes management course on Monday. You are scheduled for an all-day truck driving contract on that day. What would you like to do?
+Your have just learned that you have Type 2 Diabetes. You will need to start taking insulin immediately. 
+It costs you $300 just to get started. <<set $money to $money - 300>>
+Unfortunately, you will need to stop driving until you learn to manage your diabetes.  <<set $well to $well - 5>>
+You are a truck driver and reliant on driving for an income, so this is very bad news. <<set $well to $well - 5>>
+You are urged to attend a diabetes management course on Monday. But, you happen to be scheduled for a truck driving contract on that day. 
 [[Cancel your contract and sign up for the course.|Cancel]]
 [[Finish the contract. You need the money.|Drive]]
 [[Go home and rest. You can decide later.|Weekend]]
@@ -20,8 +21,10 @@ tags:
 colorID: 0
 position: 547,516
 ---
-You sign up for the class and cancel your contract. You are forced to refund the $250 advance you received. <<set $money to $money - 250>> You now have $[$money] remaining.
-On the plus side, you learn from your boss that the company will hold your job for you while you go on an unpaid medical leave <<set $well to $well + 10>> Your level of wellbeing is now [$well].
+<<changeBackground Background DawnLivingRoom>>
+You sign up for the class and cancel your contract. You are forced to refund the $250 advance you received. <<set $money to $money - 250>>
+On the plus side, you learn from your boss that the company will hold your job for you while you go on an unpaid medical leave. <<set $well to $well + 20>>
+Still, even being temporarily unemployed puts you at risk for food insecurity. <<set $food to $food + 2.0>> 
 [[Go to your first diabetes management class.|DawnBlock2]]
 ===
 title: Drive
@@ -29,11 +32,12 @@ tags:
 colorID: 0
 position: 258,521
 ---
+<<changeBackground Background DriveTruck>>
 You show up for work on Monday. The job involves a six hour drive to pick up a load and then a six hour drive back. 
 As you drive, you start to feel dizzy and your vision gets blurry. You cross the centre line and almost cause an accident!
-You are pulled over and fined for careless driving <<set $money to $money - 500>> You now have $[$money] remaining.
-You get fired as soon as your boss finds out <<set $well to $well - 20>> Your level of wellbeing is now [$well].
-How are you going to afford food if you are unemployed? <<set $food to $food + 0.5>> Your food insecurity score is now [$food].
+You are pulled over and fined $500 for careless driving. <<set $money to $money - 500>> 
+You get fired as soon as your boss finds out. <<set $well to $well - 20>> 
+Being unemployed puts you at high risk for food insecurity. <<set $food to $food + 2>> 
 You’d better get a handle on your condition soon! 
 [[Sign up for the diabetes management course.|DawnBlock2]]
 ===
@@ -42,6 +46,7 @@ tags:
 colorID: 0
 position: 794,449
 ---
+<<changeBackground Background DawnLivingRoom>>
 You need time to process all of this. Perhaps learning more about your condition will help ease your mind.
 [[Call Dietitians of Ontario for advice|DO]]
 [[Call a cousin who is living with Type 2 diabetes|Cousin]]
@@ -52,8 +57,9 @@ tags:
 colorID: 0
 position: 804,820
 ---
-You call the Dietitians of Ontario. The nurse gives you a lot of helpful information. <<set $well to $well + 10>> Your level of wellbeing is now [$well].
-She also urges you to sign up for a diabetes management class and avoid driving for now. Still, you could really use the money. 
+<<changeBackground Background DawnLivingRoom>>
+You call the Dietitians of Ontario. The nurse gives you a lot of helpful information. <<set $well to $well + 15>> 
+She also urges you to call in sick to your job and sign up for a diabetes management class. Still, you could really use the money. 
 [[Cancel your contract and sign up for the class.|Cancel]]
 [[Finish the contract on Monday. You need the money.|Drive]]
 ===
@@ -62,7 +68,8 @@ tags:
 colorID: 0
 position: 529,863
 ---
-Your cousin offers you a lot of encouragement. Talking to her makes things feel less overwhelming. <<set $well to $well + 10>> Your level of wellbeing is now [$well].
+<<changeBackground Background DawnLivingRoom>>
+Your cousin offers you a lot of encouragement. Talking to her makes things feel less overwhelming. <<set $well to $well + 15>> 
 You still have to decide about Monday, however.
 [[Cancel your contract and sign up for the class.|Cancel]]
 [[Finish the contract on Monday. You need the money.|Drive]]
@@ -72,8 +79,9 @@ tags:
 colorID: 0
 position: 207,844
 ---
+<<changeBackground Background ComputerRoom>>
 You search the internet, but the amount of information on Type 2 diabetes is overwhelming. 
-You feel even more stressed out then you did before. <<set $well to $well - 5>>. Your level of wellbeing is now [$well]. Plus, you still need to decide about Monday. 
+You feel even more stressed out then you did before. <<set $well to $well - 5>> 
 [[Call Dietitians of Ontario for advice|DO]]
 [[Cancel your contract and sign up for the class.|Cancel]]
 [[Finish the contract on Monday. You need the money.|Drive]]
@@ -83,6 +91,7 @@ tags:
 colorID: 0
 position: 521,1127
 ---
+<<changeBackground Background DawnLivingRoom>>
 The diabetes management class is in the next town over. Getting to and from class is going to be a problem. 
 Your roommate could drive you, but you do not want to inconvenience her. A cab/car service will cost you $35 each way. Maybe you should just risk it and drive yourself?
 [[Ask your roommate for a ride|Roommate]]
@@ -94,52 +103,63 @@ tags:
 colorID: 0
 position: 802,1126
 ---
-You ask your roommate for a ride. She can take you this time but can’t promise that she’ll be available next time. 
-You feel like a burden, but you are grateful for the ride this time. <<set $well to $well - 5>> Your level of wellbeing is now [$well].
-You arrive at the hospital with spare time and you feel hungry. What would you like to eat?
-[[A donut and a coffee at the nearby coffee shop, $5 |Donut]]
-[[A veggie omelet and toast from a nearby cafe, $8.00 |Cafe]]
-[[A fruit smoothie and health muffin at a juice bar, $10.00 |Muffin]]
+<<changeBackground Background DriveHighway>>
+You ask your roommate for a ride. She can take you this time but she can’t promise that she’ll be available next time. 
+You feel like a burden, but you are grateful for the ride this time. <<set $well to $well - 5>> 
+<<changeBackground Background BreakfastFood>>
+You arrive at the hospital with spare time. You feel hungry. What would you like to eat?
+[[A donut and a coffee, $5.00 |Donut]]
+[[A veggie omelet and toast, $8.00 |Cafe]]
+[[A fruit smoothie and health muffin, $10.00 |Muffin]]
 ===
 title: Donut
 tags: 
 colorID: 0
 position: 808,1494
 ---
-You know the donut is not the healthiest choice, but it is the cheapest option.  <<set $money to $money - 5 >> You now have $[$money] remaining. <<set $food to $food + 0.5>> Your food insecurity score is now [$food].
-At the beginning of class they show you how to test your blood glucose levels. 
-Your glucose levels are way too high. Cost savings or not, you need to make better food choices. <<set $well to $well - 5>> Your level of wellbeing is now [$well].
-[[Next|DawnBlock3]]
+<<changeBackground Background BreakfastFood>>
+You know the donut is not ideal, but it is the cheapest option. <<set $money to $money - 5>> 
+<<changeBackground Background Classroom1>>
+At the beginning of class they show you how to test your blood glucose levels. They are way too high. <<set $well to $well - 5>> 
+Not being able to afford healthy foods puts you at risk for food insecurity. <<set $food to $food + 1>> 
+Cost savings or not, you need to make better food choices. 
+[[Pay your bills|DawnBlock3]]
 ===
 title: Cafe
 tags: 
 colorID: 0
 position: 562,1503
 ---
-You choose the most fulsome breakfast option. <<set $money to $money - 8 >> You now have $[$money] remaining. 
+<<changeBackground Background BreakfastFood>>
+You are craving eggs, so you choose the veggie omelet and toast. <<set $money to $money - 8>> 
+<<changeBackground Background Classroom1>>
 At the beginning of class they show you how to test your blood glucose levels. 
-Your glucose levels are close to where they should be after eating a meal. You made a wise breakfast choice. <<set $well to $well + 5>> Your level of wellbeing is now [$well]
-[[Next|DawnBlock3]]
+Your glucose levels are close to where they should be after eating a meal. You made a wise breakfast choice. <<set $well to $well + 10>>
+[[Pay your bills|DawnBlock3]]
 ===
 title: Muffin
 tags: 
 colorID: 0
 position: 1050,1491
 ---
-You choose what seems like the healthiest breakfast option.<<set $money to $money - 10 >> You now have $[$money] remaining. 
+<<changeBackground Background BreakfastFood>>
+You choose what seems like the healthiest breakfast option.<<set $money to $money - 10>> 
+<<changeBackground Background Classroom1>>
 At the beginning of class they show you how to test your blood glucose levels. 
-Your glucose levels are way too high. The breakfast foods you chose were loaded with sugar. You have a lot to learn! <<set $well to $well - 5>> Your level of wellbeing is now [$well].
-[[Next|DawnBlock3]]
+Your glucose levels are way too high. The breakfast foods you chose were loaded with sugar. <<set $well to $well - 5>>
+Not knowing which foods to eat to manage your diabetes puts you at risk for food insecurity. <<set $food to $food + 1>>
+[[Pay your bills|DawnBlock3]]
 ===
 title: Cab
 tags: 
 colorID: 0
 position: 270,1631
 ---
-You order a car to drive you to/from the hospital on Monday morning. <<set $money to $money - 70 >> You now have $[$money] remaining.
-You have been instructed to eat breakfast before you arrive so they can show you how to test your glucose levels during the class. 
-You do not have any groceries at home so you walk to the nearby convenience store.
-What would you like to eat?
+<<changeBackground Background Taxi>>
+It costs you $70 to order a car to drive you to and from the hospital on Monday morning. <<set $money to $money - 70>>
+You have been instructed to eat breakfast before you arrive so they can show you how to test your glucose levels during class. 
+<<changeBackground Background PreMadeFoods>>
+You do not have any groceries at home so you walk to the nearby convenience store. What would you like to eat?
 [[A cinnamon roll with cream cheese frosting, $2.50|Cinnamon]]
 [[An egg breakfast sandwich and a banana, $5.00|Sandwich]]
 [[Yoghurt topped with granola cereal and juice, $7.00|Yoghurt]]
@@ -149,41 +169,47 @@ tags:
 colorID: 0
 position: 16,1906
 ---
-You know the cinnamon roll is not ideal, but it is the cheapest option .
-<<set $money to $money - 2.5>> Your money is now $[$money].
-<<set $food to $food + 0.5>> Your food insecurity score is now [$food]. 
-At the beginning of class they showed you how to test your blood glucose levels. 
-Your glucose levels are way too high. Cost savings or not, you need to make better food choices. <<set $well to $well - 5>> Your level of wellbeing is now [$well].
-[[Next|DawnBlock3]]
+You know the cinnamon roll is not ideal, but it is the cheapest option. <<set $money to $money - 2.5>> 
+<<changeBackground Background Classroom1>>
+At the beginning of class they show you how to test your blood glucose levels. They are way too high. <<set $well to $well - 5>> 
+Not being able to afford healthy foods puts you at risk for food insecurity. <<set $food to $food + 1>> 
+Cost savings or not, you need to make better food choices. <<set $well to $well - 5>> 
+[[Pay your bills|DawnBlock3]]
 ===
 title: Sandwich
 tags: 
 colorID: 0
 position: 265,1915
 ---
-At the beginning of class they showed you how to test your blood glucose levels. 
-Your glucose levels are close to where they should be after eating a meal. You made a wise breakfast choice. <<set $well to $well + 10>> Your level of wellbeing is now [$well].
-[[Next|DawnBlock3]]
+<<changeBackground Background Classroom1>>
+At the beginning of class they show you how to test your blood glucose levels. 
+Your glucose levels are close to where they should be after eating a meal. You made a wise breakfast choice. <<set $well to $well + 10>>
+[[Pay your bills|DawnBlock3]]
 ===
 title: Yoghurt
 tags: 
 colorID: 0
 position: 525,1908
 ---
-You choose what seems like the healthiest breakfast options.<<set $money to $money - 7>> You now have $[$money] remaining. 
+You choose what seems like the healthiest breakfast option.<<set $money to $money - 7>>
+<<changeBackground Background Classroom1>>
 At the beginning of class they show you how to test your blood glucose levels. 
-Your glucose levels are way too high. The breakfast foods you chose were loaded with sugar. You have a lot to learn! <<set $well to $well - 5>> Your level of wellbeing is now [$well].
-[[Next|DawnBlock3]]
+Your glucose levels are way too high. The breakfast foods you chose were loaded with sugar. <<set $well to $well - 5>>
+Not knowing which foods to eat to manage your diabetes puts you at risk for food insecurity. <<set $food to $food + 1>>
+[[Pay your bills|DawnBlock3]]
 ===
 title: RiskIt
 tags: 
 colorID: 0
 position: -260,1909
 ---
-You miscalculate your insulin dose before leaving the house and end up passing out while driving. 
-Fortunately, nobody is hurt, but you receive a citation for reckless driving <<set $money to $money - 500 >> You now have $[$money] remaining.
-This will definitely affect your ability to get your driver’s license renewed <<set $well to $well - 20 >> Your level of wellbeing is now [$well]
-You need to figure out an alternative way to get to class: 
+You miscalculate your insulin dose before leaving the house and pass out at a stop light. 
+<<changeBackground Background Ambulance>>
+Fortunately nobody is hurt, but an ambulance is called and your car is towed. <<set $well to $well - 20>>
+It will cost you $200 to get your car out of impound. <<set $money to $money - 200>>
+<<changeBackground Background Hospital>>
+You make it to the hospital (by ambulance), but you spend the time in the Emergency Room, not in your diabetes management class. <<set $well to $well - 5>>
+You have signed up for a new class that starts on Wednesday. How will you get there? 
 [[Ask your roommate for a ride|Roommate]]
 [[Pay for a cab/car service|Cab]]
 ===
@@ -192,9 +218,43 @@ tags:
 colorID: 0
 position: 804,2379
 ---
-Your monthly rent ($600) and utilities ($150) are due. <<set $money to $money - 750 >> You now have $[$money] remaining. 
-You also need to buy groceries. The grocery store will have everything you need for healthy eating, but it is across town. 
-You could ask your roommate to drive you to the grocery store.  Alternatively, there is a nearby convenience store nearby. You could also try ordering groceries online.  
+<<changeBackground Background DawnLivingRoom>>
+Your monthly rent ($600) and utilities ($150) are due. <<set $money to $money - 750>> Your funds are running low!
+You do not know when you will be able to return to work. How are you going to keep paying bills and buying food? <<set $food to $food + 1.0>>
+You can borrow $2000 from your retirement account or use your credit card to pay your expenses until you can return to work.
+[[Borrow from your retirement fund|Retirement]]
+[[Live off of your credit card|CreditCard]]
+===
+title: Retirement
+tags: 
+colorID: 0
+position: 738,2764
+---
+You borrow $2000 from your retirement account. <<set $money to $money + 2000>>
+<<changeBackground Background Bills>>
+You are surprised to learn that you must pay $300 in taxes and fees on the withdrawal. <<set $money to $money - 300>>
+Long term this withdrawal could cost you a lot of money and significantly delay your retirement. <<set $well to $well - 20>>
+But what else are you going to do? You need money now in order to pay bills and to eat.  
+[[Buy groceries.|BuyGroceries]]
+===
+title: CreditCard
+tags: 
+colorID: 0
+position: 738,2764
+---
+<<changeBackground Background Bills>>
+You receive a $500 line of credit with a 19% annual percentage rate. If you are more than $500 in debt the interest penalties will be higher. 
+Debt spending will hurt your long term financial stability, putting you at even higher risk for food insecurity. <<set $food to $food + 1>>
+But what else are you going to do? You need money now in order to pay bills and to eat. 
+[[Buy groceries.|BuyGroceries]]
+===
+title: BuyGroceries
+tags: 
+colorID: 0
+position: 738,2764
+---
+<<changeBackground Background DawnLivingRoom>>
+You need to buy groceries, but the grocery store is across town. The only thing within walking distance is a convenience store.
 [[Ask your roommate to drive you.|Gas]]
 [[Walk to the convenience store.|Junk150]]
 [[Try to order groceries online.|Online]]
@@ -204,10 +264,15 @@ tags:
 colorID: 0
 position: 738,2764
 ---
-Your roommate agrees to drive you, but you have to buy her a tank of gas. <<set $money to $money - 30 >> You now have $[$money] remaining.
-You’d like to buy enough lean proteins, whole grain starches, and fresh fruits and vegetables to last you two weeks. How much money would you like to spend? 
+Your roommate agrees to drive you to the grocery store, but it costs you $30 to buy her a tank of gas. <<set $money to $money - 30>>
+<<changeBackground Background GroceryStore>>
+You’d like to buy enough lean proteins, whole grain starches, and fresh fruits and vegetables to last you two weeks. How much can you afford to spend? 
+<<if $money > -250>>
 [[$250|Grocery250]]
+<<endif>>
+<<if $money > -300>>
 [[$200|Grocery200]]
+<<endif>>
 [[$150|Grocery150]]
 ===
 title: Grocery250
@@ -215,18 +280,22 @@ tags:
 colorID: 0
 position: 357,3046
 ---
-You are able to buy plenty of healthy ingredients to make yourself healthy meals three times a day. <<set $money to $money - 250 >> You now have $[$money] remaining.
-You test your blood with each meal and you gain a better understanding of what foods will  stabilize your blood glucose levels. 
-You still have a lot to learn, but so far you are doing great!<<set $well to $well + 10 >> Your level of wellbeing is now [$well]
-[[Next|DawnBlock4]]
+<<changeBackground Background FullShoppingCart>>
+For $250, you are able to buy plenty of ingredients to make yourself healthy meals three times per day. <<set $money to $money - 250>> 
+You test your blood with each meal and gain a better understanding of what foods will stabilize your blood glucose levels. <<set $well to $well + 10>> 
+You still have a lot to learn, but so far you are doing great! <<set $well to $well + 10>> 
+[[Go to your doctor’s appointment.|DawnBlock4]]
 ===
 title: Grocery200
 tags: 
 colorID: 0
 position: 719,3048
 ---
+<<changeBackground Background FullShoppingCart>>
 You try to stick to your budget, but the grocery bill is adding up. The groceries are going to cost more than $200. What would you like to do?
+<<if $money > -250>>
 [[Spend the money to buy everything on your list.|Grocery250]]
+<<endif>>
 [[Buy fewer fresh foods and more convenience foods.|Junk150]]
 [[Stick to fresh and healthy foods. Just buy less of them.|Less]]
 ===
@@ -235,19 +304,23 @@ tags:
 colorID: 0
 position: 722,3343
 ---
-You buy healthy foods, just in fewer quantities, and it still costs you $200. <<set $money to $money - 200 >> You now have $[$money] remaining.
-You try making smaller meals to make the groceries stretch, but in doing so you just feel hungry all of the time <<set $food to $food + 1>> Your food insecurity score is now [$food]. 
-Mid-way through your second week your resolve breaks down and you order take out <<set $money to $money - 20 >> You now have $[$money] remaining.
-You are frustrated by your progress <<set $well to $well - 5 >> Your level of wellbeing is now [$well].
-[[Next|DawnBlock4]]
+<<changeBackground Background GroceryStore>>
+You buy healthy foods, just in fewer quantities. The groceries still cost you $200. <<set $money to $money - 200>> 
+You try making smaller meals to make the groceries stretch, but in doing so you just feel hungry all of the time. <<set $well to $well - 5>> 
+Without enough food to eat, your risk of food insecurity increases. <<set $food to $food + 1>> 
+Your blood glucose levels continue to test high and you remain frustrated by your progress in managing your diabetes. <<set $well to $well - 5>>
+[[Go to your doctor’s appointment.|DawnBlock4]]
 ===
 title: Grocery150
 tags: 
 colorID: 0
 position: 1088,3314
 ---
+<<changeBackground Background GroceryStore>>
 You try to stick to your budget, but the grocery bill is adding up. You are not going to be able to get everything on your list for $150.  
+<<if $money > -250>>
 [[Spend the money to buy everything on your list|Grocery250]]
+<<endif>>
 [[Stick to fresh and healthy foods. Just buy less of them.|Less]]
 [[Buy cheaper convenience foods |Junk150]]
 ===
@@ -256,16 +329,19 @@ tags:
 colorID: 0
 position: 389,3619
 ---
-You buy a bunch of convenience foods <<set $money to $money - 150 >> You now have $[$money] remaining.
-The convenience foods are cheap, but they are made with a lot of sodium and simple carbohydrates. <<set $food to $food + 1>> Your food insecurity score is now [$food].
-Your blood glucose levels continue to test high and you remain frustrated by your progress in managing your diabetes <<set $well to $well - 10 >> Your level of wellbeing is now [$well]
-[[Next|DawnBlock4]]
+<<changeBackground Background PreMadeFoods>>
+For $150, you buy a bunch of convenience foods. <<set $money to $money - 150>>
+The convenience foods are cheap, but they are made with a lot of sodium and simple carbohydrates. <<set $well to $well - 5>>
+The poor quality of food puts you at risk for food insecurity. <<set $food to $food + 2>> 
+Your blood glucose levels continue to test high and you remain frustrated by your progress in managing your diabetes. <<set $well to $well - 10>>
+[[Go to your doctor’s appointment.|DawnBlock4]]
 ===
 title: Online
 tags: 
 colorID: 0
 position: 615,3890
 ---
+<<changeBackground Background OnlineShopping>>
 Online shopping options are limited in your area. The price of groceries and shipping costs are high, but they have everything you need. 
 [[Order groceries online|Order]].
 [[Ask your roommate to drive you to the grocery store.|Gas]]
@@ -276,10 +352,15 @@ tags:
 colorID: 0
 position: 504,4137
 ---
+<<changeBackground Background OnlineShopping>>
 You fill your online shopping cart with vegetables, whole grain starches, and lean protein; enough to last you two weeks. 
-After tax and shipping, the total bill will be $350! What would you like to do?
+After tax and shipping, the total bill will be $350! What do you do?
+<<if $money > -150>>
 [[Spend the money to buy everything on your list|Online350]]
+<<endif>>
+<<if $money > -250>>
 [[Stick to buying fresh foods. Just buy less of them. |Online250]]
+<<endif>>
 [[Buy fewer fresh foods and cheaper convenience foods|Online200]]
 ===
 title: Online350
@@ -287,40 +368,45 @@ tags:
 colorID: 0
 position: 211,4386
 ---
-You buy all of the healthy groceries. <<set $money to $money - 350 >> You have $[$money] remaining and enough healthy food to last you two weeks.
-You test your blood three times daily and you are starting to gain a better understanding of what foods to eat to manage your diabetes. 
-You still have a long way to go, but so far you are doing great!  <<set $well to $well + 10 >> Your level of wellbeing is now [$well]
-[[Next|DawnBlock4]]
+<<changeBackground Background OnlineShopping>>
+You spend $350 to buy all of the healthy groceries on your list. <<set $money to $money - 350>> 
+You test your blood three times daily and you are starting to gain a better understanding of what foods to eat to manage your diabetes. <<set $well to $well + 10>>
+You still have a long way to go, but so far you are doing great! <<set $well to $well + 10>> 
+[[Go to your doctor’s appointment.|DawnBlock4]]
 ===
 title: Online250
 tags: 
 colorID: 0
 position: 501,4386
 ---
-You choose to buy healthy foods, just in fewer quantities. The groceries still cost you $250.  <<set $money to $money - 250 >> You now have $[$money] remaining.
-You try to make smaller meals to make the groceries last longer, but in doing so you just feel hungry all of the time <<set $food to $food + 1>> Your food insecurity score is now [$food]. 
-Mid-way through your second week you walk to the convenience store and buy a bunch of junk food (-$50). 
-Your blood glucose levels continue to test high and you remain frustrated by your progress in managing your diabetes <<set $well to $well - 5 >> Your level of wellbeing is now [$well]
-[[Next|DawnBlock4]]
+<<changeBackground Background OnlineShopping>>
+You choose to buy healthy foods, just in fewer quantities. The groceries still cost you $250.  <<set $money to $money - 250>> 
+You try to make smaller meals to make the groceries last longer, but in doing so you just feel hungry all of the time. <<set $well to $well - 5>>
+Without enough food to eat, your risk of food insecurity increases. <<set $food to $food + 1>> 
+Your blood glucose levels continue to test high and you remain frustrated by your progress in managing your diabetes. <<set $well to $well - 5>>
+[[Go to your doctor’s appointment.|DawnBlock4]]
 ===
 title: Online200
 tags: 
 colorID: 0
 position: 792,4384
 ---
-Empty TextTo stick to your budget, you must buy cheap processed foods. <<set $money to $money - 200 >> You now have $[$money] remaining. <<set $food to $food + 1>> Your food insecurity score is now [$food].
-Your blood glucose levels continue to test high and you remain frustrated by your progress in managing your diabetes <<set $well to $well - 5 >> Your level of wellbeing is now [$well].
-[[Next|DawnBlock4]]
+<<changeBackground Background OnlineShopping>>
+To stick to your budget, you buy $200 of cheap processed foods. <<set $money to $money - 200>> 
+These foods are low in nutrition, which increases your risk of food insecurity. <<set $food to $food + 2>>
+Your blood glucose levels continue to test high and you remain frustrated by your progress in managing your diabetes. <<set $well to $well - 5>>
+[[Go to your doctor’s appointment.|DawnBlock4]]
 ===
 title: DawnBlock4
 tags: 
 colorID: 0
 position: -267,4797
 ---
-It is time to refill your prescriptions. The total cost for this round of drugs is $100. <<set $money to $money - 100 >> You now have $[$money] remaining. 
-You also have a doctor’s appointment across town. Your roommate is out of town, so you have to take a cab/car service.<<set $money to $money - 70 >> You now have $[$money] remaining.
-At your appointment, you learn that your blood sugar is still not controlled enough to be given medical clearance to return to your truck driving job. 
-You are extremely discouraged by these results <<set $well to $well - 5 >> Your level of wellbeing is now [$well]
+<<changeBackground Background Taxi>>
+You have a doctor’s appointment across town. Your roommate is not available, so it costs you $50 take a cab/car service. <<set $money to $money - 50>>
+<<changeBackground Background DoctorOffice>>
+At your appointment, you learn that your blood sugar is still not controlled enough to be given medical clearance to return to your job. <<set $well to $well - 10>> 
+It is also time to refill your prescriptions. The total cost for this round of drugs is $100. <<set $money to $money - 100>>
 The doctor also tells you that you need to eat better, exercise more, and lose weight. What do you want to do?
 [[Join the gym near your house.|Gym]]
 [[Join a support group at the hospital.|Support]]
@@ -331,8 +417,11 @@ tags:
 colorID: 0
 position: -251,5109
 ---
-The gym is an easy walk from your house. To join the gym you must pay a $100 sign-up fee plus a $40 per month membership fee. 
+<<changeBackground Background Gym>>
+The gym is an easy walk from your house. To join the gym you must be able to pay for a $100 sign-up fee plus a $40 per month membership fee. 
+<<if $money > -360>>
 [[Pay to join the gym.|Join]]
+<<endif>>
 [[Join the support group at the hospital, instead.|Support]]
 [[Join an online support group, instead.|Forum]]
 ===
@@ -341,38 +430,42 @@ tags:
 colorID: 0
 position: -251,5375
 ---
-You sign up for a gym membership. Membership includes three personal training sessions. <<set $money to $money - 140 >> You now have $[$money] remaining.
-The personal training sessions are beneficial, and it becomes a fun and healthy way to fill the time. <<set $well to $well + 5 >> Your level of wellbeing is now [$well].
-After two weeks of working out regularly, you lose 5 pounds and your blood sugar starts to stabilize! <<set $well to $well + 10 >> Your level of wellbeing is now [$well].
-[[Next.|DawnBlock5]]
+<<changeBackground Background Gym>>
+For $140, you sign up for a gym membership. Membership includes three personal training sessions. <<set $money to $money - 140>>
+The personal training sessions are beneficial, and it becomes a fun and healthy way to fill the time. <<set $well to $well + 10>>
+After two weeks of working out regularly, you lose 5 pounds and your blood sugar starts to stabilize! <<set $well to $well + 10>>
+[[Try to improve your diet.|DawnBlock5]]
 ===
 title: Support
 tags: 
 colorID: 0
 position: 14,5377
 ---
-You take a cab to the hospital and back to attend a support group meeting <<set $money to $money - 70 >> You now have $[$money] remaining.
-The meeting is great. The hospital offers a lot of services, including exercise classes, nutrition and diet counselling, and regular support group meetings.
-Plus, the group connects you with a carpool to and from the hospital. <<set $well to $well + 5 >> Your level of wellbeing is now [$well].
-You start going into the hospital three times per week for exercise classes, nutrition counseling, and the support group.
-After two weeks, you lose 5 pounds and your blood glucose levels are much more stable! <<set $well to $well + 10 >> Your level of wellbeing is now [$well]
-[[Next.|DawnBlock5]]
+<<changeBackground Background Taxi>>
+You spend $50 to take a cab to the hospital and back to attend a support group meeting. <<set $money to $money - 50>> 
+<<changeBackground Background Classroom1>>
+The meeting is great and they are able to connect you with a carpool to and from the hospital. <<set $well to $well + 5>> 
+You start going into the hospital three times per week for exercise classes, nutrition counseling, and the support group. <<set $well to $well + 15>>
+After two weeks, you lose 5 pounds and your blood glucose levels are much more stable! <<set $well to $well + 15>> 
+[[Try some new recipes.|DawnBlock5]]
 ===
 title: Forum
 tags: 
 colorID: 0
 position: -526,5375
 ---
-You sign up for a free online Type 2 Diabetes support service. Each day you receive an email with fitness tips and recipe suggestions.
+<<changeBackground Background OnlineRecipe>>
+You sign up for a free online support service. Each day you receive an email with fitness tips and recipe suggestions.
 Per the recommendation of the fitness tips, you start walking each day.
-After several weeks of walking, you have not lost any weight, but your blood sugar has started to stabilize. This is a good start. <<set $well to $well + 5 >> Your level of wellbeing is now [$well].
-[[Next.|DawnBlock5]]
+After several weeks of walking, you have not lost any weight, but your blood sugar has started to stabilize. This is a good start. <<set $well to $well + 10>> 
+[[Try some new recipes.|DawnBlock5]]
 ===
 title: DawnBlock5
 tags: 
 colorID: 0
 position: -251,5664
 ---
+<<changeBackground Background OnlineRecipe>>
 You are excited to try out a new list of recipes. First, you’ll need to buy more groceries. What would you like to do?
 [[Take a cab/car service to the grocery store.|CarService]]
 [[Try to order groceries online.|Online2]]
@@ -383,9 +476,13 @@ tags:
 colorID: 0
 position: 169,5962
 ---
-It costs you $50 to hire a car service to drive you to and from the store <<set $money to $money - 50 >> You now have $[$money] remaining.
+<<changeBackground Background Taxi>>
+It costs you $50 to get a cab/car service to drive you to and from the store. <<set $money to $money - 50>>
+<<changeBackground Background GroceryStore>>
 It will cost you $175 to buy all of the fresh meats, vegetables, fruits, and whole grains that are needed for the recipes you want to try. 
+<<if $money > -325>>
 [[Buy all $175 worth of groceries|Buy175]]
+<<endif>>
 [[Put some of the groceries back, spend $125 |Buy125]]
 [[Buy cheaper, convenience foods instead, spend $75|Buy75]]
 ===
@@ -394,69 +491,82 @@ tags:
 colorID: 0
 position: -89,6221
 ---
-You are able to buy all of the groceries that you need to make yourself healthy meals three times per day. <<set $money to $money - 175 >> You now have $[$money] remaining.
-Within a few weeks, your blood glucose levels are starting to stabilize even more <<set $well to $well + 10 >> Your level of wellbeing is now [$well]
-[[Next|DawnBlock6]]
+<<changeBackground Background FullShoppingCart>>
+You are able to buy all of the groceries that you need to make yourself healthy meals three times per day. <<set $money to $money - 175>> 
+Within a few weeks, your blood glucose levels are starting to stabilize even more <<set $well to $well + 10>> 
+[[Pay your rent|DawnBlock6]]
 ===
 title: Buy125
 tags: 
 colorID: 0
 position: 179,6222
 ---
-You put back the fresh meats and vegetables and replace them with cheaper convenience foods. <<set $money to $money - 125 >> You now have $[$money] remaining.
-You know junk food is not recommended, but the alternatives are too expensive <<set $food to $food + 1 >> Your food insecurity score is now [$food]. 
-Your blood glucose levels continue to test high and you remain dependent on insulin. <<set $well to $well - 5 >> Your level of wellbeing is now [$well].
-[[Next|DawnBlock6]]
+<<changeBackground Background PreMadeFoods>>
+You put back the fresh meats and vegetables and buy $125 of cheaper convenience foods. <<set $money to $money - 125>> 
+You know that junk food is not recommended, but the alternatives are too expensive. The severity of your food insecurity is increasing. <<set $food to $food + 1>> 
+Your blood glucose levels continue to test high and you remain dependent on insulin. <<set $well to $well - 10>> 
+[[Pay your rent|DawnBlock6]]
 ===
 title: Buy75
 tags: 
 colorID: 0
 position: 477,6213
 ---
-You buy a bag of rice, a bag of beans, canned vegetables, and canned tuna. It is all you can afford. <<set $money to $money - 75 >> You now have $[$money] remaining.
-The food is bland and unappetizing. You feel hungry all of the time. <<set $food to $food + 2 >> Your food insecurity score is now [$food]. 
-Your blood glucose levels continue to test high and you remain dependent on insulin. <<set $well to $well - 10 >> Your level of wellbeing is now [$well].
-[[Next|DawnBlock6]]
+<<changeBackground Background BudgetGroceryInside>>
+You buy a bag of rice, a bag of beans, canned vegetables, and canned tuna. It is all you can afford. <<set $money to $money - 75>> 
+The food is bland and unappetizing. You feel hungry all of the time. The severity of your food insecurity is increasing. <<set $food to $food + 2>> 
+Your blood glucose levels continue to test high and you remain dependent on insulin. <<set $well to $well - 10>>
+[[Pay your rent|DawnBlock6]]
 ===
 title: Online2
 tags: 
 colorID: 0
 position: -973,5951
 ---
+<<changeBackground Background OnlineShopping>>
 There is an online grocer that will deliver groceries to your area, but the groceries are overpriced and the shipping costs are high.
 It will cost you $250 to buy all of the fresh meats, vegetables, fruits, and whole grains that you need for the next two weeks. 
-[[Buy all $250 worth of groceries|Order250]]
-[[Remove some of the groceries, spend $175 |Order175]]
-[[Go to the local grocery store, instead.|CarService]]
+[[<<if $money > -250>>Buy all $250 worth of groceries.|Order250]]
+<<if $money > -325>>
+[[Buy cheaper groceries instead.|Order175]]
+<<endif>>
+[[Go to a food bank, instead.|FoodBank]]
 ===
 title: Order250
 tags: 
 colorID: 0
 position: -1185,6236
 ---
-You are able to buy all of the groceries that you need to last you two weeks <<set $money to $money - 250 >> You now have $[$money] remaining.
-Using these ingredients, you make yourself healthy meals and your blood glucose levels start to stabilize even more <<set $well to $well + 10 >> Your level of wellbeing is now [$well].
-[[Next|DawnBlock6]]
+<<changeBackground Background OnlineShopping>>
+For $250, you are able to buy all of the groceries that you will need to last two weeks. <<set $money to $money - 250>>
+Using these ingredients, you make yourself healthy meals and your blood glucose levels start to stabilize even more. <<set $well to $well + 10>>
+[[Pay your rent|DawnBlock6]]
 ===
 title: Order175
 tags: 
 colorID: 0
 position: -846,6228
 ---
-You replace a lot of the fresh meats and vegetables with cheaper convenience foods. The groceries still cost you $175 <<set $money to $money - 250 >> You now have $[$money] remaining.
-Cooking feels like a drudgery and the meals taste bland. Plus, your blood glucose levels continue to test high. <<set $well to $well - 5 >> Your level of wellbeing is now [$well]. 
-You wish you had cheaper food options. <<set $food to $food + 1 >> Your food insecurity score is now [$food]. 
-[[Next|DawnBlock6]]
+<<changeBackground Background OnlineShopping>>
+You replace a lot of the fresh meats and vegetables with cheaper convenience foods. The groceries cost you $175. <<set $money to $money - 175>>
+The convenience foods are unhealthy and bland. The low nutrition and lack of variety increases your risk for food insecurity. <<set $food to $food + 2>> 
+Your blood glucose levels continue to test high. <<set $well to $well - 5>>
+[[Pay your rent|DawnBlock6]]
 ===
 title: FoodBank
 tags: 
 colorID: 0
 position: -465,6062
 ---
+<<changeBackground Background FoodBankExterior>>
 The food bank is run by an organization that supports views for which you strongly disagree. 
 You are conflicted: you are running out of money to buy food, but you do not want to support this organization in any way shape or form.
+<<if $money > -375>>
 [[Go to the food bank anyway.|GoAnyway]]
+<<endif>>
+<<if $money > -325>>
 [[Take a cab/car service to the grocery store.|CarService]]
+<<endif>>
 [[Try to order groceries online.|Online2]]
 ===
 title: GoAnyway
@@ -464,19 +574,55 @@ tags:
 colorID: 0
 position: -454,6316
 ---
+<<changeBackground Background CommunityCentre>>
 The food bank requires that you meet with one of their counsellors before you can get food. 
-The counselling appointment is humiliating. <<set $well to $well - 10 >> Your level of wellbeing is now [$well]. 
-In addition, the food selection is limited and low in nutritional value. Your blood glucose levels continue to test high. <<set $well to $well - 5 >> Your level of wellbeing is now [$well].
-You wish you had better options for acquiring nutritious foods. <<set $food to $food + 1.5 >> Your food insecurity score is now [$food].
-[[Next|DawnBlock6]]
+The counselling appointment is condescending and not helpful. <<set $well to $well - 10>> 
+<<changeBackground Background FoodBankInside>>
+In addition, the food bank offers mainly unhealthy processed foods. The low nutrition offerings increase your risk for food insecurity. <<set $food to $food + 1>>
+Your blood glucose levels continue to test high. <<set $well to $well - 10>>
+[[Pay your rent|DawnBlock6]]
 ===
 title: DawnBlock6
 tags: 
 colorID: 0
 position: -323,6738
 ---
-Your rent ($600) and utilities ($150) are due.<<set $money to $money - 750 >> You now have $[$money] remaining.
-Your sister is getting married! The wedding is taking place in a town that is four hours away. A cousin can give you a ride if you agree to split the cost of gas.
+<<changeBackground Background DawnLivingRoom>>
+Your rent and utilities are due. You cannot use a credit card to pay these bills.
+[[<<if $money > 750>>Pay your rent|PayRent]]
+[[Borrow money from your retirement|RentRetirement]]
+[[Borrow money from a relative|RentRelative]]
+===
+title: RentRetirement
+tags: 
+colorID: 0
+position: -622,7037
+---
+<<changeBackground Background DawnLivingRoom>>
+You borrow $1000 from your retirement account. <<set $money to $money + 1000>>
+You must pay taxes and fees on the withdrawal. <<set $money to $money - 150>>
+Long term this withdrawal could cost you a lot of money and significantly delay your retirement. <<set $well to $well - 20>>
+[[Pay your rent.|PayRent]]
+===
+title: RentRelative
+tags: 
+colorID: 0
+position: -622,7037
+---
+<<changeBackground Background DawnLivingRoom>>
+It is humiliating to call your family for money, but what choice do you have? <<set $well to $well - 10>>
+Your sister gives you $1000. You use the money to pay your rent and other expenses. <<set $money to $money + 250>> You now have $[$money].
+There is a catch, however. A condition of the money is that you attend your niece’s wedding. 
+[[Go to the wedding.|Reception]]
+===
+title: PayRent
+tags: 
+colorID: 0
+position: -622,7037
+---
+<<changeBackground Background DawnLivingRoom>>
+Your rent and utilities cost $750. <<set $money to $money - 750>> You now have $[$money].
+Your niece is getting married. A cousin can give you a ride if you agree to split the cost of gas.
 [[Decline the invitation, focus on your health.|Decline]]
 [[Accept the invitation, family is important.|Accept]]
 ===
@@ -485,15 +631,17 @@ tags:
 colorID: 0
 position: -622,7037
 ---
-You decline the invitation. The distance to travel is too far. Your sister is really disappointed that you won’t be there. <<set $well to $well - 5 >> Your level of wellbeing is now [$well].
-[[Next.|DawnBlock7]]
+<<changeBackground Background DawnLivingRoom>>
+You decline the invitation. The distance to travel is too far. Your niece is disappointed that you won’t be there. <<set $well to $well - 5>>
+[[Go to your doctor’s appointment.|DawnBlock7]]
 ===
 title: Accept
 tags: 
 colorID: 0
 position: -79,7032
 ---
-Your part of the trip costs $40.  <<set $money to $money - 40 >> You now have $[$money] remaining. 
+<<changeBackground Background DriveHighway>>
+Your part of the trip costs $30. <<set $money to $money - 30>> 
 You pack a few snacks and plan to stop for meals along the way. Two hours into the trip, you remind your cousin you need to stop for lunch. 
 Unfortunately, there are no places to eat. Your only food choice is a hot dog from the gas station. 
 [[Buy a hot dog; you need to eat.|HotDog]]
@@ -505,8 +653,8 @@ tags:
 colorID: 0
 position: -66,7320
 ---
-The hot dog is not a healthy choice, but there are no other food options. <<set $food to $food + 0.5 >> Your food insecurity score is now [$food]. 
-Good thing you still have your snacks. They provide you with just enough energy to get through the ceremony. 
+<<changeBackground Background DriveHighway>>
+The hot dog is not a healthy choice, but there are no other food options. <<set $food to $food + 1.0>> Good thing you still have your snacks. 
 [[Next.|Reception]]
 ===
 title: Snacks
@@ -514,26 +662,30 @@ tags:
 colorID: 0
 position: 173,7320
 ---
-Without a healthy lunch option, you opt to eat your snacks for lunch. But now you do not have an afternoon snack. <<set $food to $food + 0.5 >> Your food insecurity score is now [$food]. 
-You are extremely hungry by the time the ceremony ends. You need food soon! <<set $well to $well - 5 >> Your level of wellbeing is now [$well].
-[[Next.|Reception]]
+<<changeBackground Background DriveHighway>>
+Without a healthy lunch option, you opt to eat your snacks for lunch. But now you do not have an afternoon snack. <<set $food to $food + 1.0>> 
+You are extremely hungry by the time you arrive to the wedding. <<set $well to $well - 5>> 
+[[Go the ceremony.|Reception]]
 ===
 title: Wait
 tags: 
 colorID: 0
 position: -300,7329
 ---
-You decline the hot dog in the hopes that there will be a better food option, but unfortunately, you do not pass anything.
-You eat your snacks before the ceremony, but it is not enough. By the time the ceremony ends you are really hungry. <<set $food to $food + 0.5 >> Your food insecurity score is now [$food].
-[[Next.|Reception]]
+<<changeBackground Background DriveHighway>>
+You decline the hot dog in the hopes that there will be a better food option. <<set $food to $food + 1.0>>
+Unfortunately, you do not pass anything. <<set $food to $food + 1.0>>
+You are extremely hungry by the time you arrive to the wedding. <<set $well to $well - 5>> 
+[[Go the ceremony|Reception]]
 ===
 title: Reception
 tags: 
 colorID: 0
 position: -30,7672
 ---
-After the ceremony, people linger around and talk. It is clear that nobody is in a hurry to get to the restaurant for dinner.
-You do not want to be a burden to anyone, but you desperately need food. What should you do? 
+<<changeBackground Background Wedding>>
+Your niece’s wedding is nice, but after the ceremony, people linger around and talk. It is clear that nobody is in a hurry to get to the restaurant.
+You do not want to be a burden to anyone, but you desperately need food. What should you do?
 [[Walk to a nearby convenience store.|Quick]]
 [[Ask your sister how long it will be until dinner.|Long]]
 [[Wait patiently. You do not want to cause any trouble.|Patient]]
@@ -543,44 +695,49 @@ tags:
 colorID: 0
 position: -348,7950
 ---
-You sneak out of the ceremony and walk to the convenience store. You eat some food and immediately feel better. 
-You walk back to discover that everyone has left for dinner except for your mother. She accuses you of being overly complicated <<set $well to $well - 5 >> Your level of wellbeing is now [$well].
-[[Next.|Return]]
+<<changeBackground Background ConvenienceStore>>
+You sneak out of the ceremony and walk to a nearby general store. You eat some food and immediately feel better. 
+You walk back to discover that everyone has left for dinner except for your sister. She accuses you of being overly complicated. <<set $well to $well - 5>>
+[[Return home.|Return]]
 ===
 title: Long
 tags: 
 colorID: 0
 position: -26,7960
 ---
+<<changeBackground Background Wedding>>
 You ask your sister how long it will be until dinner. 
-She rolls her eyes, shoves a granola bar at you, and tells you to stop whining. You wonder if you are being overly dramatic? <<set $well to $well - 5 >> Your level of wellbeing is now [$well].
-[[Next.|Return]]
+She rolls her eyes, shoves a granola bar at you, and tells you to stop whining. You wonder if you are being overly dramatic? <<set $well to $well - 5>> 
+[[Return home.|Return]]
 ===
 title: Patient
 tags: 
 colorID: 0
 position: 243,7951
 ---
+<<changeBackground Background Wedding>>
 You do not want to cause trouble, so you decide to wait patiently until dinner. 
 You feel more and more tired. You start slurring your words and faint. 
-Later you over hear your sister telling somebody that your dramatic scene nearly ruined her wedding. <<set $well to $well - 10 >> Your level of wellbeing is now [$well]
-[[Next.|Return]]
+Later you over hear your sister telling somebody that your dramatic scene nearly ruined her daughter’s wedding. <<set $well to $well - 10>>
+[[Return home.|Return]]
 ===
 title: Return
 tags: 
 colorID: 0
 position: -11,8365
 ---
-You survive the rest of the weekend, but are relieved to go home. No one seemed to take your medical needs seriously. 
-Seeing your family just made you feel even more alone in managing your diabetes <<set $well to $well - 10 >> Your level of wellbeing is now [$well].
-[[Next.|DawnBlock7]]
+<<changeBackground Background DawnLivingRoom>>
+You manage to tolerate the rest of the weekend, but are relieved to go home. No one seemed to take your medical needs seriously. <<set $well to $well - 5>>
+Seeing your family just made you feel even more alone in managing your diabetes. <<set $well to $well - 5>>
+[[Go to your next doctor’s appointment.|DawnBlock7]]
 ===
 title: DawnBlock7
 tags: 
 colorID: 0
 position: -573,8883
 ---
-It is time to refill your prescriptions. The total cost for this round of drugs is $150. <<set $money to $money - 150 >> You now have $[$money] remaining. 
+<<changeBackground Background DoctorOffice>>
+It is time to refill your prescriptions. The total cost for this round of drugs is $200. <<set $money to $money - 200>>
 It is going to be a while before you can drive again. You need a part time job. Three options are within walking distance. Where do you want to work?
 [[Fast food restaurant: 25 hours per week, $15/hour.|FastFood]]
 [[Bakery: 15 hours per week, $18/hour.|Bakery]]
@@ -591,38 +748,42 @@ tags:
 colorID: 0
 position: -578,9225
 ---
-It is nice to have extra money working at the fast food restaurant (+$700). <<set $money to $money + 700 >> You now have $[$money].
-But, it is too hard to avoid the temptation of fast food, especially when it is so cheap and it is the only food around <<set $food to $food + 0.5 >> Your food insecurity score is now [$food]. 
-After two weeks, your blood glucose levels are less stable and it is clear that you are gaining weight again. <<set $well to $well - 10 >> Your level of wellbeing is now [$well].
-[[Next.|DawnBlock8]]
+<<changeBackground Background FastFoodExterior>>
+It is nice to have the extra $200 per week working at the fast food restaurant. <<set $money to $money + 200>>
+But, it is too hard to avoid the temptation of fast food, especially when it is so cheap and it is the only food around. <<set $food to $food + 1>> 
+After two weeks, your blood glucose levels are less stable and it is clear that you are gaining weight again. <<set $well to $well - 10>>
+[[Get your eyes checked.|DawnBlock8]]
 ===
 title: Bakery
 tags: 
 colorID: 0
 position: -915,9260
 ---
-It is nice to have extra money working at the fast food restaurant (+$500). <<set $money to $money + 500 >> You now have $[$money].
+<<changeBackground Background Bakery>>
+It is nice to have an extra $150 per week working at the bakery. <<set $money to $money +150>> 
 But, it is too hard to avoid the temptation of the baked goods. 
-After two weeks, your blood glucose levels are less stable and it is clear that you are gaining weight again. <<set $well to $well - 10 >> Your level of wellbeing is now [$well].
-[[Next.|DawnBlock8]]
+After two weeks, your blood glucose levels are less stable and it is clear that you are gaining weight again. <<set $well to $well - 10>>
+[[Get your eyes checked.|DawnBlock8]]
 ===
 title: Elder
 tags: 
 colorID: 0
 position: -240,9266
 ---
+<<changeBackground Background CommunityKitchen>>
 You start working as an assistant cook at an elder care residential home. 
-As part of the position, you work with a dietician who shows you tricks for preparing healthy meals that meet the residents’ nutritional needs. 
-Because many of the residents are also managing diabetes, you learn a lot about your own nutritional needs in the process.
-You also get one healthy meal per day as part of the position. This helps reduce your overall expenses (+$600). <<set $money to $money + 600 >> You now have $[$money].
-The work is fun. If you are not able to return to truck driving, this could be an alternative career option for you. <<set $well to $well + 20 >> Your level of wellbeing is now [$well].
-[[Next.|DawnBlock8]]
+As part of the position, you work with a dietician who shows you tricks for preparing inexpensive healthy meals. <<set $well to $well + 10>>
+Because many of the residents are also managing diabetes, you learn a lot about your own nutritional needs in the process. <<set $well to $well + 10>>
+You also get one healthy meal per day as part of the position. <<set $well to $well + 10>>
+Between the weekly paycheck and the meal savings, you are feeling a little bit more secure. <<set $money to $money + 200>><<set $well to $well + 10>>
+[[Get your eyes checked.|DawnBlock8]]
 ===
 title: DawnBlock8
 tags: 
 colorID: 0
 position: -664,9762
 ---
+<<changeBackground Background DawnLivingRoom>>
 An important step in getting approval to drive again is the completion of a diabetic eye exam. 
 The exam is covered by the Ontario Health Insurance Plan (OHIP), but the nearest optometrist who does the exam is over 50 km away. What would you like to do?
 [[Put off going to the appointment|Off]]
@@ -634,24 +795,29 @@ tags:
 colorID: 0
 position: -1087,10160
 ---
-Without this eye appointment, you will not be able to return to your truck driving job. 
-Putting this appointment off means you will be out of work for even longer <<set $well to $well - 20 >> Your level of wellbeing is now [$well]
-[[Next|DawnDebrief]]
+<<changeBackground Background DawnLivingRoom>>
+Without this eye appointment, you cannot return to your truck driving job. You will be out of work for even longer. <<set $well to $well - 20>>
+On the plus side, you have learned a lot about managing your diabetes over the past few months.
+[[Did you succeed in your quest to help Dawn?|DawnDebrief]]
 ===
 title: Car
 tags: 
 colorID: 0
 position: -346,10132
 ---
-It costs you $200 to hire a car service to go to the appointment. <<set $money to $money - 200 >> You now have $[$money] remaining.
-Your eyesight is deemed fine! This is a huge step towards being able to regain your driving privileges. <<set $well to $well + 20 >> Your level of wellbeing is now [$well].
-[[Next|DawnDebrief]] 
+<<changeBackground Background Taxi>>
+It costs you $200 to hire a car service to go to the appointment. <<set $money to $money - 200>>.
+<<changeBackground Background BusinessOffice>>
+Your eyesight is deemed fine! This is a huge step towards being able to regain your driving privileges. <<set $well to $well + 20>> 
+<<changeBackground Background DawnLivingRoom>>
+[[Did you succeed in your quest to help Dawn?|DawnDebrief]] 
 ===
 title: Roomie
 tags: 
 colorID: 0
 position: -703,10151
 ---
+<<changeBackground Background DawnLivingRoom>>
 The day of the appointment is on your roommate's birthday. She would rather go do something fun on that day. 
 [[Put off going to the appointment|Off]]
 [[Take a cab/car service instead|Car]]
@@ -662,11 +828,14 @@ tags:
 colorID: 0
 position: -712,10570
 ---
-You offer to take your roommate out for a nice birthday dinner after the appointment. 
-She agrees and drives you to the appointment. You pay for gas for the trip. <<set $money to $money - 40 >> You now have $[$money] remaining.
-Your eyesight is deemed fine! This is a huge step towards being able to regain your driving privileges. <<set $well to $well + 20 >> Your level of wellbeing is now [$well].
-Now you owe your roommate a dinner. 
-After you return home, you and your roommate walk to a nice restaurant near your apartment. The two of you decide to share a bottle of wine. 
+<<changeBackground Background DawnLivingRoom>>
+You beg your roommate to drive you. 
+She agrees only when you offer to take her out for a nice birthday dinner after the appointment. 
+You also have to pay for gas for the trip. <<set $money to $money - 40>> 
+<<changeBackground Background BusinessOffice>>
+The appointment is a success. Your eyesight is deemed fine! This is a huge step towards being able to regain your driving privileges. <<set $well to $well + 20>> 
+<<changeBackground Background HotelDining>>
+After you return home, you and your roommate walk to a restaurant near your apartment. The two of you decide to share a bottle of wine. 
 You will be paying for the wine, your roommate’s dinner, and your own dinner. Given this, what do you want to order for yourself?
 [[A salad with chicken ($9).|Chicken]]
 [[A steak with baked potato and broccoli ($15).|Steak]]
@@ -677,27 +846,39 @@ tags:
 colorID: 0
 position: -713,10869
 ---
-You enjoy your meal then pay the bill, including tax and tip <<set $money to $money - 50 >> You now have $[$money] remaining.
-Walking home you start to feel sick. You test your blood glucose levels and they are very high. The wine was a bad idea <<set $well to $well - 5 >> Your level of wellbeing is now [$well].
-[[Next|DawnDebrief]]
+<<changeBackground Background HotelDining>>
+You enjoy your meal then pay the $50 bill. <<set $money to $money - 50>> 
+Walking home you start to feel sick. You test your blood glucose levels and they are very high. The wine was a bad idea. <<set $well to $well - 5>>
+Clearly, you still have a lot to learn about diabetes. Still, on the whole, you have come a long way!
+<<changeBackground Background DawnLivingRoom>>
+[[Did you succeed in your quest to help Dawn?|DawnDebrief]]
 ===
 title: Steak
 tags: 
 colorID: 0
 position: -1025,10868
 ---
-You enjoy your meal then pay the bill, including tax and tip. <<set $money to $money - 65 >> You now have $[$money] remaining.
-You test your blood glucose levels when you get home. They are somewhat high. It’s a good thing you ordered a hearty meal, otherwise the wine could have made you sick.
-[[Next|DawnDebrief]]
+<<changeBackground Background HotelDining>>
+You enjoy your meal then pay the $65 bill. <<set $money to $money - 65>>
+You test your blood glucose levels when you get home. They are somewhat high. 
+It’s a good thing you ordered a hearty meal, otherwise the wine could have made you sick.
+Clearly, you are getting better at learning to manage your diabetes. <<set $well to $well + 5>>
+<<changeBackground Background DawnLivingRoom>>
+[[Did you succeed in your quest to help Dawn?|DawnDebrief]]
 ===
 title: Salad
 tags: 
 colorID: 0
 position: -399,10858
 ---
-You are worried about money so you order the cheapest thing on the menu <<set $food to $food + 0.5 >> Your food insecurity score is now [$food]. 
-Walking home you pass out. Drinking wine with so little food was a bad idea! <<set $well to $well - 10 >> Your level of wellbeing is now [$well].
-[[Next|DawnDebrief]]
+<<changeBackground Background HotelDining>>
+You are worried about money so you order the cheapest thing on the menu. 
+You are still hungry and very tipsy from the wine when you pay the $40 bill at the end of the evening. <<set $money to $money - 65>>
+<<changeBackground Background Ambulance>>
+Walking home you pass out. Drinking wine with so little food was a bad idea! <<set $well to $well - 10>> 
+Your concerns about money are resulting in you making decisions that increase your risk for food insecurity and put your health in danger. <<set $food to $food + 2>>
+You have come a long way in the past few months, but you still have a lot to learn.
+[[Did you succeed in your quest to help Dawn?|DawnDebrief]]
 ===
 title: DawnDebrief
 tags: 
@@ -722,7 +903,7 @@ This situation is quite dangerous for Dawn given her diagnosis of Type 2 diabete
 <<endif>>
 
 <<if $money < 0>>
-<<set $debt to $money*-1.20>>
+<<set $debt to $money * -1.2>>
 To pay for all of her expenses, Dawn had to go into debt. Credit cards carry high interest rates and penalties. 
 Indeed, although the final game balance was $[$money], in reality Dawn will end up spending at least $[$debt] to pay off this credit card debt once fees and interest are taken into consideration. 
 The decision to go into debt to pay for immediate expenses helped Dawn survive more comfortably in the short term, 

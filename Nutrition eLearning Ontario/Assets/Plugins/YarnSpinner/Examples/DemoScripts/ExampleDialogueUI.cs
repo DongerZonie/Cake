@@ -73,9 +73,9 @@ public class ExampleDialogueUI : Yarn.Unity.DialogueUIBehaviour {
 
     void Update()
     {
-        money.text = "Money  	 :$" + variableStorage.GetValue("$money").AsNumber;
-        food.text = "Insecurity:" + variableStorage.GetValue("$food").AsNumber;
-        well.text = "Wellness  :" + variableStorage.GetValue("$well").AsNumber;
+        money.text = "Money  	 : $" + variableStorage.GetValue("$money").AsNumber;
+        food.text = "Food\nInsecurity: " + variableStorage.GetValue("$food").AsNumber;
+        well.text = "Wellbeing: " + variableStorage.GetValue("$well").AsNumber;
     }
 
     void Awake ()

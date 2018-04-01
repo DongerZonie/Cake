@@ -3,14 +3,12 @@ tags:
 colorID: 0
 position: 548,76
 ---
-<<changeBackground Background Bedroom>>
-<<set $money to 500>>
+<<changeBackground Background SaadBedroomSyria>>
+<<set $money to $500>>
 <<set $well to 30>>
 <<set $food to 0>>
-You start the game with $[$money]. Your current level of wellbeing is [$well]. You start the game with a food insecurity score of [$food].
-At present you are living in a hotel where food preparation is difficult. You would like to find more permanent housing. 
-You have been told to expect a housing allowance of $850 per month. You could afford more if you had a job, but your English language skills are limited. 
-What would you like to try to do?                                
+At present you are living in a hotel room with your wife and daughters. Food preparation is difficult. 
+You would like to find more permanent housing. You could afford more if you had a job, but your English language skills are limited.
 [[Find better housing.|Housing]]
 [[Find employment.|Job]]
 [[Sign up for English language classes.|English]]
@@ -20,9 +18,8 @@ tags:
 colorID: 0
 position: 264,329
 ---
-<<changeBackground Background Bedroom>>
-With your limited English language skills you will have difficulty finding housing on your own. 
-The hotel offers a translation service for $100. Would you like to:                
+<<changeBackground Background SaadBedroomSyria>>
+With your limited English language skills you will have difficulty finding housing on your own. The hotel offers a translation service for $100.
 [[Hire the hotel translator.|Translator]]
 [[Search the internet for housing.|Internet]]
 [[Get help from a community organization.|SaadBlock2]]  
@@ -32,12 +29,10 @@ tags:
 colorID: 0
 position: 553,336
 ---
-<<changeBackground Background Bedroom>>
-The translator costs $100.<<set $money to $money - 100>> You now have $[$money] remaining.
-With the help of the translator, you call to inquire about the availability of apartments. 
-Each call ends the same: nobody wants to rent to a family as large as your family. <<set $well to $well - 5>> Your level of wellbeing is now [$well].
-In the meantime, your family continues to be dependent on expensive hotel food. <<set $food to $food + 0.5>> <<set $money to $money - 100>> You now have $[$money] remaining and your food insecurity score is [$food].
-What would you like to do now?
+<<changeBackground Background ComputerRoom>>
+You pay $100 to hire a translator to help you inquire about the availability of apartments. <<set $money to $money - 100>>
+Each call ends the same: nobody wants to rent to a family as large as your family. It is very discouraging! <<set $well to $well - 10>> 
+In the meantime, your family continues to be dependent on expensive and unhealthy hotel food. This increases your risk for food insecurity. <<set $food to $food + 1.0>> <<set $money to $money - 200>>
 [[Find employment.|Job]]
 [[Sign up for English language classes.|English]]
 [[Get help from a community organization.|SaadBlock2]]
@@ -48,8 +43,8 @@ colorID: 0
 position: 3,620
 ---
 <<changeBackground Background ComputerRoom>>
-You use an online translation app to look through apartment listings. Very few acceptable apartments come up in your price range. <<set $well to $well - 5>> Your level of wellbeing is now [$well].
-Finally, you find a one bedroom basement apartment available for $1000 a month.                
+You use an online translation app to look through apartment listings. Very few acceptable apartments come up in your price range. <<set $well to $well - 10>> 
+Finally, you find a one bedroom basement apartment available for $1000 a month.
 [[Email about the apartment.|EmailApartment]]
 [[Find a job so you can afford more options.|Job]]
 [[Get help from a community organization.|SaadBlock2]]
@@ -60,11 +55,10 @@ colorID: 0
 position: 0,913
 ---
 <<changeBackground Background ComputerRoom>>
-You use an online translation app to send an email in English asking about the apartment. 
-The email reply is short, “The apartment is no longer available.” 
-You try again with another apartment and another. This time you get no response at all to your emails. <<set $well to $well - 5>> Your level of wellbeing is now [$well].
-In the meantime, your family continues to be dependent on expensive hotel food. <<set $food to $food + 0.5>> <<set $money to $money - 100>> You now have $[$money] remaining and your food insecurity score is [$food].
-What would you like to do now?
+The response to your email is short, “The apartment is no longer available.” 
+You try again with another apartment. This time you get no response at all to your emails. You are getting discouraged! <<set $well to $well - 10>> 
+<<changeBackground Background SaadBedroomSyria>>
+In the meantime, your family continues to be dependent on hotel food. This is expensive and increases your risk for food insecurity. <<set $food to $food + 2.0>> <<set $money to $money - 200>>
 [[Find employment.|Job]]
 [[Sign up for English language classes.|English]]
 [[Get help from a community organization.|SaadBlock2]]
@@ -74,10 +68,9 @@ tags:
 colorID: 0
 position: 903,517
 ---
-<<changeBackground Background Bedroom>>
+<<changeBackground Background SaadBedroomSyria>>
 If you had a job, you could afford better housing and healthier food. In Syria you were a high school math teacher. 
-To teach here in Canada, you will need to get recertified. This may be difficult with your limited English language skills. 
-You may have to consider alternative options.
+To teach here in Canada, you will need to get recertified. This may be difficult with your limited English language skills.
 [[Look into recertification.|Recertified]]
 [[Reach out to neighbors for employment ideas.|Neighbors]]
 [[Get help from a community organization.|SaadBlock2]]   
@@ -87,10 +80,8 @@ tags:
 colorID: 0
 position: 893,913
 ---
-<<changeBackground Background ComputerRoom>>
 Using the internet, you find a free information session about the Canadian certification process for teachers with foreign credentials.  
-The session is held in a city three hours away. It will cost $100 in travel costs to attend.        
-What would you like to do?
+The session is held in a city three hours away. It will cost $100 in travel costs to attend.
 [[Attend the session.|AttendSession]]
 [[Focus on learning English, instead.|English]]
 [[Get help from a community organization.|SaadBlock2]]  
@@ -100,10 +91,10 @@ tags:
 colorID: 0
 position: 898,1192
 ---
-<<changeBackground Background Classroom>>
-The session is informative and you grow your network of professional connections. <<set $well to $well + 15>> Your level of wellbeing is now [$well]. 
-In the meantime, your family continues to be dependent on expensive hotel food. <<set $food to $food + 0.5>> <<set $money to $money - 100>> You now have $[$money] remaining and your food insecurity score is [$food].
-Maybe it is time to get help from a community organization.
+<<changeBackground Background Classroom1>>
+It costs you $100 to travel to the session. <<set $money to $money - 100>> But, it is informative and you grow your network of professional connections. <<set $well to $well + 15>> 
+<<changeBackground Background SaadBedroomSyria>>
+In the meantime, you continue living in a hotel room. Your reliance on hotel food is expensive and increases your risk of food insecurity. <<set $food to $food + 1.0>><<set $money to $money - 100>>
 [[Get help from a community organization.|SaadBlock2]]
 ===
 title: Neighbors
@@ -111,11 +102,11 @@ tags:
 colorID: 0
 position: 6,1203
 ---
-<<changeBackground Background Bedroom>>
+<<changeBackground Background SaadBedroomSyria>>
 You ask around and learn that one of your neighbors is starting a small business and needs help managing his money. 
-Your background in math and finance makes you an ideal candidate <<set $well to $well + 10>> Your level of wellbeing is now [$well].
-He is able to pay you $200 for some initial accounting services. <<set $money to $money + 200>> You now have $[$money] remaining.
-Now you just need better housing. Maybe a community organization can help. 
+<<changeBackground Background Dollars2>>
+He is able to pay you $200 for some initial accounting services. <<set $money to $money + 200>> It feels good to use your skills! <<set $well to $well + 10>> 
+Now you just need better housing. Maybe a community organization can help.
 [[Get help from a community organization.|SaadBlock2]]
 ===
 title: English
@@ -123,8 +114,8 @@ tags:
 colorID: 0
 position: 351,1306
 ---
-<<changeBackground Background Bedroom>>
-You want to sign up for language classes, but with your wife on bed rest, it will be difficult for her to travel to and from classes.                                
+<<changeBackground Background SaadBedroomSyria>>
+You want to sign up for language classes, but you do not know where to find one. If you take an online class your wife and kids could learn as well.	
 [[Sign up for an online class ($200).|OnlineClass]]
 [[Ask your neighbors for information.|AskNeighbor]]
 [[Get help from a community organization.|SaadBlock2]]
@@ -135,10 +126,9 @@ colorID: 0
 position: 253,1624
 ---
 <<changeBackground Background ComputerRoom>>
-You sign up for the online course. <<set $money to $money - 200>> You now have $[$money] remaining. 
-The class really helps to  improve your English language skills <<set $well to $well + 15>> Your level of wellbeing is now [$well].
-But in the meantime, your family continues to be dependent on expensive hotel food. <<set $food to $food + 0.5>> <<set $money to $money - 100>> You now have $[$money] remaining and your food insecurity score is [$food].        
-Maybe it is time to get help from a community organization. 
+The online class is expensive, but fun. <<set $money to $money - 200>> It really helps all of you improve your English language skills. <<set $well to $well + 15>> 
+<<changeBackground Background SaadBedroomSyria>>
+In the meantime, however, you continue living in the hotel room. Your reliance on hotel food is expensive and increases your risk of food insecurity. <<set $money to $money - 200>> <<set $food to $food + 2.0>>
 [[Get help from a community organization.|SaadBlock2]]
 ===
 title: AskNeighbor
@@ -146,9 +136,9 @@ tags:
 colorID: 0
 position: 518,1627
 ---
-<<changeBackground Background Bedroom>>
-Meeting your neighbours is fun and helps you feel socially connected and supported. <<set $well to $well + 5>> Your level of wellbeing is now [$well].
-They encourage you to get help from a community organization. Many offer free language courses. 
+<<changeBackground Background SaadBedroomSyria>>
+Meeting your neighbours is fun and helps you feel socially connected and supported. <<set $well to $well + 5>> 
+Your neighbors encourage you to get help from a community organization. Many offer free language courses.
 [[Get help from a community organization.|SaadBlock2]]
 ===
 title: SaadBlock2
@@ -156,7 +146,7 @@ tags:
 colorID: 0
 position: 1836,2043
 ---
-<<changeBackground Background Bedroom>>
+<<changeBackground Background City>>
 When you arrived in Canada, you were assigned a caseworker through a Resettlement Assistance Program (RAP). 
 The next appointment with your caseworker is not for four weeks. Still, the RAP office may be able to give you information to help you get settled. 
 There is also a Muslim Community Association and a food bank nearby. Where would you like to go? 
@@ -183,8 +173,7 @@ position: 784,2666
 ---
 <<changeBackground Background OfficeSpace>>
 Karam explains that the government provides a small housing allowance, but it is rarely enough to pay for an apartment. You will need to budget your money wisely.
-You are relieved to learn that your caseworker will help you find an affordable apartment. <<set $well to $well + 10>> Your level of wellbeing is now [$well].
-In the meantime, you must figure out how to feed your family while living in temporary housing.
+Your caseworker will help you find an affordable apartment. But, your appointment is not for four more weeks. For now, you must continue living in the hotel.
 [[Figure out how to feed your family.|SaadBlock3]]
 ===
 title: RAPemployment
@@ -194,8 +183,7 @@ position: 1150,2688
 ---
 <<changeBackground Background OfficeSpace>>
 Karam explains that for the first six months refugees are encouraged to focus on acquiring language skills to help prepare them for employment. 
-You are relieved to learn that the Canadian government will provide your family with income help. <<set $well to $well + 10>> Your level of wellbeing is now [$well].
-It will be a few more weeks, however, until you receive your first income assistance check. In the meantime, you must figure out how to feed your family.
+The Canadian government will provide your family with income help. It will be a few more weeks, however, until you receive your first income check.
 [[Figure out how to feed your family.|SaadBlock3]]
 ===
 title: RAPenglish
@@ -204,7 +192,7 @@ colorID: 0
 position: 1457,2677
 ---
 <<changeBackground Background OfficeSpace>>
-Karam explains that when you arrived in Canada, you and Aya were added to a waiting list for an English language course. 
+Karam explains that when you arrived in Canada, you and your family members were added to a waiting list for an English language course. 
 The wait list for the course is long and it may be months before a spot opens up. In the meantime, you must figure out how to feed your family.
 [[Figure out how to feed your family.|SaadBlock3]]
 ===
@@ -214,10 +202,8 @@ colorID: 0
 position: 1899,2403
 ---
 <<changeBackground Background CommunityCentre>>
-You and the children take a bus to the Muslim Community Centre (MCC). <<set $money to $money - 6>> You now have $[$money] remaining.
-The MCC offers a community meal twice per week. You have arrived just in time to enjoy the taste of a nice (and free) meal. <<set $well to $well + 5>> Your level of wellbeing is now [$well].
-A warm meal twice per week is like having extra money in your pockets! <<set $money to $money + 100>> You now have $[$money] remaining.
-Now you must figure out how to feed your family the rest of the week. 
+The MCC offers a community meal twice per week. You have arrived just in time to enjoy the taste of a nice (and free) meal. <<set $well to $well + 5>> 
+A warm meal twice per week is like having an extra $50 in your pocket! Now you must figure out how to feed your family the rest of the week. <<set $money to $money + 50>>
 [[Figure out how to feed your family.|SaadBlock3]]
 ===
 title: FoodBank
@@ -225,13 +211,11 @@ tags:
 colorID: 0
 position: 2240,2400
 ---
-<<changeBackground Background FoodBank>>
-You and your daughters walk down to the food bank. When you arrive you are greeted in English. 
-With your limited English language skills you struggle to make yourself understood. <<set $well to $well - 5>> Your level of wellbeing is now [$well].        
+<<changeBackground Background FoodBankInside>>
+You and your daughters walk down to the food bank. With your limited English language skills you struggle to make yourself understood. <<set $well to $well - 10>> 
 Finally, however, the woman nods and hands you a box of food.
-But, without a kitchen, you are unable to prepare most of the foods for which you have been provided. <<set $food to $food + 0.5>> Your food insecurity score is now [$food].
-You will need to figure out another way to feed your family for the next few weeks.                
-[[Figure out how to feed your family.|SaadBlock3]]
+Unfortunately, without a kitchen, you are unable to prepare most of the foods you received. <<set $food to $food + 2.0>>
+[[Figure out another way to feed your family.|SaadBlock3]]
 ===
 title: SaadBlock3
 tags: 
@@ -239,8 +223,7 @@ colorID: 0
 position: 1633,3354
 ---
 <<changeBackground Background HotelDining>>
-The hotel food is very expensive. Alternatively, you could buy food at a fast food restaurant or groceries at a grocery store. 
-How do you want to feed your family?
+The hotel food is easy to acquire but unhealthy and expensive. Alternatively, you could buy cheaper fast foods or healthier foods at a grocery store. 
 [[Keep eating the hotel food.|HotelFood]]
 [[Eat fast food, instead.|FastFood]]
 [[Find a grocery store.|GroceryShop]]
@@ -252,22 +235,21 @@ position: 1640,3630
 ---
 <<changeBackground Background HotelDining>>
 The meat is not halal, so the vegetarian meals are the only option for you. The hotel meals cost around $8 per meal.
-Since you will have to rely on these meals for the next four weeks, you will have to share meals between the five of you.
-How many meals can you afford? 
-[[$900 for four meals to share.|FourMeals]]
-[[$670 for three meals to share.|ThreeMeals]]
-[[$450 for two meals to share.|TwoMeals]]
+You are reliant on these meals for the next four weeks. At $8 per meal, how many meals per day can you afford to share between the five of you? 
+[[<<if $money > 700>>Three meals per day to share.|ThreeMeals]]
+[[<<if $money > 500>>Two meals per day to share.|TwoMeals]]
+[[One meal per day to share.|OneMeal]]
 ===
-title: FourMeals
+title: OneMeal
 tags: 
 colorID: 0
 position: 1336,3929
 ---
 <<changeBackground Background HotelDining>>
-You order four meals per day to share between the five of you.  <<set $money to $money - 900>> You now have $[$money] remaining.
-This will be enough food to keep you all fed for the time being, although you wish you had a little more variety in your diet. <<set $food to $food + 0.5>> Your food insecurity score is now [$food].
-Because you are not leaving the hotel for meals, you and the children spend most of your time in the cramped hotel room. <<set $well to $well - 10>> Your level of wellbeing is now [$well].
-You are relieved when it is finally time to meet with your caseworker.
+Over the next few weeks, it costs you $250 to order one meal per day to share between the five of you. <<set $money to $money - 250>> 
+The five of you spend most of the time feeling hungry. Your nutritional needs are not being met and you are definitely experiencing food insecurity. <<set $food to $food + 3.0>> 
+<<changeBackground Background SaadBedroomSyria>>
+Because you are not leaving the hotel for meals, you and your children spend most of the next four weeks in the cramped hotel room. <<set $well to $well - 15>> 
 [[Go to the caseworker appointment.|SaadBlock4]]
 ===
 title: ThreeMeals
@@ -276,10 +258,10 @@ colorID: 0
 position: 1631,3940
 ---
 <<changeBackground Background HotelDining>>
-You order three meals per day to share between the five of you.  <<set $money to $money - 670>> You now have $[$money] remaining.
-It is not quite enough food to keep you all fed. You find yourself skipping some meals so that your daughters and wife can have more to eat. <<set $food to $food + 1.0>> Your food insecurity score is now [$food].
-Because you are not leaving the hotel for meals, you and the children spend most of your time in the cramped hotel room. <<set $well to $well - 10>> Your level of wellbeing is now [$well].
-You are relieved when it is finally time to meet with your caseworker.
+Over the next few weeks, it costs you $700 to order three meals per day to share between the five of you. <<set $money to $money - 700>> 
+It is not quite enough food to keep you all fed and you miss having variety in your diet. This increases your risk of food insecurity. <<set $food to $food + 1.0>> 
+<<changeBackground Background SaadBedroomSyria>>
+Because you are not leaving the hotel for meals, you and your children spend most of the next four weeks in the cramped hotel room. <<set $well to $well - 10>>
 [[Go to the caseworker appointment.|SaadBlock4]]
 ===
 title: TwoMeals
@@ -288,10 +270,10 @@ colorID: 0
 position: 1947,3935
 ---
 <<changeBackground Background HotelDining>>
-You order two meals per day to share between the five of you.  <<set $money to $money - 450>> You now have $[$money] remaining.
-This is definitely not enough food to keep you all fed. You find yourself skipping several meals so that your daughters and wife can have more to eat. <<set $food to $food + 2.0>> Your food insecurity score is now [$food].
-Because you are not leaving the hotel for meals, you and the children spend most of your time in the cramped hotel room. <<set $well to $well - 10>> Your level of wellbeing is now [$well].
-You are relieved when it is finally time to meet with your caseworker.
+Over the next few weeks, it costs you $500 to order two meals per day to share between the five of you.  <<set $money to $money - 500>>
+To make sure your wife and kids have enough to eat, you start skipping meals. This increases your risk of food insecurity. <<set $food to $food + 2.0>> 
+<<changeBackground Background SaadBedroomSyria>>
+Because you are not leaving the hotel for meals, you and your children spend most of the next four weeks in the cramped hotel room. <<set $well to $well - 10>>
 [[Go to the caseworker appointment.|SaadBlock4]]
 ===
 title: FastFood
@@ -299,11 +281,9 @@ tags:
 colorID: 0
 position: 670,3662
 ---
-<<changeBackground Background FastFood>>
-For the next four weeks, you eat fruit for breakfast and fast food for lunch and dinner. <<set $money to $money - 400>> You now have $[$money] remaining.
-The fast food helps you avoid hunger, but it is greasy and causes your stomachs to ache. <<set $food to $food + 1.0>> Your food insecurity score is now [$food].
-You feel sluggish most of the time. <<set $well to $well - 10>> Your level of wellbeing is now [$well].
-You are relieved when it is finally time to meet with your caseworker.
+<<changeBackground Background FastFoodExterior>>
+Over the next four weeks, you spend $400 to eat fresh fruit for breakfast and fast food for lunch and dinner. <<set $money to $money - 400>> 
+The fast food helps you avoid hunger, but it is greasy and causes your stomachs to ache. The poor quality of food increases your risk of food insecurity. <<set $food to $food + 2.0>> 
 [[Go to the caseworker appointment.|SaadBlock4]]
 ===
 title: GroceryShop
@@ -311,7 +291,7 @@ tags:
 colorID: 0
 position: 2588,3596
 ---
-<<changeBackground Background HotelDining>>
+<<changeBackground Background City>>
 The nearest grocery store is 3 km away. How do you want to get there?
 [[Take public transit.|PublicTransit]]
 [[Take a cab/car service.|CarService]]
@@ -323,11 +303,11 @@ colorID: 0
 position: 2379,3883
 ---
 <<changeBackground Background GroceryStore>>
-Your first visit to the grocery store is intimidating. It is difficult to read the food labels and much of the food is unfamiliar.<<set $well to $well - 5>> Your level of wellbeing is now [$well].
-But, you are able to buy cooked Halal chicken, bread, fruit, and vegetables to feed your family for four weeks. <<set $money to $money - 300>> You now have $[$money] remaining.
-Without a way to prepare food, you are forced to buy pre-made foods. You wish there was more variety to your diet. <<set $food to $food + 0.5>> Your food insecurity score is now [$food].
-On the plus side, the frequent trips to the grocery store help you feel more confident in navigating the bus system. <<set $well to $well + 10>> Your level of wellbeing is now [$well].
-You feel a little bit more settled leading up to your meeting with the caseworker.
+Your first visit to the grocery store is intimidating. It is difficult to read the food labels and much of the food is unfamiliar. <<set $well to $well - 10>> 
+Over four weeks, you spend $450 on transportation costs and groceries. <<set $money to $money - 450>> 
+Unfortunately, without a way to prepare meals, you must buy expensive pre-made foods. The cost and lack of variety put you at risk for food insecurity. <<set $food to $food + 1.0>>
+<<changeBackground Background Bus>>
+On the plus side, the frequent trips to the grocery store help you feel more confident in navigating the bus system. <<set $well to $well + 10>>
 [[Go to the caseworker appointment.|SaadBlock4]]
 ===
 title: CarService
@@ -337,9 +317,9 @@ position: 2629,3878
 ---
 <<changeBackground Background Taxi>>
 You do not feel confident enough to navigate the bus system, so you take a cab/car service each time you want to go to the grocery store.
-For the next four weeks, most of your funds go towards transportation and grocery shopping. <<set $money to $money - 450>> You now have $[$money] remaining.
-Without a way to prepare food, you are forced to buy pre-made deli foods. You wish there was more variety to your diet. <<set $food to $food + 0.5>> Your food insecurity score is now [$food].
-You are relieved when it is finally time to meet with your caseworker.
+Over the next four weeks, you spend $600 on transportation costs and grocery shopping. <<set $money to $money - 600>> 
+<<changeBackground Background PreMadeDeli>>
+Unfortunately, without a way to prepare food, you must buy expensive pre-made meals.The cost and lack of variety put you at risk for food insecurity. <<set $food to $food + 1.0>>
 [[Go to the caseworker appointment.|SaadBlock4]]
 ===
 title: WalkGrocery
@@ -347,11 +327,11 @@ tags:
 colorID: 0
 position: 2884,3878
 ---
-<<changeBackground Background CityWalk>>
-The walk to and from the grocery store becomes a fun opportunity for you and your children to explore your new city. <<set $well to $well + 10>> Your level of wellbeing is now [$well].
-The trips to the grocery store also ensure you have healthy foods to feed your family over the next four weeks. <<set $money to $money - 300>> You now have $[$money] remaining. 
-Without a way to prepare food, you are forced to buy most pre-made foods. You wish there was more variety to your diet. <<set $food to $food + 0.5>> Your food insecurity score is now [$food].
-You feel a little bit more settled leading up to your meeting with the caseworker.
+<<changeBackground Background CityWalkShadow>>
+The walk to and from the grocery store becomes a fun opportunity for you and your children to explore your new city. <<set $well to $well + 10>> 
+Over four weeks, you spend $400 to buy groceries for your family. <<set $money to $money - 400>> 
+<<changeBackground Background PreMadeDeli>>
+Unfortunately, without a way to prepare food, you must buy expensive pre-made meals.The cost and lack of variety put you at risk for food insecurity. <<set $food to $food + 1.0>>
 [[Go to the caseworker appointment.|SaadBlock4]]
 ===
 title: SaadBlock4
@@ -359,10 +339,10 @@ tags:
 colorID: 0
 position: 1650,4680
 ---
-<<changeBackground Background  OfficeSpace>>
-It is time for your appointment with your caseworker. 
-You learn that you are now eligible for $2500 per month in shelter allowance and income assistance. <<set $money to $money + 2500>> You now have $[$money] remaining.
-The first priority: getting your family into permanent housing. The case worker has found three potential apartments.         
+<<changeBackground Background Apartment>>
+In your meeting with the caseworker you learn that you are now eligible for shelter allowance and income assistance. 
+Each month you will have $2000 to pay for housing, transportation, clothing, groceries, and other expenses. <<set $money to $money + 2000>> 
+The first priority: getting your family into permanent housing. The case worker has found three potential apartments. 
 [[See Apartment A: One bedroom, $800/month.|ApartmentA]]
 [[See Apartment B: Two bedroom, $1100/month.|ApartmentB]]
 [[See Apartment C: Three bedroom, $1300/month.|ApartmentC]] 
@@ -385,7 +365,7 @@ colorID: 0
 position: 1320,5345
 ---
 <<changeBackground Background ApartmentSmall>>
-The landlord permits a maximum of three people to live in the one-bedroom units. You cannot rent this apartment. <<set $well to $well - 5>> Your level of wellbeing is now [$well].                
+The landlord permits a maximum of three people to live in the one-bedroom units. You cannot rent this apartment. <<set $well to $well - 5>>
 [[See Apartment B: Two bedroom, $1100/month.|ApartmentB]]
 [[See Apartment C: Three bedroom, $1300/month.|ApartmentC]]
 ===
@@ -406,9 +386,11 @@ tags:
 colorID: 0
 position: 1717,5369
 ---
-<<changeBackground Background ApartmentDirty>>
-You sign a rental agreement for the two bedroom apartment. The apartment costs you $1100 per month, plus $100 in utilities. <<set $money to $money - 1200>> You now have $[$money] remaining.
-Shortly after moving in, you discover the stove and refrigerator do not work. The apartment owner tells you that you are responsible for replacing them.
+<<changeBackground Background BrokenKitchen>>
+You sign a rental agreement for the two bedroom apartment. The apartment costs you $1100 per month, plus $100 in utilities. <<set $money to $money - 1200>> 
+You spend $100 in paint and cleaning supplies to make the apartment look nicer. <<set $money to $money - 100>>
+Unfortunately after moving in you discover that the stove and refrigerator do not work. <<set $well to $well - 10>> 
+The apartment owner tells you that you are responsible for replacing them.
 [[Pay to replace the refrigerator and stove.|PayFridge]]
 [[Reach out to the RAP for assistance.|RAPFridge]]
 ===
@@ -417,9 +399,8 @@ tags:
 colorID: 0
 position: 1532,5656
 ---
-<<changeBackground Background BrokenKitchen>>
-It costs you $200 to have the refrigerator and stove repaired. <<set $money to $money - 200>> You now have $[$money] remaining. 
-At least you now have a kitchen to prepare food.
+<<changeBackground Background ApartmentDirty>>
+It costs you $200 to have the refrigerator and stove repaired. <<set $money to $money - 200>> 
 [[Buy groceries for the apartment.|SaadBlock5]]
 ===
 title: RAPFridge
@@ -427,10 +408,10 @@ tags:
 colorID: 0
 position: 1886,5675
 ---
-<<changeBackground Background BrokenKitchen>>
+<<changeBackground Background ApartmentDirty>>
 You contact your caseworker who refers you to an organization that handles housing disputes. 
-It takes several weeks and a lot of stress, but the owner finally agrees to replace the refrigerator and stove. <<set $well to $well - 5>> Your level of wellbeing is now [$well].
-During that time you have to rely on already prepared foods, which is expensive.<<set $food to $food + 1.0>> Your food insecurity score is now [$food]. <<set $money to $money - 100>> You now have $[$money] remaining.
+It takes several weeks and a lot of stress, but the owner finally agrees to replace the refrigerator and stove. <<set $well to $well - 5>>
+During that time you have to rely on pre-prepared foods, which is expensive and increases the severity of your food insecurity.<<set $food to $food + 2.0>> <<set $money to $money - 100>> 
 [[Buy groceries for the apartment.|SaadBlock5]]
 ===
 title: ApartmentC
@@ -439,8 +420,8 @@ colorID: 0
 position: 2244,5222
 ---
 <<changeBackground Background KitchenNiceBig>>
-The three-bedroom apartment is perfect for you. It has three bedrooms, a large kitchen, a sitting room, and a dining area. 
-It even comes with a clothes washer and dryer. The apartment is clean and spacious and all of the appliances are new.                                
+The apartment is perfect for you. It has three bedrooms, a large kitchen, a sitting room, and a dining area. 
+It even comes with a clothes washer and dryer. The apartment is clean and spacious and all of the appliances are new.
 [[Rent Apartment C for $1300/month.|RentApartmentC]]
 [[See Apartment A: One bedroom, $800/month.|ApartmentA]]
 [[See Apartment B: Three bedroom, $1100/month.|ApartmentB]]
@@ -450,8 +431,8 @@ tags:
 colorID: 0
 position: 2512,5707
 ---
-<<changeBackground Background KitchenNiceBig>>
-When your case worker helps you inquire about the apartment you are told that the unit has already been rented to another family. 
+<<changeBackground Background ApartmentDirty>>
+When your case worker helps you inquire about the apartment you are told that the unit has already been rented to another family.<<set $well to $well + 10>>
 There is an identical unit available on the same floor. However, because that unit has a better view, it costs $1600 per month.                                
 [[Rent Apartment C for $1600/month.|RentApartmentC1600]]
 [[See Apartment A: One bedroom, $800/month.|ApartmentA]]
@@ -462,10 +443,10 @@ tags:
 colorID: 0
 position: 2527,6024
 ---
-<<changeBackground Background KitchenNiceBig>>
-You are excited to finally have a place to call your own <<set $well to $well + 10>> Your level of wellbeing is now [$well]. 
-Still, the apartment costs you $1600 per month, plus $100 in utilities. <<set $money to $money - 1700>> You now have $[$money] remaining.
-This is twice the cost of your housing allowance. You will have to live on an extra tight food budget to avoid falling into debt. <<set $food to $food + 1.0>> Your food insecurity score is now [$food].
+<<changeBackground Background ApartmentDirty>>
+You are excited to finally have a place to call your own <<set $well to $well + 20>> 
+Still, the apartment costs you $1600 per month, plus $100 in utilities. <<set $money to $money - 1700>> 
+This is twice the cost of your housing allowance, which puts you at high risk for experiencing food insecurity. <<set $food to $food + 2.0>>
 [[Buy groceries for the apartment.|SaadBlock5]]
 ===
 title: SaadBlock5
@@ -473,7 +454,7 @@ tags:
 colorID: 0
 position: 1947,6436
 ---
-<<changeBackground Background LivingRoom>>
+<<changeBackground Background SaadRoom>>
 Now that you have permanent housing and a working kitchen, you can buy groceries to prepare meals. Where would you like to go?
 [[Budget grocery store 5km away.|BudgetGrocery]]
 [[Middle Eastern Grocery store 1km away.|MiddleEast]]
@@ -485,11 +466,15 @@ colorID: 0
 position: 1952,6762
 ---
 <<changeBackground Background GroceryStore>>
-It costs you $6 in bus fair to get to the budget grocery store and $19 in cab fare to return with your groceries.  <<set $money to $money - 25>> You now have $[$money] remaining.
-You want to buy groceries to last you two weeks. How much do you spend?        
+It costs you $6 in bus fair to get to the budget grocery store and $19 in cab fare to return with your groceries.  <<set $money to $money - 25>> 
+You want to buy groceries to last you two weeks. How much can you afford to spend?	
+<<if $money > 400>>
 [[$400 for two week’s worth of groceries.|BuyHealthy]]
+<<endif>>
+<<if $money > 300>>
 [[$300 for two week’s worth of groceries.|BuyCheapFood]]
-[[$200 for two week’s worth of groceries.|BuyLessFood]]
+<<endif>>
+[[Less than $200 for two week’s worth of groceries.|BuyLessFood]]
 ===
 title: BuyHealthy
 tags: 
@@ -497,41 +482,42 @@ colorID: 0
 position: 1956,7067
 ---
 <<changeBackground Background GroceryStore>>
-For $400, you are able to buy plenty of healthy foods to eat. <<set $money to $money - 400>> You now have $[$money] remaining.<<set $well to $well + 5>> Your level of wellbeing is [$well].
-Still, you worry that long term this level of spending may not be realistic on your current budget. <<set $well to $well - 5>> Your level of wellbeing is now [$well].
-[[Next.|SaadBlock6]]
+For $400, you are able to buy plenty of healthy foods to eat. <<set $money to $money - 400>> <<set $well to $well + 10>> 
+[[Help your daughters get ready for school.|SaadBlock6]]
 ===
 title: BuyCheapFood
 tags: 
 colorID: 0
 position: 1669,7016
 ---
-<<changeBackground Background GroceryStore>>
-For $300, you buy rice, raisins, and a moderate amount of lean meats, fruits, and vegetables to last you two weeks. <<set $money to $money - 300>> You now have $[$money] remaining. 
-You wish you could afford to buy a larger variety of foods to feed your family. <<set $food to $food + 1.0>> Your food insecurity score is now [$food].
-[[Next.|SaadBlock6]]
+<<changeBackground Background BudgetGroceryInside>>
+Canned foods, boxed meals, and frozen foods cost less than fresh foods, so you buy $300 worth of processed foods. <<set $money to $money - 300>> 
+Unfortunately, processed foods tend to be high in sodium and low in nutrition. The poor quality of the food increases your risk of food insecurity. <<set $food to $food + 1.0>> 
+[[Help your daughters get ready for school.|SaadBlock6]]
 ===
 title: BuyLessFood
 tags: 
 colorID: 0
 position: 2272,7030
 ---
-<<changeBackground Background GroceryStore>>
-For $200, you buy rice, raisins, and a limited amount of fruits and vegetables to last you two weeks. <<set $money to $money - 200>> You now have $[$money] remaining.
-It is not a lot of food, and you find yourself skipping meals to ensure your wife and kids have enough to eat. <<set $food to $food + 2.0>> Your food insecurity score is now [$food].
-Your energy levels are low. Long term, this is not a good strategy. <<set $well to $well - 5>> Your level of wellbeing is now [$well].
-[[Next.|SaadBlock6]]
+<<changeBackground Background BudgetGroceryInside>>
+For $175, you buy a large bag of rice and a few simple ingredients to last you for the next two weeks. <<set $money to $money - 175>> 
+You find yourself reducing your food intake to ensure your wife and kids have enough to eat. This increases the severity of your food insecurity. <<set $food to $food + 2.0>> 
+Due to the lack of nutrition, your energy levels are low. Long term, this is not a good strategy. <<set $well to $well - 5>> 
+[[Help your daughters get ready for school.|SaadBlock6]]
 ===
 title: MiddleEast
 tags: 
 colorID: 0
 position: 962,6785
 ---
-<<changeBackground Background MiddleEasterGroceryStore>>
-By going to the Middle Eastern Grocery store, you are able to feel confident that the foods are Halal. <<set $well to $well + 10>> Your level of wellbeing is now [$well].
+<<changeBackground Background MiddleEasternGroceryStore>>
+By going to the Middle Eastern Grocery store, you can feel confident that the foods are Halal. <<set $well to $well + 10>> 
 You save money in transportation costs, but the price of foods are higher here than they would be at a larger budget grocery store.
-How much do you want to spend on groceries each week?
+How much can you afford to spend on groceries each week?
+<<if $money > 450>>
 [[$225.|MiddleEast225]]
+<<endif>>
 [[$175.|MiddleEast175]]
 [[$125.|MiddleEast125]]
 ===
@@ -540,53 +526,52 @@ tags:
 colorID: 0
 position: 651,7110
 ---
-<<changeBackground Background MiddleEasterGroceryStore>>
-Over the course of two weeks, it costs you $450 to feed your family. <<set $money to $money - 450>> You now have $[$money] remaining.
-During this time, you are able to buy a range of healthy foods. With good nutritious foods, your strength starts coming back. <<set $well to $well + 10>> Your level of wellbeing is now [$well].
-Still, you worry that long term this level of spending may not be realistic on your current budget. <<set $well to $well - 5>> Your level of wellbeing is now [$well].
-[[Next.|SaadBlock6]]
+<<changeBackground Background MiddleEasternGroceryStore>>
+Over two weeks, it costs you $450 to buy a range of healthy foods. <<set $money to $money - 450>> <<set $well to $well + 10>> 
+[[Help your daughters get ready for school.|SaadBlock6]]
 ===
 title: MiddleEast175
 tags: 
 colorID: 0
 position: 967,7124
 ---
-<<changeBackground Background MiddleEasterGroceryStore>>
-Over the course of two weeks, it costs you $350 to feed your family. <<set $money to $money - 350>> You now have $[$money] remaining.
-To stick to budget, you mainly eat meals of rice and raisins, with little meat or vegetables or variety. <<set $food to $food + 1.0>> Your food insecurity score is now [$food].
-[[Next.|SaadBlock6]]
+<<changeBackground Background MiddleEasternGroceryStore>>
+Over two weeks, it costs you $350 to feed your family. <<set $money to $money - 350>> 
+To stick to your budget, you mainly eat meals of rice and fruit. These low variety meals increase your risk for food insecurity. <<set $food to $food + 2.0>> 
+[[Help your daughters get ready for school.|SaadBlock6]]
 ===
 title: MiddleEast125
 tags: 
 colorID: 0
 position: 1236,7096
 ---
-<<changeBackground Background MiddleEasterGroceryStore>>
-You buy only the bare minimum amount of food needed to feed your family. <<set $money to $money - 250>> You now have $[$money] remaining.
-The groceries are not enough to feed your family for two weeks. You must skip meals to make the food last. <<set $food to $food + 2.0>> Your food insecurity score is now [$food].
-Without the proper nutrition, you feel tired and sluggish. <<set $well to $well - 10>> Your level of wellbeing is now [$well]. 
-[[Next.|SaadBlock6]]
+<<changeBackground Background MiddleEasternGroceryStore>>
+For $250, you buy only the bare minimum amount of groceries. <<set $money to $money - 250>> 
+With so little food to eat, everyone in your family is at risk of experiencing food insecurity, poor nutrition, and low energy. <<set $food to $food + 3.0>> <<set $well to $well - 10>>
+[[Help your daughters get ready for school.|SaadBlock6]]
 ===
 title: NewFoodBank
 tags: 
 colorID: 0
 position: 2904,6780
 ---
-<<changeBackground Background FoodBank>>
-Going to the food bank is draining. Language barriers are a real problem and there are few Halal options. <<set $well to $well - 5>> Your level of wellbeing is now [$well].
-The food comes in cans and cardboard boxes. Most of the items are completely unfamiliar to you. <<set $food to $food + 1.0>> Your food insecurity score is now [$food].
-The food does not seem to have a lot of nutritional value. You worry about the health of your wife and children. <<set $well to $well - 5>> Your level of wellbeing is now [$well].
-[[Next.|SaadBlock6]]
+<<changeBackground Background FoodBankInside>>
+Going to the food bank is draining. Language barriers are a real problem and there are few Halal options. <<set $well to $well - 5>> 
+The food comes in cans and cardboard boxes. Most of the items are completely unfamiliar to you. <<set $well to $well - 5>> 
+The food does not seem to have a lot of nutritional value. Your risk of food insecurity increases as you worry about the health of your wife and children. <<set $food to $food + 2.0>> 
+[[Help your daughters get ready for school|SaadBlock6]]
 ===
 title: SaadBlock6
 tags: 
 colorID: 0
 position: 1853,7586
 ---
-<<changeBackground Background LivingRoom>>
-Where would you like to go shopping?
+<<changeBackground Background SaadRoom>>
+Your daughters start school in a few weeks. They will each need a backpack, new shoes, clothing, and a few basic school supplies.
+<<if $money > 0>>
 [[Go to a shopping mall.|ShoppingMall]]
 [[Go to a bargain outlet.|BudgetClothes]]
+<<endif>>
 [[Go to the free clothing bank.|ClothesBank]]
 ===
 title: ShoppingMall
@@ -594,12 +579,14 @@ tags:
 colorID: 0
 position: 2413,7840
 ---
-<<changeBackground Background ClothingMall>>
-There is no bus service to the mall, so it costs you $30 in cab fare to get there and back. <<set $money to $money - 30>> You now have $[$money] remaining. 
-What would you like to buy?
-[[Let each daughter pick some new clothes.|AllMall]]
-[[Buy the cheapest clothes available.|SomeMall]]
-[[Buy shoes; skip the clothing.|BasicsMall]]
+<<changeBackground Background Taxi>>
+There is no bus service to the mall, so it costs you $30 in cab fare to get there and back. <<set $money to $money - 30>> 
+You have $[$money]. What can you afford to buy?
+<<if $money > 300>>
+[[Let each daughter pick new clothes.|AllMall]]
+<<endif>>
+[[Pick out cheap clothes for you daughters.|SomeMall]]
+[[Buy only key necessities.|BasicsMall]]
 ===
 title: AllMall
 tags: 
@@ -607,9 +594,8 @@ colorID: 0
 position: 2418,8147
 ---
 <<changeBackground Background ClothingMall>>
-You spend $300 on clothing. <<set $money to $money - 300>> You now have $[$money] remaining. 
-Your daughters are happy that they got to pick out their own clothes. <<set $well to $well + 10>> Your level of wellbeing is now [$well].
-[[Next.|SaadBlock7]]
+Your daughters are thrilled and pick out $300’s worth of clothing. <<set $money to $money - 300>> <<set $well to $well + 10>>
+[[Go with your wife to her doctor’s appointment.|SaadBlock7]]
 ===
 title: SomeMall
 tags: 
@@ -617,9 +603,8 @@ colorID: 0
 position: 2074,8147
 ---
 <<changeBackground Background ClothingMall>>
-You spend $200 on the cheapest clothing you can find at the mall. <<set $money to $money - 200>> You now have $[$money] remaining.
-Your kids are happy to have some new clothes. <<set $well to $well + 5>> Your level of wellbeing is now [$well].
-[[Next.|SaadBlock7]]
+You pick out $200’s worth of clothing for your children. They are happy. <<set $money to $money - 200>> <<set $well to $well + 5>> 
+[[Go with your wife to her doctor’s appointment.|SaadBlock7]]
 ===
 title: BasicsMall
 tags: 
@@ -627,21 +612,24 @@ colorID: 0
 position: 2777,8152
 ---
 <<changeBackground Background ClothingMall>>
-You spend $100 on a backpack and new shoes for each of your daughters. <<set $money to $money - 100>> You now have $[$money] remaining.
-Your children are disappointed that they did not get to pick out new clothes. <<set $well to $well - 5>> Your level of wellbeing is now [$well].
-[[Next.|SaadBlock7]]
+You spend $100 on a backpack and new shoes for each of your daughters. <<set $money to $money - 100>> 
+Your children are disappointed that they did not get to pick out new clothes. <<set $well to $well - 5>> 
+[[Go with your wife to her doctor’s appointment.|SaadBlock7]]
 ===
 title: BudgetClothes
 tags: 
 colorID: 0
 position: 755,7931
 ---
-<<changeBackground Background ClothingMall>>
-It costs you $3 in transportation costs to travel to the bargain outlet. <<set $money to $money - 3>> You now have $[$money] remaining. 
-What would you like to buy? 
-[[Let each daughter pick some new clothes.|AllBudget]]
-[[Buy the cheapest clothes available.|SomeBudget]]
-[[Buy shoes; skip the clothing.|BasicsBudget]]
+<<changeBackground Background BargainShoppingCentre>>
+It costs you $3 in transportation costs to travel to the bargain outlet. <<set $money to $money - 3>> 
+You have $[$money]. What can you afford to buy?
+<<if $money > 200>>
+[[Let each daughter pick new clothes.|AllBudget]]
+<<endif>>
+[[Pick out cheap clothes for you daughters.|SomeBudget]]
+[[Buy only key necessities.|BasicsBudget]]
+
 ===
 title: AllBudget
 tags: 
@@ -649,10 +637,11 @@ colorID: 0
 position: 391,8293
 ---
 <<changeBackground Background ClothingBargain>>
-You spend $200 on clothing. <<set $money to $money - 200>> You now have $[$money] remaining. 
-Your kids are happy to get new clothes. <<set $well to $well + 5>> Your level of wellbeing is now [$well]. 
-But now you need to find a way to get all of your purchases home.
+You spend $200  and your kids are happy to get new clothing. <<set $money to $money - 200>> <<set $well to $well + 5>> 
+Now you just need to find a way to get all of your purchases home.
+<<if $money > 15>>
 [[Take a cab/car service.|ClothesCab]]
+<<endif>>
 [[Take public transit.|ClothesTransit]]
 ===
 title: SomeBudget
@@ -661,10 +650,12 @@ colorID: 0
 position: 698,8309
 ---
 <<changeBackground Background ClothingBargain>>
-You spend $150 on the cheapest clothing you can find at the store. <<set $money to $money - 150>> You now have $[$money] remaining
-Your children are disappointed that they did not get to pick out what they wanted. <<set $well to $well - 5>> Your level of wellbeing is now [$well].
-Now you need to find a way to get all of your purchases home.
+You spend $150 on the cheapest clothing you can find at the store. <<set $money to $money - 150>> 
+Your children are disappointed that they did not get to pick out what they wanted. <<set $well to $well - 5>> 
+Plus,you still need to find a way to get all of your purchases home.
+<<if $money > 15>>
 [[Take a cab/car service.|ClothesCab]]
+<<endif>>
 [[Take public transit.|ClothesTransit]]
 ===
 title: BasicsBudget
@@ -673,9 +664,9 @@ colorID: 0
 position: 1051,8341
 ---
 <<changeBackground Background ClothingBargain>>
-You spend $75 on a backpack and new shoes for each of your daughters. <<set $money to $money - 75>> You now have $[$money] remaining.
-Your kids are disappointed that they did not get any new clothes. <<set $well to $well - 5>> Your level of wellbeing is now [$well].
-[[Next.|SaadBlock7]]
+You spend $75 on a backpack and new shoes for each of your daughters. <<set $money to $money - 75>> 
+Your kids are disappointed that they did not get any new clothes. <<set $well to $well - 5>> 
+[[Go with your wife to her doctor’s appointment.|SaadBlock7]]
 ===
 title: ClothesBank
 tags: 
@@ -683,10 +674,12 @@ colorID: 0
 position: 1626,8156
 ---
 <<changeBackground Background ClothingUsed>>
-You spend $3 to take public transit to the clothing bank. <<set $money to $money - 3>> You now have $[$money] remaining.
-As a new refugee you receive clothes, shoes, and a backpack at no additional cost to you. <<set $well to $well + 5>> Your level of wellbeing is now [$well].
-Now you need to find a way to get all of this clothing home.
+You spend $3 to take public transit to the clothing bank. <<set $money to $money - 3>> 
+As a new refugee you receive clothes, shoes, and a backpack at no additional cost to you. <<set $well to $well + 5>> 
+Now you need to find a way to get all of this clothing home
+<<if $money > 15>>
 [[Take a cab/car service.|ClothesCab]]
+<<endif>>
 [[Take public transit.|ClothesTransit]]
 ===
 title: ClothesCab
@@ -695,8 +688,8 @@ colorID: 0
 position: 1258,8643
 ---
 <<changeBackground Background Taxi>>
-The ride costs you $15. <<set $money to $money - 15>> You now have $[$money] remaining. The ride home is a relaxing and easy. <<set $well to $well + 5>> Your level of wellbeing is now [$well].
-[[Next.|SaadBlock7]]
+The ride costs you $15, but it is relaxing and easy. <<set $money to $money - 15>> <<set $well to $well + 5>> 
+[[Go with your wife to her doctor’s appointment.|SaadBlock7]]
 ===
 title: ClothesTransit
 tags: 
@@ -705,21 +698,22 @@ position: 1103,9397
 ---
 <<changeBackground Background Bus>>
 With effort, you gather up the bags of clothing and walk to the bus station. 
-The ride is cheap ($3), but the trip is long. <<set $money to $money - 3>> You now have $[$money] remaining. <<set $well to $well + 5>> Your level of wellbeing is now [$well].
-[[Next.|SaadBlock7]]
+The ride is cheap ($3), but the trip is long. <set $money to $money - 3>> <<set $well to $well + 5>> 
+[[Go with your wife to her doctor’s appointment.|SaadBlock7]]
 ===
 title: SaadBlock7
 tags: 
 colorID: 0
 position: 3668,9124
 ---
-<<changeBackground Background LivingRoom>>
+<<changeBackground Background Hospital>>
 At a routine prenatal appointment, a blood test reveals that your wife is not getting enough iron in her diet. 
-Her doctor recommends that she increase the amount of meat, eggs, and leafy greens in her diet for the rest of her pregnancy.
-It is time for you to buy groceries again. What do you want to prioritize?
-[[Buy high iron foods for your wife.|HighIron]]
-[[Strike a balance between health and cost.|StrikeBalance]]
-[[Find the cheapest way possible to get food.|CheapestFood]]
+Her doctor recommends that for the rest of her pregnancy she increase the amount of meat, eggs, and leafy greens that she consumes.
+<<if $money > 400>>
+[[Buy all of the high iron foods your wife needs.|HighIron]]
+<<endif>>
+[[Strike a balance between nutrition and cost.|StrikeBalance]]
+[[Find the cheapest way possible to get iron.|CheapestFood]]
 ===
 title: HighIron
 tags: 
@@ -727,9 +721,9 @@ colorID: 0
 position: 3660,9487
 ---
 <<changeBackground Background GroceryStore>>
-For $400, you are able to buy plenty of high iron foods for your wife and children to eat over the next two weeks. <<set $money to $money - 400>> You now have $[$money] remaining.
-The change in diet seems to help. Your wife has more energy and is looking healthier each day. <<set $well to $well + 10>> Your level of wellbeing is [$well].
-[[Next.|SaadBlock8]]
+For $400, you are able to buy plenty of high iron foods for your wife to eat over the next few weeks. <<set $money to $money - 400>> 
+The change in diet seems to help. Your wife has more energy and is looking healthier each day. <<set $well to $well + 10>> 
+[[Drop your kids off for their first day of school.|SaadBlock8]]
 ===
 title: StrikeBalance
 tags: 
@@ -737,11 +731,10 @@ colorID: 0
 position: 4036,9515
 ---
 <<changeBackground Background GroceryStore>>
-Given your limited income, you must strike a balance between health and cost.
-How much do you want to spend on groceries each week?
-[[$200.|HighIron]]
-[[$150.|Balance150]]
-[[$100.|Balance100]]
+Given your limited income, how would you like to you ensure that your wife gets enough iron?
+[[Skip your own meals to buy high iron foods.|Balance150]]
+[[Buy iron fortified foods, such as cereal.|Balance100]]
+[[Explore community options for getting high iron foods.|CheapestFood]]
 ===
 title: Balance150
 tags: 
@@ -749,10 +742,10 @@ colorID: 0
 position: 4088,9982
 ---
 <<changeBackground Background GroceryStore>>
-For $300, you are only able to buy a few more high iron foods for your wife to eat over the next two weeks. <<set $money to $money - 300>> You now have $[$money] remaining.
-The increase in iron intake does seem help a little bit. Your wife seems to have a little bit more energy than she did before <<set $well to $well + 5>> Your level of wellbeing is [$well]. 
-You wish you could afford to buy even more iron rich foods for her. <<set $food to $food + 1.0>> Your food insecurity score is now [$food].
-[[Next.|SaadBlock8]]
+By cutting back on your own food intake, you are able to buy two week’s worth of high iron foods for your wife for $300. <<set $money to $money - 300>> 
+The increase in iron intake seems to help your wife a lot. She has more energy than she did before. <<set $well to $well + 10>> 
+You, on the other hand, are feeling the consequences of skipping meals, as you feel tired all of the time. <<set $food to $food + 2>> <<set $well to $well - 10>> 
+[[Drop your kids off for their first day of school.|SaadBlock8]]
 ===
 title: Balance100
 tags: 
@@ -760,34 +753,36 @@ colorID: 0
 position: 3867,9954
 ---
 <<changeBackground Background GroceryStore>>
-On your budget, you cannot afford to buy high iron foods, which tend to be more expensive than low nutrient foods. <<set $food to $food + 2.0>> Your food insecurity score is now [$food].
-Even buying only the bare minimum amount of food needed to feed your family, groceries still cost you $250 for two weeks. <<set $money to $money - 250>> You now have $[$money] remaining. 
-You worry about the health of your wife and children. <<set $well to $well - 10>> Your level of wellbeing is now [$well].
-[[Next.|SaadBlock8]]
+On your budget, you cannot afford to buy foods that are naturally high in iron, so you opt to buy $300 worth of iron fortified processed foods. <<set $money to $money - 300>> 
+These foods are cheaper than fresh foods, but not as effective as natural sources of iron. Still, it is better than nothing.
+Unfortunately, your inability to afford the foods that you and your family need increases the severity of your food insecurity. <<set $food to $food + 2.0>> 
+[[Drop your kids off for their first day of school.|SaadBlock8]]
 ===
 title: CheapestFood
 tags: 
 colorID: 0
 position: 4385,9497
 ---
-<<changeBackground Background FoodBank>>
-You remain dependent on the low nutrient processed foods you are able to get from the food bank. <<set $food to $food + 1.0>> Your food insecurity score is now [$food].
-However, twice per week, you and the children take public transit to the Muslim Community Centre for their family meal. <<set $money to $money - 12>> You now have $[$money] remaining. 
-You are able to bring home a warm meal for your wife, which ensures that she eats an iron rich meal twice per week. <<set $well to $well + 5>> Your level of wellbeing is now [$well].
-[[Next.|SaadBlock8]]
+<<changeBackground Background FoodBankInside>>
+Being low on money, you must rely on a food bank, which carries processed foods that are low  in nutrients. This puts you at risk for food insecurity. <<set $food to $food + 2.0>> 
+<<changeBackground Background CommunityDining>>
+Fortunately, twice per week you and the children also take public transit to the Muslim Community Centre for their family meal. <<set $money to $money - 12>> 
+You are able to bring home a warm meal for your wife, which ensures that she eats an iron rich meal twice per week. <<set $well to $well + 5>> 
+[[Drop your kids off for their first day of school.|SaadBlock8]]
 ===
 title: SaadBlock8
 tags: 
 colorID: 0
 position: 3952,11001
 ---
-<<changeBackground Background School>>
+<<changeBackground Background SchoolCafeteria>>
 After their first day of school, the children report mixed reviews about their experiences. 
 Your two older daughters felt different from their classmates, especially when it came to their lunches. 
 Tomorrow, they would like you to pack them a more “Canadian” lunch, with a turkey and cheese sandwich, goldfish crackers, carrot sticks, and a cookie. 
-You do not currently have these types of groceries in your home. 
-What would you like to do?        
+You do not currently have these types of groceries in your home.
+<<if $money > 30>>
 [[Go to the store to buy the ingredients.|BuyIngredients]]
+<<endif>>
 [[Try to make these items from existing ingredients.|UseExisting]]
 [[Explain why you want to pack food from home.|ExplainHome]]
 ===
@@ -796,45 +791,47 @@ tags:
 colorID: 0
 position: 3956,11356
 ---
-<<changeBackground Background School>>
-You and your children take the bus to the store and pick out the items that they want in their lunch. <<set $money to $money - 30>> You now have $[$money] remaining.
-You are not happy about the costs, but your daughters seem happier the next day at school.
-[[Next.|SaadBlock9]]
+<<changeBackground Background SchoolCafeteria>>
+You and your children take the bus to the store and pick out the items that they want in their lunch. <<set $money to $money - 30>> 
+You are not happy about the added costs, but your daughters seem happier the next day at school. <<set $well to $well + 5>>
+Your risk of food insecurity increases as you feel uncertain how to maintain your food connections to Syria, while also fitting into Canada. <<set $food to $food + 1.0>>
+[[Attend the birth of your son.|SaadBlock9]]
 ===
 title: UseExisting
 tags: 
 colorID: 0
 position: 3645,11346
 ---
-<<changeBackground Background School>>
-You use ingredients you have at home to make a lunch like the one described to you. 
+<<changeBackground Background SchoolCafeteria>>
+You use ingredients that you have at home to make a lunch like the one described to you. 
 When your oldest daughter sees the lunch, she looks at you in horror and bursts into tears. “This is not what I meant!” 
-You waver between anger at her lack of appreciation and deep sadness for the difficult transition that your children are having to make. <<set $well to $well - 5>> Your level of wellbeing is now [$well].
-You feel caught between two worlds and uncertain how to maintain your food connections to Syria, while also fitting into Canada. <<set $food to $food + 0.5>> Your food insecurity score is now [$food].
-[[Next.|SaadBlock9]]
+You waver between anger at her lack of appreciation and deep sadness for the difficult transition that your children are having to make. <<set $well to $well - 15>> 
+Your risk of food insecurity increases as you feel uncertain how to maintain your food connections to Syria, while also fitting into Canada. <<set $food to $food + 2.0>> 
+[[Attend the birth of your son.|SaadBlock9]]
 ===
 title: ExplainHome
 tags: 
 colorID: 0
 position: 4215,11341
 ---
-<<changeBackground Background School>>
-You tell your daughters how making foods from Syria help you hold on to your memories of home and family. 
-Your discussion is a lovely chance to connect with your daughters and help each other with your feelings of homesickness. <<set $well to $well + 5>> Your level of wellbeing is now [$well].
-But, you all feel uncertain how you will maintain your food connections to Syria, while also fitting into Canada. <<set $food to $food + 0.5>> Your food insecurity score is now [$food].
-[[Next.|SaadBlock9]]
+<<changeBackground Background SchoolCafeteria>>
+You tell your daughters how cooking foods from Syria help you stay connected to your memories of home and family. 
+The conversation about food provides you with an opportunity to bond with your daughters. <<set $well to $well + 5>> 
+Still, your risk of food insecurity increases as you feel uncertain how to maintain your food connections with Syria, while also fitting into Canada. <<set $food to $food + 1.0>> 
+[[Attend the birth of your son.|SaadBlock9]]
 ===
 title: SaadBlock9
 tags: 
 colorID: 0
 position: 3932,11728
 ---
-<<changeBackground Background MiddleEasternStreetFestival>>
+<<changeBackground Background MiddleEasternFestival>>
 Your wife goes into labour and you welcome a fourth child into your family! 
 When your first three children were born, you hosted an aqeeqah (birth ceremony) to welcome your baby. 
 Each time, your family members would bring traditional dishes and you would supply a roasted lamb to feed your family, friends, and neighbors. 
-You think that holding a traditional aqeeqah is important for marking the occasion of your fourth child’s birth.         
+<<if $money > 199>>
 [[Host a traditional aqeeqah with neighbours.|HostAqeeqah]]
+<<endif>>
 [[Have a small celebration with just your family.|CelebrateWithFamily]]
 [[Wait until you can afford a large celebration.|WaitAqeeqah]]
 ===
@@ -843,32 +840,33 @@ tags:
 colorID: 0
 position: 3631,12034
 ---
-<<changeBackground Background MiddleEasternStreetFestival>>
-You invite your new neighbors and friends to mark the occasion of the birth of your fourth child. The party costs you $200, but it is worth it. <<set $money to $money - 30>> You now have $[$money] remaining. <<set $well to $well + 10>> Your level of wellbeing is now [$well].
+<<changeBackground Background MiddleEasternFestival>>				
+You invite your new neighbors and friends to mark the occasion of the birth of your fourth child. The party costs you $200, but it is worth it. <<set $money to $money - 200>> <<set $well to $well + 10>> 
 Slowly, as you make friends, Canada is starting to feel like a place you could call home. 
-[[Next.|SaadDebrief]]
+[[Did you succeed in your quest to help Saad?|SaadDebrief]]
 ===
 title: CelebrateWithFamily
 tags: 
 colorID: 0
 position: 3942,12024
 ---
-<<changeBackground Background MiddleEasternStreetFestival>>
-You order a small leg of lamb from the butcher and make a nice meal for your wife and daughters.  <<set $money to $money - 50>> You now have $[$money] remaining.
-Even if the celebration is small, it feels good to mark the occasion of your fourth child’s birth.  <<set $well to $well + 5>> Your level of wellbeing is now [$well].
+<<changeBackground Background MiddleEasternFestival>>
+You order a small leg of lamb from the butcher and make a nice meal for your wife and daughters.  <<set $money to $money - 50>> 
+Even if the celebration is small, it feels good to mark the occasion of your fourth child’s birth.  <<set $well to $well + 5>> 
 It will take time, but eventually Canada will start to feel like a place you could call home. 
-[[Next.|SaadDebrief]]
+[[Did you succeed in your quest to help Saad?|SaadDebrief]]
 ===
 title: WaitAqeeqah
 tags: 
 colorID: 0
 position: 4244,12015
 ---
-<<changeBackground Background MiddleEasternStreetFestival>>
+<<changeBackground Background MiddleEasternFestival>>
 The birth of your child brings you great joy, but the new baby also reminds you of all that you have lost. 
-You miss sharing large celebratory meals with family and friends. You miss your traditions and your comfort foods. <<set $well to $well - 5>> Your level of wellbeing is now [$well].
+You miss sharing large celebratory meals with family and friends. You miss your traditions and your comfort foods. <<set $well to $well - 10>> 
+Not being able to access culturally appropriate foods increases your risk of food insecurity. <<set $food to $food + 1>> 
 You know that eventually you will feel more at ease here, but for now, Canada does not yet feel like “home”. 
-[[Next.|SaadDebrief]]
+[[Did you succeed in your quest to help Saad?|SaadDebrief]]
 ===
 title: SaadDebrief
 tags: 

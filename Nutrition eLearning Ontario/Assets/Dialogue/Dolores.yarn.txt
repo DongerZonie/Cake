@@ -1,23 +1,15 @@
-title: Start
-tags: 
-colorID: 0
-position: 429,-487
----
-Dolores is a 27 year old First Nations single mother with two sons. She just earned a nursing degree. 
-She has a job offer that requires her to move to a new city. 
-As a single mother, Dolores has very little time and two extra mouths to feed.
-Can you help Dolores stay food secure as she gets settled in a new city?
-[[DeeBlock1]]
 ===
 title: DeeBlock1
 tags: 
 colorID: 0
 position: 429,-486
 ---
-<<set $money to 6000>>
+<<set $money to 3500>>
 <<set $well to 50>>
 <<set $food to 0>>
-You start the game with $[$money]. Your current level of wellbeing is [$well]. You start the game with a food insecurity score of [$food].
+<<changeBackground Background DoloresRoom>>
+You have managed to save $3,500 to finance your move. 
+You have a $500 limit on your credit card. If you go more than $500 in debt, you will incur large overdraw penalties.  
 You need to find an apartment in your new city. What would you like to do?
 [[Make a trip to the new city to see the apartments in person.|Trip]]
 [[Try to secure an apartment online.|RentOnline]]
@@ -28,6 +20,7 @@ tags:
 colorID: 0
 position: -412,5
 ---
+<<changeBackground Background DoloresRoom>>
 You do not have a car and the city is more than a four hour drive away. How will you get there?
 [[Take public transportation. Each ticket costs $30|Transit]]
 [[Rent a car for $200 a day|RentCar]]
@@ -38,10 +31,9 @@ tags:
 colorID: 0
 position: -655,436
 ---
-You buy three round trip tickets for you and your two children, with tax it comes out to $100. <<set $money to $money - 100>> You now have $[$money] remaining.
-The bus trip takes 7 hours! By the time you arrive in the city, you are only able to see a few apartments before you have to leave. 
-<<set $well to $well - 5>> Your wellbeing is now [$well]. 
-Fortunately, you were able to identify three potential apartments.
+<<changeBackground Background Bus>>
+You buy three round trip tickets for you and your two children, with tax it comes out to $100. <<set $money to $money - 100>> 
+The bus trip takes 7 hours! By the time you arrive in the city, you are only able to see a few apartments. <<set $well to $well - 5>>
 [[View the apartment choices|DeeBlock2]]
 ===
 title: RentCar
@@ -49,9 +41,9 @@ tags:
 colorID: 0
 position: -278,424
 ---
-You rent a car for the day. After tax, insurance, and gas, the bill is $300! <<set $money to $money - 300>> You now have $[$money] remaining.
-It’s a long drive to the city, but you and your children have a great time! <<set $well to $well + 5>> Your level of wellbeing is now [$well].
-In addition, you were able to identify three potential apartments.
+<<changeBackground Background RentalCar>>
+You rent a car for the day. After tax, insurance, and gas, the bill is $300. <<set $money to $money - 300>> 
+It’s a long drive to the city, but you and your children have a great time and see several potential apartments. <<set $well to $well + 5>> 
 [[View the apartment choices|DeeBlock2]]
 ===
 title: RentOnline
@@ -59,6 +51,7 @@ tags:
 colorID: 0
 position: 328,37
 ---
+<<changeBackground Background ComputerRoom>>
 Using the internet, you identify a few housing opportunities. One seems perfect for you. 
 It is a 3-bedroom apartment for $1200. You can hold the apartment for only a $500 cash deposit.
 <<if visited("MailIn") is false>>
@@ -72,10 +65,9 @@ tags:
 colorID: 0
 position: 454,413
 ---
-You mail in the $500 cash deposit and wait for the owner of the property to mail the lease. <<set $money to $money - 500>> You now have $[$money] remaining. 
-A week goes by and you hear nothing. You email the woman and get no response. 
-When you try to call, the number has been disconnected. You have been scammed! <<set $well to $well - 10>> Your level of wellbeing is now [$well]. 
-What do you do?
+<<changeBackground Background Dollars2>>
+You mail in the $500 cash deposit and wait for the owner of the property to mail the lease. <<set $money to $money - 500>> 
+A week goes by and you hear nothing. When you try to call, the number has been disconnected. You have been scammed! <<set $well to $well - 20>> 
 [[Report the scam to the police.|Police]]
 [[Travel to the city to look for apartments in person.|Trip]]
 [[Reach out to a Friendship Center for advice.|Friendship]]
@@ -85,10 +77,12 @@ tags:
 colorID: 0
 position: 112,420
 ---
-You arrange a babysitter so you can go down to the police station. Once there you have to wait for two hours before an officer is available. 
-The officer asks you completely irrelevant questions, such as whether you were drinking when it happened. 
-Clearly, this officer is not going to take your claim seriously! Now you are out the cost of the deposit money and you’ve wasted half a day at the police station
- <<set $well to $well - 15>> Your level of wellbeing is now [$well]. What do you want to do now?
+<<changeBackground Background PoliceStation>>
+You arrange for a babysitter so you can go down to the police station. <<set $well to $well - 5>> 
+The officer spends most of his time asking you completely irrelevant questions, such as whether you were drinking when it happened. 
+Is the officer trying to suggest that you are making it up or somehow to blame? <<set $well to $well - 5>> 
+Clearly, this officer is not going to take your claim seriously. <<set $well to $well - 5>>
+Now you are out the cost of the deposit money and you’ve wasted half a day at the police station. <<set $well to $well - 10>>
 [[Travel to the city to look for apartments in person.|Trip]]
 [[Try looking online again.|TryAgain]]
 [[Reach out to a Friendship Center.|Friendship]]
@@ -98,7 +92,8 @@ tags:
 colorID: 0
 position: 102,733
 ---
-You are nervous that you will get scammed again, but you cannot afford to spend any more money. <<set $well to $well - 5>> Your level of wellbeing is now [$well]. 
+<<changeBackground Background ComputerRoom>>
+You are nervous that you will get scammed again, but you cannot afford to spend any more money. <<set $well to $well - 5>> 
 After a careful online search, you find three apartment possibilities.
 [[View the apartment choices|DeeBlock2]]
 ===
@@ -107,7 +102,8 @@ tags:
 colorID: 0
 position: 1110,894
 ---
-Many cities have Indigenous Friendship Centers. These non-for-profit organizations support indigenous people in many ways. 
+<<changeBackground Background FriendshipCentreSearch>>
+Many cities have Indigenous Friendship Centers. These organizations support indigenous people in many ways. 
 You call the Friendship Centre in your new city. They suggest that you visit the center before moving. A volunteer can help you look for apartments. 
 [[Take public transportation to visit the city.|TransitVolunteer]]
 [[Rent a car to visit the city.|RentCarVolunteer]]
@@ -118,9 +114,9 @@ tags:
 colorID: 0
 position: 1274,1173
 ---
-Three round trip bus tickets, with tax, cost you $100. <<set $money to $money - 100>> You now have $[$money] remaining. 
-The trip is long, but fun. The volunteer is great! She is able to provide you with a lot of information. <<set $well to $well + 10>> Your level of wellbeing is now [$well].
-Plus, now you have some apartment options to choose from!
+<<changeBackground Background Bus>>
+Three round trip bus tickets, with tax, cost you $100. <<set $money to $money - 100>>
+The trip is long, but fun. The volunteer is great! She is able to show you several apartments. <<set $well to $well + 10>> 
 [[View the apartment choices|DeeBlock2]]
 ===
 title: RentCarVolunteer
@@ -128,9 +124,9 @@ tags:
 colorID: 0
 position: 975,1175
 ---
-You rent a car for the day. After tax, rental insurance, and gas, the total bill is $300! <<set $money to $money - 300>> You now have $[$money] remaining 
-The road trip is fun and the volunteer is great! She is able to provide you with a lot of information. <<set $well to $well + 10>> Your level of wellbeing is now [$well].
-In addition, you were able to find some potential apartments.
+<<changeBackground Background Rental>>
+You rent a car for the day. After tax, rental insurance, and gas, the total bill is $300. <<set $money to $money - 300>>
+The road trip is fun and the volunteer is great! She is able to show you several apartments. <<set $well to $well + 10>>
 [[View the apartment choices|DeeBlock2]]
 ===
 title: DeeBlock2
@@ -138,6 +134,7 @@ tags:
 colorID: 0
 position: -97,1867
 ---
+<<changeBackground Background City>>
 You have identified three apartment options. Select an apartment to learn more.
 [[Apartment A: 3 bedrooms, $800 per month.|ApartmentA]]
 [[Apartment B: 2 bedrooms, $1100 per month.|ApartmentB]]
@@ -148,42 +145,47 @@ tags:
 colorID: 0
 position: -487,2498
 ---
+<<changeBackground Background ApartmentStripMall>>
 Apartment A is a large 3 bedroom apartment in a commuter city 20km from where you will be working. You would need to buy a car.
 [[Rent Apartment A for $800 per month|RentApartmentA]]
-[[Learn about Apartment B (2 bedrooms, $1100/month)|ApartmentB]]
-[[Learn about Apartment C (2 bedrooms, $1300/month)|ApartmentC]]
+[[View/rent Apartment B, instead ($1100/month)|ApartmentB]]
+[[View/rent Apartment C, instead ($1300/month)|ApartmentC]]
 ===
 title: ApartmentB
 tags: 
 colorID: 0
 position: -112,2326
 ---
+<<changeBackground Background ApartmentBuildingTreeStreet>>
 Apartment B is a 2 bedroom apartment in a pretty suburb located just outside the city core. It is near a bus line. You could take public transit to work. 
 [[Rent Apartment B for $1100 per month|RentApartmentB]]
-[[Learn about Apartment A (3 bedrooms, $800/month|ApartmentA]]
-[[Learn about Apartment C (2 bedrooms, $1300/month)|ApartmentC]]
+[[View/rent Apartment A, instead ($800/month)|ApartmentA]]
+[[View/rent Apartment C, instead ($1300/month)|ApartmentC]]
 ===
 title: ApartmentC
 tags: 
 colorID: 0
 position: 232,2500
 ---
+<<changeBackground Background ApartmentBuildingHospital>>
 Apartment C is a small 2 bedroom apartment in the heart of the city within walking distance of the hospital. You could walk to work.
 [[Rent Apartment C for $1300 per month|RentApartmentC]]
-[[Learn about Apartment A (3 bedrooms, $800/month|ApartmentA]]
-[[Learn about Apartment B (2 bedrooms, $1100/month)|ApartmentB]]
+[[View/rent Apartment A, instead ($800/month|ApartmentA]]
+[[View/rent Apartment B, instead ($1100/month)|ApartmentB]]
 ===
 title: RentApartmentA
 tags: 
 colorID: 0
 position: -500,2802
 ---
-You are excited to have a large spacious apartment with plenty of room for your children to play. <<set $well to $well + 5>> Your level of wellbeing is now [$well].
-To secure the apartment you must pay the first month’s rent ($800) and the last month’s rent ($800). <<set $money to $money - 1600>> You now have $[$money] remaining. 
-You will also need to pay for utilities (electricity, heat, water, etc.), including initial hook-up fees. The cost is $400! <<set $money to $money - 400>> You now have $[$money] remaining. 
-To get to work, you need a car. The initial costs of a down payment, insurance, gas, and parking costs you $400. <<set $money to $money - 400>> You now have $[$money] remaining 
-Moving forward, your rent, utilities, car costs, and student loan payments will cost you $2000 per month.
-You are worried about how you will afford to buy food on top of all of these expenses! <<set $food to $food + 0.5>> Your food insecurity score is now [$food].<<set $well to $well - 5>>Your wellness is now [$well]
+<<changeBackground Background ApartmentStripMall>>
+You are excited to have a large spacious apartment with plenty of room for your children to play. <<set $well to $well + 10>>
+To secure the apartment you must pay the first month’s rent ($800) and the last month’s rent ($800). <<set $money to $money - 1600>> 
+You will also need to pay for utilities (electricity, heat, water, etc.), including initial hook-up fees. The cost is $400. <<set $money to $money - 400>>
+To get to work, you need a car. The initial costs of a down payment, insurance, gas, and parking are $400. <<set $money to $money - 400>>
+The cost to rent a moving van is $100. <<set $money to $money - 100>>
+The move, alone, cost you $2,500, leaving you with just $[$money].
+The high cost of the move puts you at high risk for food insecurity. <<set $food to $food + 1.0>>
 [[Move to the new city.|DeeBlock3]]
 ===
 title: RentApartmentB
@@ -191,26 +193,29 @@ tags:
 colorID: 0
 position: -127,2792
 ---
-You are excited to live in a lovely neighborhood, with plenty of parks for your children to roam. <<set $well to $well + 10>> Your level of wellbeing is now [$well]. 
-To secure the apartment you must pay the first month’s rent ($1100) and the last month’s rent ($1100). <<set $money to $money - 2200>> You now have $[$money] remaining 
-You will also need to pay for utilities (electricity, heat, water, etc.), including initial hook-up fees. The cost is $350! <<set $money to $money - 350>> You now have $[$money] remaining.
-You now have $[$money] remaining 
-You will also need a $150 monthly transit pass. <<set $money to $money - 150>> You now have $[$money] remaining 
-Moving forward, your rent, utilities, transit pass, and student loan payments will cost you $2000 per month.
-You are worried about how you will afford to buy food on top of all of these expenses! <<set $food to $food + 0.5>> Your food insecurity score is now [$food].
- [[Move to the new city.|DeeBlock3]]
+<<changeBackground Background ApartmentBuildingTreeStreet>>
+You are excited to live in a lovely neighborhood, with plenty of parks for your children to roam. <<set $well to $well + 30>> 
+To secure the apartment you must pay the first month’s rent ($1100) and the last month’s rent ($1100). <<set $money to $money - 2200>>
+It will also cost you $350 to pay the initial hook-up fees for utilities (electricity, heat, water, etc.). <<set $money to $money - 350 >>
+You will also need a $150 monthly transit pass. <<set $money to $money - 150>> 
+The cost to rent a moving van is $100. <<set $money to $money - 100>>
+The move, alone, cost you $2,800, leaving you with just $[$money] remaining.
+The high cost of the move puts you at risk for food insecurity. <<set $food to $food + 1.0>>
+[[Move to the new city.|DeeBlock3]]
 ===
 title: RentApartmentC
 tags: 
 colorID: 0
 position: 248,2785
 ---
-You are excited to live in the heart of the city. It will be convenient for you to be so close to everything. <<set $well to $well + 10>> Your level of wellbeing is now [$well]. 
-To secure the apartment you must pay the first month’s rent ($1300) and the last month’s rent ($1300). <<set $money to $money - 2600>> You now have $[$money] remaining 
-The rent on your apartment includes utilities. One less thing for you to worry about! <<set $well to $well + 5>> Your level of wellbeing is now [$well]. 
-You can walk or take transit to most things. Altogether, transit costs should cost you only $100 per month. <<set $money to $money - 100>> You now have $[$money] remaining 
-Moving forward, your rent, utilities, transportation, and student loan payments will cost you around $2000 per month.
-You are worried about how you will afford to buy food on top of all of these expenses! <<set $food to $food + 0.5>> Your food insecurity score is now [$food].
+<<changeBackground Background ApartmentBuildingHospital>>
+You are excited to live in the heart of the city. It will be convenient for you to be so close to everything. <<set $well to $well + 30>>
+To secure the apartment you must pay the first month’s rent ($1300) and the last month’s rent ($1300). <<set $money to $money - 2600>>
+The rent on your apartment includes utilities. One less thing for you to worry about. <<set $well to $well + 5>>
+You can walk or take transit to most things.
+The cost to rent a moving van is $100. You will also need to pay $50 for a city permit to park the moving van. <<set $money to $money - 150>>
+The move costs you $2,750, leaving you with just $[$money] remaining.
+The high cost of the move puts you at risk for food insecurity. <<set $food to $food + 1.0>>
 [[Move to the new city.|DeeBlock3]]
 ===
 title: DeeBlock3
@@ -218,8 +223,10 @@ tags:
 colorID: 0
 position: -188,4020
 ---
-It is the beginning of September, and you have officially moved to the new city. Now you need to buy groceries to last you a few weeks.
-There is a small grocery store close to you, a large bargain grocery store almost an hour away, and a food bank down the block from you. Where do you want to go?
+<<changeBackground Background DoloresRoom>>
+With most of your kitchen gear still in boxes, you spend over $100 buying greasy fast food your first week in the new city. <<set $money to $money - 100>> 
+Eating fast food, which is low in nutrition puts you at risk for food insecurity. <<set $food to $food + 1.0>> You need to buy groceries soon. 
+There is a small grocery store close to you, a large bargain grocery store almost an hour away, and a food bank down the block from you. 
 [[Check out the grocery store near you.|Local]]
 [[Travel to the bargain grocery store.|Budget]]
 [[Go to the foodbank.|FoodBank]]
@@ -229,9 +236,10 @@ tags:
 colorID: 0
 position: -171,4394
 ---
+<<changeBackground Background OrganicGroceryStore>>
 The grocery store near you is an organic grocery store. There are a lot of fresh and healthy food choices. However, the food is very expensive. 
-They also do not carry the traditional foods that you associate with your First Nations community. What do you want to do?
-[[You are already there; might as well buy groceries.|ShopLocal]]
+They also do not carry the traditional foods that you associate with your First Nations community. <<set $well to $well - 5>>
+[[Buy groceries from the organic grocery store.|ShopLocal]]
 [[Travel to the bargain grocery store.|Budget]]
 [[Look into options for a food bank.|PantryOptions]]
 ===
@@ -240,9 +248,14 @@ tags:
 colorID: 0
 position: -156,4784
 ---
+<<changeBackground Background OrganicGroceryStore>>
 You need to buy groceries to last you two weeks. What’s your key priority? 
+<<if $money > -200>>
 [[Make meals from scratch so you can eat healthy and cut costs.|LocalHomemade]]
+<<endif>>
+<<if $money > -100>>
 [[Buy healthy foods that will also be easy to prepare.|LocalEasy]]
+<<endif>>
 [[Buy the cheapest foods possible. You are on a budget.|LocalEasyQuality]]
 ===
 title: LocalHomemade
@@ -250,18 +263,21 @@ tags:
 colorID: 0
 position: -153,5062
 ---
-You buy fresh ingredients to make soups, casseroles, and meals. Groceries for two weeks cost $300. <<set $money to $money - 300>> You now have $[$money] remaining. 
-Making meals from scratch takes several hours per week. This will not be realistic once your new job starts! <<set $well to $well - 5>> Your level of wellbeing is now [$well]. 
-For now, however, you have managed to keep your family well fed. 
-[[Next.|DeeBlock4]]
+<<changeBackground Background OrganicGroceryStore>>
+You buy fresh ingredients to make soups, casseroles, and meals. Groceries for two weeks cost $300. <<set $money to $money - 300>> 
+Making meals from scratch takes several hours per week. This will not be realistic once your new job starts! <<set $well to $well - 5>>
+[[Get organized before your job starts.|DeeBlock4]]
 ===
 title: LocalEasy
 tags: 
 colorID: 0
 position: 135,5085
 ---
+<<changeBackground Background OrganicGroceryStore>>
 Buying enough easy-to-prepare health foods to feed a family of three will cost you at least $200 a week. 
+<<if $money > -100>>
 [[Buy the groceries. The convenience is worth it.|LocalEasyBuy]]
+<<endif>>
 [[Make hard choices to keep food costs low.|LocalEasyQuality]]
 [[Travel to the bargain grocery store instead.|Budget]]
 ===
@@ -270,9 +286,9 @@ tags:
 colorID: 0
 position: 146,5355
 ---
-Groceries for two weeks cost you $400. <<set $money to $money - 400>> You now have $[$money] remaining.
-It is expensive to feed your family this way, but as a single mom, the time savings is worth it! <<set $well to $well + 5>> Your level of wellbeing is now [$well]. 
-For now, you have managed to keep your family well fed. 
+<<changeBackground Background OrganicGroceryStore>>
+Groceries for two weeks cost you $400. <<set $money to $money - 400>> 
+It is expensive to feed your family this way, but as a single mom the time savings is worth it! <<set $well to $well + 10>>
 [[Next.|DeeBlock4]]
 ===
 title: LocalEasyQuality
@@ -280,49 +296,61 @@ tags:
 colorID: 0
 position: 580,5095
 ---
-Money is tight. You must stick to a budget! How much would you like to spend each week on groceries to feed your family?
-[[$175.|LocalEasy175]]
-[[$150.|LocalEasy150]]
-[[$100.|LocalEasy100]]
+<<changeBackground Background OrganicGroceryStore>>
+Money is tight. You need to buy groceries for two weeks. How much can you afford to spend?
+<<if $money > -150>>
+[[$350|LocalEasy175]]
+<<endif>>
+<<if $money > -200>>
+[[$300|LocalEasy150]]
+<<endif>>
+[[$200|LocalEasy100]]
 ===
 title: LocalEasy175
 tags: 
 colorID: 0
 position: 587,5370
 ---
-You buy as many healthy foods as you can on your budget. Groceries for two weeks cost $350. <<set $money to $money - 350>> You now have $[$money] remaining. 
-For now, you have managed to keep your family well fed. <<set $well to $well + 5>> Your level of wellbeing is now [$well].
-[[Next.|DeeBlock4]]
+<<changeBackground Background OrganicGroceryStore>>
+You buy as many healthy foods as you can on your budget. Groceries for two weeks cost $350. <<set $money to $money - 350>>
+For now, you have managed to keep your family well fed. <<set $well to $well + 5>> 
+[[Get organized before your job starts.|DeeBlock4]]
 ===
 title: LocalEasy150
 tags: 
 colorID: 0
 position: 890,5098
 ---
-You buy $300 of the cheapest foods you can find. Most of these foods are processed foods. <<set $money to $money - 300>> You now have $[$money] remaining. 
-You hate that the groceries cost you this much and you still had to compromise on the quality of the food. <<set $food to $food + 1.0>> Your food insecurity score is now [$food].
-[[Next.|DeeBlock4]]
+<<changeBackground Background OrganicGroceryStore>>
+To get you through the next two weeks, you buy $300 of the cheapest foods you can find. <<set $money to $money - 300>>
+Most of these foods are processed foods that are low in nutrition, increasing your risk for food insecurity. <set $food to $food + 2.0>>
+[[Get organized before your job starts|DeeBlock4]]
 ===
 title: LocalEasy100
 tags: 
 colorID: 0
 position: 1171,5093
 ---
-You spend $200 on groceries that you hope will last you two weeks. <<set $money to $money - 200>> You now have $[$money] remaining. 
-Unfortunately, the groceries run out.  You must skip meals to ensure that your children do not go hungry. <<set $food to $food + 2>> Your food insecurity score is now [$food]. 
-Because you are skipping meals you feel tired and irritable. Long term this is not a good strategy! <<set $well to $well - 10>> Your level of wellbeing is now [$well]. 
-[[Next.|DeeBlock4]]
+<<changeBackground Background OrganicGroceryStore>>
+You spend $200 on groceries that you hope will last your family two weeks. <<set $money to $money - 200>> 
+Unfortunately, the groceries run out. Without enough food to eat, your risk of food insecurity increases. <<set $food to $food + 3>> 
+Long term this is not a good strategy! <<set $well to $well - 10>>
+[[Get organized before your job starts.|DeeBlock4]]
 ===
 title: Budget
 tags: 
 colorID: 0
 position: -857,5450
 ---
-Travelling to and from the bargain grocery store adds an additional $20 in travel costs. <<set $money to $money - 20>> You now have $[$money] remaining.
-It also adds almost two hours to the chore of grocery shopping. <<set $well to $well - 5>> Your level of wellbeing is now [$well].
-You are disappointed to discover that the grocery store does not carry the traditional foods that you associate with your First Nations community. 
+<<changeBackground Background BargainGroceryStore>>
+Travelling to and from the bargain grocery store takes significant time. 
+It also adds an additional $20 in transportation costs not in your original budget. <<set $money to $money - 20>>
+The inability to access affordable food closer to your home increases your risk for food insecurity. <<set $food to $food + 2>>
+In addition, you are disappointed to discover that the grocery store does not carry traditional foods of your First Nations community. <<set $well to $well - 5>>
 You need to buy groceries to last you two weeks. What’s your key priority? 
+<<if $money > -250>>
 [[Make healthy meals from scratch to cut costs.|BudgetHomemade]]
+<<endif>>
 [[Buy healthy foods that are easy to prepare.|BudgetEasy]]
 [[Keep food costs as low as possible.|BudgetEasyQuality]]
 ===
@@ -331,18 +359,21 @@ tags:
 colorID: 0
 position: -1156,5751
 ---
-For $250, you are able to buy ingredients to make soups, casseroles, and meals for two weeks. <<set $money to $money - 250>> You now have $[$money] remaining. 
-Making meals from scratch takes several hours per week. This will not be realistic once your new job starts! <<set $well to $well - 5>> Your level of wellbeing is now [$well]. 
-For now, however, you have managed to keep your family well fed. 
-[[Next.|DeeBlock4]]
+<<changeBackground Background BudgetGroceryInside>>
+For $250, you are able to buy ingredients to make soups, casseroles, and meals for two weeks. <<set $money to $money - 250>>
+Making meals from scratch takes several hours per week. This will not be realistic once your new job starts. <<set $well to $well - 5>>
+[[Get organized before your job starts|DeeBlock4]]
 ===
 title: BudgetEasy
 tags: 
 colorID: 0
 position: -870,5767
 ---
+<<changeBackground Background BudgetGroceryInside>>
 Buying enough easy-to-prepare health foods to feed a family of three will cost you $150 to $200 a week. What would you like to do?
+<<if $money > -150>>
 [[Buy the groceries. The convenience will be worth it.|BudgetEasyBuy]]
+<<endif>>
 [[Make hard choices to keep food costs low.|BudgetEasyQuality]]
 [[Buy the cheapest foods possible.|BudgetEasy50]]
 ===
@@ -351,60 +382,66 @@ tags:
 colorID: 0
 position: -1017,6049
 ---
-You buy a range of healthy convenience foods. Two weeks’ worth of groceries cost you $350. <<set $money to $money - 350>> You now have $[$money] remaining. 
-It is expensive to feed your family this way, but it is fast and easy. This is what you need right now! <<set $well to $well + 5>> Your level of wellbeing is now [$well]. 
-Still, you hate that you had to travel so far just to afford to buy groceries. Your food security score is now <<set $food to $food + 0.5>> [$food]. 
-[[Next.|DeeBlock4]]
+<<changeBackground Background BudgetGroceryInside>>
+You buy a range of healthy easy-to-prepare foods. Two weeks’ worth of groceries cost you $350. <<set $money to $money - 350>>
+It is expensive to feed your family this way, but it is fast and easy. <<set $well to $well + 5>>
+Not having the time to prepare healthy low cost meals increases your risk for food insecurity. <<set $food to $food + 1>>
+[[Get organized before your job starts.|DeeBlock4]]
 ===
 title: BudgetEasyQuality
 tags: 
 colorID: 0
 position: -552,5751
 ---
-Money is tight. You must stick to a budget! How much would you like to spend each week on groceries to feed your family?
-[[$150.|BudgetEasy150]]
-[[$100.|BudgetEasy100]]
-[[$50.|BudgetEasy50]]
+<<changeBackground Background BudgetGroceryInside>>
+Money is tight. You need to buy groceries to last you two weeks. How much can you afford to spend on groceries?
+<<if $money > -200>>
+[[$300|BudgetEasy150]]
+<<endif>>
+<<if $money > -300>>
+[[$200|BudgetEasy100]]
+<<endif>>
+[[$100|BudgetEasy50]]
 ===
 title: BudgetEasy150
 tags: 
 colorID: 0
 position: -310,6037
 ---
-You buy as many healthy foods as you can on your budget. Groceries for two weeks cost $300. <<set $money to $money - 300>> You now have $[$money] remaining. 
-You are able to prepare mostly health dinners for your family. <<set $well to $well + 5>> Your level of wellbeing is now [$well]. 
-Still, you hate that you had to travel so far just to afford to buy groceries. Your food security score is now <<set $food to $food + 0.5>> [$food]. 
-[[Next.|DeeBlock4]]
+<<changeBackground Background BudgetGroceryInside>>
+You buy as many healthy foods as you can on your budget. Groceries for two weeks cost $300. <<set $money to $money - 300>>
+You are able to prepare mostly health dinners for your family. <<set $well to $well + 5>>
+[[Get organized before your job starts.|DeeBlock4]]
 ===
 title: BudgetEasy100
 tags: 
 colorID: 0
 position: -262,5761
 ---
-The cheapest foods are processed foods. Even buying junk food, groceries for two weeks cost you $200. <<set $money to $money - 200>> You now have $[$money] remaining. 
-You hate that you had to travel this far to spend this much on groceries and you still had to compromise on the quality of the food. 
-<<set $food to $food + 1.0>> Your food insecurity score is now [$food].
-[[Next.|DeeBlock4]]
+<<changeBackground Background BudgetGroceryInside>>
+The cheapest foods are processed foods. Even buying junk food groceries for two weeks cost you $200. <<set $money to $money - 200>>
+Eating low nutrition foods increases your risk for food insecurity. <<set $food to $food + 2.0>>
+[[Get organized before your job starts.|DeeBlock4]]
 ===
 title: BudgetEasy50
 tags: 
 colorID: 0
 position: -685,6046
 ---
-You spend $100 on groceries that you hope will last you two weeks. <<set $money to $money - 100>> You now have $[$money] remaining. 
-Unfortunately, the groceries run out. You must skip meals to ensure that your children do not go hungry. <<set $food to $food + 2>> Your food insecurity score is now [$food]. 
-Because you are skipping meals you feel tired and irritable. Long term this is not a good strategy! <<set $well to $well - 10>> Your level of wellbeing is now [$well]. 
-[[Next.|DeeBlock4]]
+<<changeBackground Background BudgetGroceryInside>>
+You spend $100 on groceries that you hope will last you two weeks. <<set $money to $money - 100>>
+The groceries run out. You skip meals to ensure that your children do not go hungry. This increases your risk for severe food insecurity. <<set $food to $food + 3>>
+[[Get organized before your job starts.|DeeBlock4]]
 ===
 title: FoodBank
 tags: 
 colorID: 0
 position: 1675,5098
 ---
-You do not have childcare so you bring your children with you to the food bank. 
-Your children ask questions like, “Why does that man’s clothes smell?” and “Are we poor?”
-You are embarrassed by your children’s questions and do not know how to respond. <<set $well to $well - 5>> Your level of wellbeing is now [$well]. 
-What do you want to do?
+<<changeBackground Background FoodBankExternal>>
+You do not have childcare so you bring your children with you to the food bank. <<set $well to $well - 5>>
+Your children ask questions like, “Are we poor?”
+You are embarrassed by your children’s questions and do not know how to respond. <<set $well to $well - 10>>
 [[Continue into the food bank.|PantryContinue]]
 [[Go to your local grocery store instead.|Local]]
 [[Look into alternative options.|PantryOptions]]
@@ -414,10 +451,11 @@ tags:
 colorID: 0
 position: 1463,5424
 ---
-You go into the food bank. There are a range of food options, but most of them are non-perishable and processed foods items. 
-The food bank offers almost no fresh fruits and vegetables and no fresh meat. The food bank carries no First Nations traditional foods. 
-You wish you had more options for feeding your family. <<set $food to $food + 1>> Your food insecurity score is now [$food].
-You are limited in the number of items you can take. How will you get the rest of your groceries?
+<<changeBackground Background FoodBank2>>
+You go into the food bank. There are a range of food options, but most of them are non-perishable processed foods. <<set $well to $well - 5>>
+The food bank offers almost no fresh fruits and vegetables and no fresh meat. The food bank does not carry First Nations traditional foods. <<set $well to $well - 5>>
+The nutritional content of the foods puts you at higher risk for food insecurity. <<set $food to $food + 2>> 
+The food bank groceries are not enough to last you two weeks. How will you get the rest of your groceries?
 [[Go to the local grocery store.|RoundLocal]]
 [[Go to the bargain grocery store.|RoundBudget]]
 [[Do not buy more. Make the groceries last.|RoundLast]]
@@ -427,33 +465,37 @@ tags:
 colorID: 0
 position: 1244,5701
 ---
-For $150, you are able to balance out the food bank options to feed your family for two weeks. <<set $money to $money - 150>> You now have $[$money] remaining. 
- [[Next.|DeeBlock4]]
+<<changeBackground Background OrganicGroceryStore>>
+For $150 more you are able to balance out the food bank options to feed your family for two weeks. <<set $money to $money - 150>>
+[[Get organized before your job starts.|DeeBlock4]]
 ===
 title: RoundBudget
 tags: 
 colorID: 0
 position: 1492,5698
 ---
-For the cost of transit ($20) and another $80 in groceries, you balance out the food bank options.<<set $money to $money - 100>> You now have $[$money] remaining. 
-Still, the long trip out to the bargain grocery took almost two extra hours. You wish you had more cost and time efficient options for getting food. 
-<<set $food to $food + 0.5>> Your food insecurity score is now [$food].
-[[Next.|DeeBlock4]]
+<<changeBackground Background BargainGroceryStore>>
+The bargain grocery store is far away. It costs you $20 more than your original transportation budget to get there. <<set $money to $money - 100>>
+It then costs your $80 in groceries to balance out the food bank options.<<set $money to $money - 100>>
+The inability to access affordable food closer to your home increases your risk for food insecurity. <<set $food to $food + 2>> 
+[[Get organized before your job starts.|DeeBlock4]]
 ===
 title: RoundLast
 tags: 
 colorID: 0
 position: 1740,5682
 ---
-You will have to skip meals so that your children have enough to eat. <<set $food to $food + 2>> Your food insecurity score is now [$food].
-Without the proper nutrition, you feel sluggish and unwell. Long term, this is not a good strategy! <<set $well to $well - 10>> Your level of wellbeing is now [$well]. 
-[[Next.|DeeBlock4]]
+<<changeBackground Background EmptyShoppingCart>>
+You will have to skip meals so that your children have enough to eat. This puts you at high risk for experiencing severe food insecurity. <<set $food to $food + 3>>
+Without the proper nutrition, you feel sluggish and unwell. Long term, this is not a good strategy! <<set $well to $well - 10>>
+[[Get organized before your job starts.|DeeBlock4]]
 ===
 title: PantryOptions
 tags: 
 colorID: 0
 position: 1997,5415
 ---
+<<changeBackground Background City>>
 Living in a major urban area there are several food bank and community meal options available. 
 [[Go to the food bank closest to you.|PantryContinue]]
 [[Go to the Friendship Center.|CommunityMeal]]
@@ -464,10 +506,13 @@ tags:
 colorID: 0
 position: 2011,6029
 ---
+<<changeBackground Background FriendshipCentre>>
 The Friendship Center is an organization that supports Indigenous people in many ways. 
-You attend their weekly community meal. It is great to meet other people and build connections. <<set $well to $well + 10>> Your level of wellbeing is now [$well]. 
-It is great to eat traditional foods. It is also one less meal you have to buy. <<set $money to $money + 30>> You now have $[$money] remaining. 
-How will you feed your family the rest of the week? 
+<<changeBackground Background CommunityMeal>>
+You attend their weekly community meal. It is great to meet new people. <<set $well to $well + 10>>
+The community meal includes many traditional foods. These comfort foods of your childhood are just what you needed right now! <<set $well to $well + 10>>
+The community meal is also one less meal you have to buy. It’s like having an extra $30 in your pocket. <<set $money to $money + 30>>
+Now you just need to figure out how will you feed your family the rest of the week. 
 [[Go to the local grocery store.|Local]]
 [[Go to the bargain grocery store.|Budget]]
 [[Ask the women at the Friendship Center for ideas.|MealShare]]
@@ -477,6 +522,7 @@ tags:
 colorID: 0
 position: 2011,6030
 ---
+<<changeBackground Background FriendshipCentre>>
 You ask the women at the Friendship Center how they live on a budget in the city.
 They tell you that once per week they carpool out to the Aboriginal food bank together. 
 They explain that although the Aboriginal food bank is farther away, it is better than the local one as it carries fresh fruits and vegetables. 
@@ -490,28 +536,32 @@ tags:
 colorID: 0
 position: 2013,6326
 ---
-A woman from the centre watches your children while you join the others on their trip to the Aboriginal food bank.
-The food bank offers a wide range of healthy food offerings, including some traditional food offerings. 
+<<changeBackground Background AboriginalFoodBankInside>>
+A woman from the centre watches your children while you join the others on their trip to the Aboriginal Food Bank.
+The food bank offers a wide range of healthy food offerings, including some traditional foods. 
+<<changeBackground Background CommunityKitchen>>
 The women pick out groceries together and use the community kitchen to make large batches of food for each woman to take home. 
-It is such a fun, creative, and efficient way of sharing food resources! <<set $well to $well + 10>> Your level of wellbeing is now [$well]. 
-[[Next.|DeeBlock4]]
+It is such a fun, creative, and efficient way of sharing food resources! <<set $well to $well + 10>>
+[[Get organized before your job starts.|DeeBlock4]]
 ===
 title: AboriginalFoodBank
 tags: 
 colorID: 0
 position: 2386,5403
 ---
-The Aboriginal Food bank is almost an hour away. <<set $well to $well - 5>> Your level of wellbeing is now [$well].
-Travelling to and from the food bank adds an additional $20 in travel costs. <<set $money to $money - 20>> You now have $[$money] remaining.
-Still, you are glad you came. The food bank offers a range of options, including fresh fruits and vegetables and some traditional food items. 
-For now, you have managed to keep your family well fed!
-[[Next.|DeeBlock4]]
+<<changeBackground Background AboriginalFoodBankOpen>>
+The Aboriginal Food Bank is almost an hour away and adds an additional $20 in travel costs beyond your original travel budget. <<set $well to $well - 5>> <<set $money to $money - 20>> 
+<<changeBackground Background AboriginalFoodBankInside>>
+Still, you are glad you came. The food bank offers a range of options, including fresh fruits and vegetables. 
+You manage to keep your family fed for these first two weeks. <<set $well to $well - 5>>
+[[Get organized before your job starts.|DeeBlock4]]
 ===
 title: DeeBlock4
 tags: 
 colorID: 0
 position: 470,7436
 ---
+<<changeBackground Background KitchenNiceBig>>
 You are trying to make dinner and complete some required paperwork for your job. Your sons want to play outside, but you are too busy to go with them. 
 [[Let them play outside on their own|PlayOutside]]
 [[Tell them they must play quietly inside the apartment|PlayQuietly]]
@@ -522,6 +572,7 @@ tags:
 colorID: 0
 position: 462,7812
 ---
+<<changeBackground Background KitchenNiceBig>>
 You send your children outside to play. 
 A few minutes later a neighbor is at your door with your children. She is concerned because she found the children playing on their own. 
 [[Invite the woman in to talk.|InviteWoman]]
@@ -533,46 +584,51 @@ tags:
 colorID: 0
 position: 256,8201
 ---
+<<changeBackground Background DoloresRoom>>
 The woman explains that a troublesome neighbor in the building has called social services on residents in the past. 
 She wanted to warn you of his behaviour so you did not get in trouble with the police. 
 As a house warming present, the neighbor presents you with a huge basket of fresh garden vegetables and some homemade bread. 
-It’s like having an extra $100 of grocery money! <<set $money to $money + 100>> You now have $[$money] remaining. 
-You are happy to have met your neighbour. <<set $well to $well + 10>> Your level of wellbeing is now [$well]. 
- [[Next.|DeeBlock5]]
+It’s like having an extra $100 of grocery money! <<set $money to $money + 100>> 
+You are happy to have met your neighbour. <<set $well to $well + 10>> 
+[[Enroll your children in school.|DeeBlock5]]
 ===
 title: IgnoreAdvice
 tags: 
 colorID: 0
 position: 599,8196
 ---
+<<changeBackground Background KitchenNiceBig>>
 Once the woman has gone away, you tell the children that they can go play outside again. 
 Thirty minutes later, a police officer is at your door. 
 A neighbour has called the police to complain of “suspicious” children causing trouble. 
-Your children were just playing. You are angry that your neighbour assumed that they were up to no good. <<set $well to $well - 15>> Your level of wellbeing is now [$well]. 
-[[Next.|DeeBlock5]]
+Your children were just playing. You are angry that your neighbour assumed that they were up to no good. <<set $well to $well - 15>> 
+[[Enroll your children in school.|DeeBlock5]]
 ===
 title: PlayQuietly
 tags: 
 colorID: 0
 position: 900,7818
 ---
+<<changeBackground Background KitchenNiceBig>>
 You tell your children that they must play inside quietly. They complain that they are bored and bicker amongst themselves. 
-It is a long afternoon and you do not get your paperwork done until late at night. <<set $well to $well - 5>> Your level of wellbeing is now [$well]. 
- [[Next.|DeeBlock5]]
+It is a long afternoon and you do not get your paperwork done until late at night. <<set $well to $well - 5>>
+[[Enroll your children in school.|DeeBlock5]]
 ===
 title: PlayLoudly
 tags: 
 colorID: 0
 position: -111,7813
 ---
+<<changeBackground Background KitchenNiceBig>>
 Your children continue playing loudly. You get distracted and burn dinner. You spend $20 buying take-out. <<set $money to $money - 20>> You now have $[$money] remaining. 
-[[Next.|DeeBlock5]]
+[[Enroll your children in school.|DeeBlock5]]
 ===
 title: DeeBlock5
 tags: 
 colorID: 0
 position: 444,9074
 ---
+<<changeBackground Background School>>
 Your sons have started school. They beg you to take them shopping for new clothes. 
 Money is tight, but your sons have outgrown their shoes from last year and their pants are too short. 
 [[Go to a shopping mall.|ShoppingMall]]
@@ -584,9 +640,14 @@ tags:
 colorID: 0
 position: -538,9475
 ---
+<<changeBackground Background ClothingMall>>
 You travel to the shopping mall. What would you like to buy?
+<<if $money > -200>>
 [[Let each son pick some new clothes.|AllMall]]
-[[Buy the cheapest clothes available.|SomeMall]]
+<<endif>>
+<<if $money > -300>>
+[[Pick out new clothing for your children.|SomeMall]]
+<<endif>>
 [[Buy shoes; skip the clothing.|BasicsMall]]
 ===
 title: AllMall
@@ -594,33 +655,35 @@ tags:
 colorID: 0
 position: -773,9802
 ---
-You spend $300 on clothing. <<set $money to $money - 300>> You now have $[$money] remaining. 
-Your kids are happy that they got to pick out their own clothes. <<set $well to $well + 10>> Your level of wellbeing is now [$well].
-[[Next.|DeeBlock6]]
+<<changeBackground Background ClothingMall>>
+Your children are very excited and pick out $300 worth of clothing. <<set $money to $money - 300>> <<set $well to $well + 10>>
+[[Buy more groceries.|DeeBlock6]]
 ===
 title: SomeMall
 tags: 
 colorID: 0
 position: -528,9791
 ---
-You spend $200 on the cheapest clothing you can find at the mall. <<set $money to $money - 200>> You now have $[$money] remaining.
-Your kids are happy to have some new clothes. <<set $well to $well + 5>> Your level of wellbeing is now [$well].
-[[Next.|DeeBlock6]]
+<<changeBackground Background ClothingMall>>
+You spend $200 on the cheapest clothing you can find. Your children are happy to get new clothes. <<set $money to $money - 200>> <<set $well to $well + 5>> 
+[[Buy more groceries.|DeeBlock6]]
 ===
 title: BasicsMall
 tags: 
 colorID: 0
 position: -238,9791
 ---
-You spend $100 on a backpack and new shoes for each of your sons. <<set $money to $money - 100>> You now have $[$money] remaining.
-Your children are disappointed that they did not get to pick out new clothes. <<set $well to $well - 5>> Your level of wellbeing is now [$well].
-[[Next.|DeeBlock6]]
+<<changeBackground Background ClothingMall>>
+You spend $50 to buy new shoes for each of your sons. <<set $money to $money - 50>>
+Your children are disappointed that they did not get to pick out new clothes. <<set $well to $well - 5>>
+[[Buy more groceries.|DeeBlock6]]
 ===
 title: BudgetClothes
 tags: 
 colorID: 0
 position: 415,9439
 ---
+<<changeBackground Background BargainShoppingCentre>>
 You travel to a bargain outlet. 
 [[Let each son pick some new clothes.|AllBudget]]
 [[Buy the cheapest clothes available.|SomeBudget]]
@@ -631,41 +694,44 @@ tags:
 colorID: 0
 position: 179,9785
 ---
-You spend $200 on clothing. <<set $money to $money - 200>> You now have $[$money] remaining. 
-Your kids are happy. <<set $well to $well + 5>> Your level of wellbeing is now [$well].
-[[Next.|DeeBlock6]]
+<<changeBackground Background ClothingBargain>>
+Your children are very excited and pick out $200 worth of clothing. <<set $money to $money - 200>> <<set $well to $well + 10>>
+[[Buy more groceries.|DeeBlock6]]
 ===
 title: SomeBudget
 tags: 
 colorID: 0
 position: 453,9792
 ---
-You spend $150 on the cheapest clothing you can find at the store. <<set $money to $money - 150>> You now have $[$money] remaining
-Your kids are disappointed that they did not get to pick out their own clothes. <<set $well to $well - 5>> Your level of wellbeing is now [$well].
-[[Next.|DeeBlock6]]
+<<changeBackground Background ClothingBargain>>
+You spend $150 on the cheapest clothing you can find. Your children are happy to get new clothes. <<set $money to $money - 150>> <<set $well to $well + 5>>
+[[Buy more groceries.|DeeBlock6]]
 ===
 title: BasicsBudget
 tags: 
 colorID: 0
 position: 790,9793
 ---
-You spend $75 on a backpack and new shoes for each of your sons. <<set $money to $money - 75>> You now have $[$money] remaining
-Your kids are disappointed that they did not get any new clothes. <<set $well to $well - 5>> Your level of wellbeing is now [$well].
-[[Next.|DeeBlock6]]
+<<changeBackground Background ClothingBargain>>
+You spend $30 to buy new shoes for each of your sons. <<set $money to $money - 30>> 
+Your kids are disappointed that they did not get any new clothes. <<set $well to $well - 5>>
+[[Buy more groceries.|DeeBlock6]]
 ===
 title: NoClothes
 tags: 
 colorID: 0
 position: 1456,9483
 ---
-There is no money for clothes right now. Your children will have to make do with what they have. <<set $well to $well - 10>> Your level of wellbeing is now [$well].
-[[Next.|DeeBlock6]]
+<<changeBackground Background ClothingBargain>>
+There is no money for new clothes. Your children will have to make do with what they have for now. <<set $well to $well - 10>>
+[[Buy more groceries.|DeeBlock6]]
 ===
 title: DeeBlock6
 tags: 
 colorID: 0
 position: 206,10638
 ---
+<<changeBackground Background DoloresRoom>>
 It’s time to buy groceries again. Your first paycheck is not for another 6 weeks. You need to spend wisely. Where would you like to go?
 [[Go to the organic grocery store near your house.|LocalSept]]
 [[Go to the bargain grocery store across town.|BudgetSept]]
@@ -678,87 +744,103 @@ tags:
 colorID: 0
 position: -747,11118
 ---
-How much do you want to spend on groceries each week?
-[[$200.|LocalSept200]]
-[[$150.|LocalSept150]]
-[[$75.|LocalSept75]]
+<<changeBackground Background OrganicGroceryStore>>
+You need to buy groceries for two weeks. What is your strategy?
+<<if $money > -100>>
+[[Buy plenty of nutritious foods|LocalSept200]]
+<<endif>>
+<<if $money > -200>>
+[[Buy some healthy foods|LocalSept150]]
+<<endif>>
+[[Buy the cheapest foods that you can|LocalSept75]]
 ===
 title: LocalSept200
 tags: 
 colorID: 0
 position: -1099,11453
 ---
-It costs you $400 to buy two weeks’ worth of groceries for your family. <<set $money to $money - 400>> You now have $[$money] remaining.
-Your family has plenty of healthy foods to eat. <<set $well to $well + 5>> Your level of wellbeing is now [$well].
-[[Next.|DeeBlock7]]
+<<changeBackground Background OrganicGroceryStore>>
+Your local grocery store is very expensive. It costs you $400 to buy two weeks’ worth of nutritious foods for your family. <<set $money to $money - 400>> <<set $well to $well + 10>>
+[[Start your new job.|DeeBlock7]]
 ===
 title: LocalSept150
 tags: 
 colorID: 0
 position: -709,11467
 ---
-It costs you $300 to buy two weeks’ worth of groceries. <<set $money to $money - 300>> You now have $[$money] remaining.
-Even then, you have to compromise on the quality of the food. <<set $food to $food + 0.5>> Your food insecurity score is now [$food]
-[[Next.|DeeBlock7]]
+<<changeBackground Background OrganicGroceryStore>>
+Your local grocery store is very expensive. It costs you $300 to buy two weeks’ worth of nutritious foods for your family. <<set $money to $money - 300>> 
+Even then, you have to compromise on the quantity and quality of the food you can buy. <<set $food to $food + 1>> 
+[[Start your new job.|DeeBlock7]]
 ===
 title: LocalSept75
 tags: 
 colorID: 0
 position: -323,11419
 ---
-You spend $150 to buy groceries for two weeks. <<set $money to $money - 150>> You now have $[$money] remaining.
-The groceries are not enough. You find yourself skipping meals to make sure your kids have enough to eat. <<set $food to $food + 2>> Your food insecurity score is now [$food].
-Because you are not getting enough nutrients, you feel slow and sluggish. Long term, this is not a good strategy. <<set $well to $well - 10>> Your level of wellbeing is now [$well].
-[[Next.|DeeBlock7]]
+<<changeBackground Background OrganicGroceryStore>>
+You spend $150 to buy groceries for two weeks. <<set $money to $money - 150>> 
+The groceries are not enough. You find yourself skipping meals to make sure your kids have enough to eat. <<set $food to $food + 2>>
+Because you are not getting enough nutrients, you feel slow and sluggish. Long term, this is not a good strategy. <<set $well to $well - 10>>
+[[Start your new job.|DeeBlock7]]
 ===
 title: BudgetSept
 tags: 
 colorID: 0
 position: 241,11117
 ---
-Travelling to and from the bargain grocery store adds an additional $20 in travel costs. <<set $money to $money - 20>> You now have $[$money] remaining.
-It also adds almost two hours to the chore of grocery shopping. <<set $well to $well - 5>> Your level of wellbeing is now [$well].
-How much do you want to spend on groceries each week?
-[[$150.|BudgetSept150]]
-[[$100.|BudgetSept100]]
-[[$50.|BudgetSept50]]
+<<changeBackground Background BargainGroceryStore>>
+Because it is so far away, travelling to and from the bargain grocery store adds an additional $20 in travel costs. <<set $money to $money - 20>>
+Not having cheaper food options closer to home increases your risk of food insecurity. <<set $food to $food + 1>>
+Travelling this far for groceries may not be realistic once your new job starts. <<set $well to $well - 5>>
+You need to buy groceries for two weeks. What is your strategy?
+<<if $money > -200>>
+[[Buy plenty of nutritious foods.|BudgetSept150]]
+<<endif>>
+<<if $money > -300>>
+[[Buy some healthy foods.|BudgetSept100]]
+<<endif>>
+[[Buy the cheapest foods that you can.|BudgetSept50]]
 ===
 title: BudgetSept150
 tags: 
 colorID: 0
 position: -34,11414
 ---
-For $300 you are able to buy a range of healthy groceries to last you two weeks. <<set $money to $money - 300>> You now have $[$money] remaining.
-Still, you wish you had a more cost-effective grocery store closer to your home. <<set $food to $food + 0.5>> Your food insecurity score is now [$food].
-[[Next.|DeeBlock7]]
+<<changeBackground Background BudgetGroceryStoreInside>>
+For $300 you are able to buy a range of healthy groceries to last you two weeks. <<set $money to $money - 300>> <<set $well to $well - 5>>
+[[Start your new job.|DeeBlock7]]
 ===
 title: BudgetSept100
 tags: 
 colorID: 0
 position: 256,11428
 ---
-Even buying cheap, low nutrition foods, groceries for two weeks cost you $200. <<set $money to $money - 200>> You now have $[$money] remaining.
-You wish you had a cheaper way of getting groceries closer to home. <<set $food to $food + 0.5>> Your food insecurity score is now [$food]
-[[Next.|DeeBlock7]]
+<<changeBackground Background BudgetGroceryStoreInside>>
+Even buying cheap, low nutrition foods, groceries for two weeks cost you $200. <<set $money to $money - 200>>
+Eating low nutrition foods puts you at risk for food insecurity. <<set $food to $food + 1.0>>
+[[Start your new job.|DeeBlock7]]
 ===
 title: BudgetSept50
 tags: 
 colorID: 0
 position: 647,11414
 ---
-You buy the cheapest foods possible, spending just $100 to feed your family for two weeks. <<set $money to $money - 100>> You now have $[$money] remaining.
-The food does not last. You are forced to skip meals to make sure your children have enough to eat. <<set $food to $food + 2>> Your food insecurity score is now [$food].
-Because you are not getting enough nutrients, you feel slow and sluggish. Long term, this is not a good strategy. <<set $well to $well - 10>> Your level of wellbeing is now [$well]
-[[Next.|DeeBlock7]]
+<<changeBackground Background BudgetGroceryStoreInside>>
+You buy the cheapest foods possible, spending just $100 to feed your family for two weeks. <<set $money to $money - 100>>
+The food does not last. You are forced to skip meals to make sure your children have enough to eat. <<set $food to $food + 2>>
+Because you are not getting enough nutrients, you feel slow and sluggish. Long term, this is not a good strategy. <<set $well to $well - 10>>
+[[Start your new job.|DeeBlock7]]
 ===
 title: BankSept
 tags: 
 colorID: 0
 position: -274,12146
 ---
+<<changeBackground Background FoodBankEmpty>>
 The food bank is nearly empty. You ask the volunteer why there are so few options. 
-He explains that donations to the food bank ebb and flow. This just happens to be a slow month. 
-<<set $food to $food + 0.5>> Your food insecurity score is now [$food].
+He explains that donations to the food bank ebb and flow. This just happens to be a slow month.
+Not being able to access affordable food puts you at high risk for food insecurity. <<set $food to $food + 3>>
 It is clear that you are going to need another solution to get through this month. 
 [[Sell some of your belongings to get more money.|SellStuff]]
 [[Skip meals so your kids have enough to eat.|BudgetSept50]]
@@ -769,6 +851,7 @@ tags:
 colorID: 0
 position: 58,12436
 ---
+<<changeBackground Background DoloresRoom>>
 You have very few belongings that are worth selling and these items are near and dear to your heart. What do you want to do?  
 <<if visited("WeddingRing") is false>>
 [[Sell the ring your grandmother gave you.|WeddingRing]]
@@ -783,9 +866,10 @@ tags:
 colorID: 0
 position: 106,12820
 ---
-Your grandmother’s ring is an antique, but it is not worth much. The most you can get for it is $50. 
+<<changeBackground Background PawnShop>>
+Your grandmother’s ring is an antique, but it is not worth much. The most you can get for it is $100. 
 <<if visited("SellRing") is false>>
-[[Sell the ring for $50.|SellRing]]
+[[Sell the ring for $100.|SellRing]]
 <<endif>>
 <<if visited("SellFurniture") is false>>
 [[Sell the antique furniture instead.|SellFurniture]]
@@ -797,9 +881,10 @@ tags:
 colorID: 0
 position: 705,12825
 ---
-You sell the ring for $50. <<set $money to $money + 50>> You now have $[$money].
-After selling the ring, you feel immediate regret. The ring is gone forever. <<set $well to $well - 10>> Your level of wellbeing is now [$well].
-You and your children still need to eat. <<set $food to $food + 0.5>> Your food insecurity score is now [$food]. What will you do? 
+<<changeBackground Background PawnShop>>
+You sell the ring for $100. <<set $money to $money + 100>>
+After selling the ring, you feel immediate regret. The ring has been in your family for years and now it is gone. <<set $well to $well - 10>>
+You and your children still need to eat. <<set $food to $food + 1>> What will you do? 
 [[Sell the antique furniture.|SellFurniture]]
 [[Go to the Friendship Center.|FriendshipSept]]
 [[Skip meals to save money.|BudgetSept50]]
@@ -809,9 +894,10 @@ tags:
 colorID: 0
 position: -1159,12759
 ---
-You sell the antique bed frame, dresser, and mirror that you inherited from your grandmother for $300. <<set $money to $money + 300>> You now have $[$money]. 
-It fills you with deep sadness. And, you now have to sleep on a mattress on the floor. <<set $well to $well - 20>> Your level of wellbeing is now [$well]
-At least you now have more money to buy groceries.
+<<changeBackground Background AntiqueFurniture>>
+You sell the antique dining set that you inherited from your grandmother for $400. <<set $money to $money + 400>> You now have $[$money]. 
+Not only have you lost a piece of your grandmother, you and the children no longer have a dining room table to share meals. <<set $well to $well - 20>>
+At least now you can get groceries to feed your family.
 [[Go to the organic grocery store near your house.|LocalSept]]
 [[Go to the bargain grocery store across town.|BudgetSept]]
 [[Go to the Friendship Center for Support.|FriendshipSept]]
@@ -821,10 +907,13 @@ tags:
 colorID: 0
 position: -945,13346
 ---
+<<changeBackground Background FriendshipCentre>>
 You take your kids to the Friendship Center. They are offering a community food sharing program. 
 It costs $200. You’ll work collaboratively with other moms in the community to buy bulk foods and turn them into traditional meals. 
 At the end of the day, you’ll take home enough freezer-ready dishes to feed your family for two weeks.  
+<<if $money > -300>>
 [[Pay $200 to sign up for the program.|CommunityShare]]
+<<endif>>
 [[Buy and prepare your own groceries.|LocalSept]]
 [[Sell some of your stuff for more money.|SellStuff]]
 ===
@@ -833,25 +922,57 @@ tags:
 colorID: 0
 position: -950,13777
 ---
-You pay $200 to join the community meal share program. <<set $money to $money - 200>> You now have $[$money] remaining.
-Your kids have a great time playing with the other children and you enjoy cooking and chatting with the other women in the group. 
-Plus, you end the day with a variety of traditional and easy to prepare foods. <<set $well to $well + 15>> Your level of wellbeing is now [$well].
-[[Next.|DeeBlock7]]
+<<changeBackground Background CommunityMeal>>
+You pay $200 to join the community meal share program. <<set $money to $money - 200>>
+Your kids have a great time playing with the other children and you enjoy cooking and chatting with the other women in the group. <<set $well to $well + 15>>
+Plus, you end the day with a variety of traditional and easy to prepare foods. <<set $well to $well + 15>>
+[[Start your new job.|DeeBlock7]]
 ===
 title: DeeBlock7
 tags: 
 colorID: 0
 position: -487,14375
 ---
-Your monthly bills are due. You must pay rent, utilities, transportation costs, and loan repayments. <<set $money to $money - 2000>> You now have $[$money] remaining.
+<<changeBackground Background DoloresRoom>>
+You start your new job next week, but you will not get your first paycheck for four more weeks. 
+Your monthly bills are due now. Altogether, your rent, utilities, transportation costs, and loan repayments cost $2000. 
+You do not have $2000. What are you going to do about your bills?
+[[Take out a short term loan.|ShortLoan]]
+[[Delay payment for a month.|DelayPayment]]
+===
+title: ShortLoan
+tags: 
+colorID: 0
+position: -136,14781
+---
+<<changeBackground Background Dollars2>>
+By showing your employment contract, you are able to get a payday loan. 
+The fee for the loan is $15 per $100. As such, you will end up paying $2,300 for a $2,000 loan, assuming you can pay it off in 30 days. 
+It is not ideal, but what choice do you have right now? <<set $well to $well - 10>>
+[[Request your work scheduled.|WorkSchedule]]
+===
+title: DelayPayment
+tags: 
+colorID: 0
+position: -136,14782
+---
+<<changeBackground Background Bills>>
+You have always paid your bills on time. The thought of delaying payment makes you extremely stressed.  <<set $well to $well - 10>>
+You have no idea how much the late penalties will be or how this will impact your credit. <<set $well to $well - 10>>
+It is not ideal, but what choice do you have right now? <<set $well to $well - 10>>
+[[Request your work scheduled.|WorkSchedule]]
+===
+title: WorkSchedule
+tags: 
+colorID: 0
+position: -136,14783
+---
+<<changeBackground Background DoloresRoom>>
+<<set $well to $well - 10>>
 You have just received your work schedule for your new job. You have been assigned to work the overnight shift. 
 You ask for a shift change, but your request is denied. This poses significant issues for childcare. What do you do?
-<<if visited("Nanny") is false>>
 [[Find an overnight nanny service.|Nanny]]
-<<endif>>
-<<if visited("Childcare") is false>>
 [[Find a centre that offers overnight childcare.|Childcare]]
-<<endif>>
 [[Advertise for an overnight babysitter.|Babysitter]]
 ===
 title: Nanny
@@ -859,8 +980,9 @@ tags:
 colorID: 0
 position: -136,14780
 ---
+<<changeBackground Background ComputerRoom>>
 You go online and find several nanny services that offer overnight care. They charge $2000 (or more) per month! 
-This is too expensive. You will have to try something else. <<set $well to $well - 5>> Your level of wellbeing is now [$well].
+This is too expensive. You will have to try something else. <<set $well to $well - 5>>
 <<if visited("Childcare") is false>>
 [[Find a centre that offers overnight childcare.|Childcare]]
 <<endif>>
@@ -872,8 +994,8 @@ tags:
 colorID: 0
 position: -516,15181
 ---
-You call several childcare centers. None of them offer overnight services, nor do any of them know of a service that does. <<set $well to $well - 5>> Your level of wellbeing is now [$well].
-You will have to try something else. 
+<<changeBackground Background DoloresRoom>>
+You call several childcare centers. None of them offer overnight services, nor do any of them know of a service that does. <<set $well to $well - 5>>
 <<if visited("Nanny") is false>>
 [[Find an overnight nanny.|Nanny]]
 <<endif>>
@@ -885,6 +1007,7 @@ tags:
 colorID: 0
 position: 295,14399
 ---
+<<changeBackground Background DoloresRoom>>
 You advertise for a babysitter and narrow it down to three candidates. Who do you want to interview?
 [[Sarah, who provides live-in nanny services.|Sarah]]
 [[Danielle, a licensed daycare provider.|Danielle]]
@@ -895,6 +1018,7 @@ tags:
 colorID: 0
 position: 286,14792
 ---
+<<changeBackground Background DoloresRoom>>
 Sarah is moving to the city for the next three months. She is interested in providing childcare services in exchange for a place to live. 
 She is kind and gentle with the children. If you do not mind living with a roommate, this could be a good short term option. 
 [[Hire Sarah as a live-in nanny.|HireSarah]]
@@ -906,6 +1030,7 @@ tags:
 colorID: 0
 position: 316,15120
 ---
+<<changeBackground Background DoloresRoom>>
 You invite Sarah to be a live-in nanny. This requires that you rearrange the apartment so that Sarah has her own space. 
 The apartment feels cramped with this many people living in it, but it is a good low cost childcare option for now.
 [[Next.|DeeBlock8]]
@@ -915,6 +1040,7 @@ tags:
 colorID: 0
 position: 852,14785
 ---
+<<changeBackground Background DoloresRoom>>
 Danielle is a licensed child care provider with years of experience working with children. She seems very serious and stern. The children seem a bit afraid of her. 
 She charges $50 per night for overnight care. She suggests that you hire her for a “trial run” before making any final decisions. 
 Do you want to spend $50 to hire her for a trial run?
@@ -927,10 +1053,11 @@ tags:
 colorID: 0
 position: 851,15127
 ---
-You pay Danielle $50 for a trial run with the children. <<set $money to $money - 50>> You now have $[$money] remaining.
+<<changeBackground Background DoloresRoom>>
+You pay Danielle $50 for a trial run with the children. <<set $money to $money - 50>>
 It goes poorly. Danielle makes your normally very active children sit quietly for four hours. She is not a good fit for your family. 
-All of that money for nothing. <<set $well to $well - 5>> Your level of wellbeing is now [$well].
-Who do you want to interview next?
+All of that money for nothing. <<set $well to $well - 5>>
+Who do you want to interview next
 [[Sarah, who provides live-in nanny services.|Sarah]]
 [[Steven, a teacher looking for babysitting work.|Steven]]
 [[Contact the Friendship Centre for advice.|FriendshipChildcare]]
@@ -940,6 +1067,7 @@ tags:
 colorID: 0
 position: 1401,14866
 ---
+<<changeBackground Background DoloresRoom>>
 You set up a meeting with Steven. He is fun and silly with the children. He seems like a great fit. 
 Unfortunately, as you lay out your babysitting needs, he makes it clear that he is available only on occasion. 
 You need a regular sitter. You will need to find someone else. <<set $well to $well - 5>> Your level of wellbeing is now [$well]. Who do you want to interview next? 
@@ -952,6 +1080,7 @@ tags:
 colorID: 0
 position: 1133,15491
 ---
+<<changeBackground Background DoloresRoom>>
 You set up a meeting with Sophie. She seems a bit immature, but the children seem to like her. She agrees to babysit for $150 per week.
 [[Hire Sophie to babysit.|HireSophie]]
 [[Interview Danielle instead.|Danielle]]
@@ -962,8 +1091,9 @@ tags:
 colorID: 0
 position: 422,15460
 ---
-You hire Sophie to babysit for you. <<set $money to $money - 150>> You now have $[$money] remaining.
-The first few days with Sophie go great, but then she fails to show up for several days in a row. You are stressed to the max! <<set $well to $well - 20>> Your level of wellbeing is now [$well] What do you want to do now?
+<<changeBackground Background DoloresRoom>>
+You hire Sophie to babysit for you. <<set $money to $money - 150>>
+The first few days with Sophie go great, but then she fails to show up for several days in a row. You are stressed to the max! <<set $well to $well - 20>>
 [[Interview Sarah who provides live-in nanny services.|Sarah]]
 [[Interview Steven a teacher looking for babysitting work.|Steven]]
 [[Contact the Friendship Centre for advice.|FriendshipChildcare]]
@@ -973,9 +1103,10 @@ tags:
 colorID: 0
 position: 2424,15411
 ---
+<<changeBackground Background DoloresRoom>>
 You call the Friendship Center and ask for advice. They connect you with a family that lives in the same apartment building as you.
 Until you can figure out something more permanent, their teenage daughter can sleep at your place on the nights you are working. 
-This is a great short term solution! <<set $well to $well + 5>> Your level of wellbeing is now [$well].
+This is a great short term solution! <<set $well to $well + 5>>
 [[Next.|DeeBlock8]]
 ===
 title: DeeBlock8
@@ -983,12 +1114,17 @@ tags:
 colorID: 0
 position: -176,16384
 ---
+<<changeBackground Background DoloresRoom>>
 It is time to buy groceries again. This month is going to be very busy. 
 You are working full time and your paycheck does not come for another four weeks. 
 More than ever, you must decide between convenience and cost when it comes to food. 
 What is your key priority? 
+<<if $money > -300>>
 [[Make healthy meals from scratch to cut costs.|HomemadeOctE]]
+<<endif>>
+<<if $money > -150>>
 [[Buy easy to prepare healthy foods.|EasyOctE]]
+<<endif>>
 [[Find the cheapest way to get food.|CheapOctE]]
 ===
 title: HomemadeOctE
@@ -996,14 +1132,19 @@ tags:
 colorID: 0
 position: -197,16713
 ---
-You spend $200 to buy two weeks’ worth of healthy and fresh ingredients. <<set $money to $money - 200>> You now have $[$money] remaining.
+<<changeBackground Background GroceryStore>>
+You spend $200 to buy two weeks’ worth of healthy and fresh ingredients. <<set $money to $money - 200>>
 Making homemade meals goes well for a few days, but then you catch a cold. 
 Between taking care of your children and adjusting to a new job, you have zero energy to cook. 
-You resort to ordering take-out food several times to feed your family. <<set $money to $money - 100>> You now have $[$money] remaining.
-Because you are not eating the groceries that you bought, some of it goes bad and has to be thrown away. <<set $food to $food + 0.5>> Your food insecurity score is now [$food].
+You resort to ordering take-out food several times to feed your family. <<set $money to $money - 100>>
+Because you are not eating the groceries that you bought, some of it goes bad and has to be thrown away. <<set $food to $food + 1>>
 What do you want to do for groceries the rest of the month?
+<<if $money > -300>>
 [[Make healthy meals from scratch to cut costs.|HomemadeOctL]]
+<<endif>>
+<<if $money > -150>>
 [[Buy easy to prepare healthy foods.|EasyOctL]]
+<<endif>>
 [[Find the cheapest way to get food.|CheapOctL]]
 ===
 title: EasyOctE
@@ -1011,11 +1152,15 @@ tags:
 colorID: 0
 position: 149,16789
 ---
-It costs you $350 to buy a range of foods that are both healthy and easy to make. <<set $money to $money - 350>> You now have $[$money] remaining.
-It is worth the extra cost to save yourself time and energy while you adjust to your new job. <<set $well to $well + 10>> Your level of wellbeing is now [$well].
-What do you want to do for groceries the rest of the month?
+<<changeBackground Background PreMadeFoods>>
+It costs you $350 to buy a range of foods that are both healthy and easy to make. <<set $money to $money - 350>>
+It is worth the extra cost to save yourself time and energy while you adjust to your new job. <<set $well to $well + 10>>
+<<if $money > -300>>
 [[Make healthy meals from scratch to cut costs.|HomemadeOctL]]
+<<endif>>
+<<if $money > -150>>
 [[Buy easy to prepare healthy foods.|EasyOctL]]
+<<endif>>
 [[Find the cheapest way to get food.|CheapOctL]]
 ===
 title: CheapOctE
@@ -1023,6 +1168,7 @@ tags:
 colorID: 0
 position: -642,16748
 ---
+<<changeBackground Background DoloresRoom>>
 The cheapest way to get food for your family is to rely on food banks and community meals.  
 [[Go to the food bank closest to you.|BankOctE]]
 [[Go to the Aboriginal food bank.|IndigeneousOctE]]
@@ -1033,10 +1179,15 @@ tags:
 colorID: 0
 position: -620,17212
 ---
-The food bank is full of Thanksgiving donations. You get a turkey and six boxes of stuffing. You hate stuffing, but what choice do you have?  
-<<set $food to $food + 0.5>> Your food insecurity score is now [$food]. What do you want to do for groceries the rest of the month?
+<<changeBackground Background FoodBankInside>>
+The food bank is full of Thanksgiving donations. You get a turkey and six boxes of stuffing. You hate stuffing, but what choice do you have?  <<set $well to $well - 5>>
+What do you want to do for groceries the rest of the month?
+<<if $money > -300>>
 [[Make healthy meals from scratch to cut costs.|HomemadeOctL]]
+<<endif>>
+<<if $money > -150>>
 [[Buy easy to prepare healthy foods.|EasyOctL]]
+<<endif>>
 [[Find the cheapest way to get food.|CheapOctL]]
 ===
 title: IndigenousOctE
@@ -1044,6 +1195,7 @@ tags:
 colorID: 0
 position: -1044,17206
 ---
+<<changeBackground Background DoloresRoom>>
 The Aboriginal food bank is open from 5pm to 9pm. You work between 7pm to 7am. 
 Even if you arrived at the foodbank at 5pm, you would still be cutting it close in terms of making it to work on time.
 What do you want to do?
@@ -1056,11 +1208,12 @@ tags:
 colorID: 0
 position: -1653,17774
 ---
-Travelling to and from the Aboriginal food bank adds an additional $20 in travel costs. <<set $money to $money - 20>> You now have $[$money] remaining.
-When you arrive, you find a sign stating that due to a power outage, the Aboriginal food bank is closed. 
+<<changeBackground Background DoloresRoom>>
+Because it is so far away, travelling to and from the Aboriginal food bank adds an additional $20 in travel costs. <<set $money to $money - 20>>
+<<changeBackground Background AboriginalFoodBankClosed>>
+When you arrive, you find a sign stating that due to a power outage, the Aboriginal food bank is closed. <<set $well to $well - 5>>
 You wasted two hours of your day and you still do not have any groceries to feed your family. 
-<<set $food to $food + 0.5>> Your food insecurity score is now [$food].
-What do you do for food?
+<<set $food to $food + 1.0>>
 [[Go to the food bank closest to you.|BankOctE]]
 [[Go to the Friendship Center.|FoodEventsE]]
 [[Buy the cheapest groceries that you can.|LessOctE]]
@@ -1070,9 +1223,8 @@ tags:
 colorID: 0
 position: -905,17580
 ---
-There are several community meals being offered at the Friendship Center this month, but all of them conflict with your work schedule. 
-Maybe next month you will have more time. <<set $food to $food + 0.5>> Your food insecurity score is now [$food].
-You still need to eat. What do you want to do? 
+<<changeBackground Background FriendshipCentre>>
+There are several community meals being offered at the Friendship Center this month, but all of them conflict with your work schedule. <<set $well to $well - 5>>
 [[Go to the food bank closest to you.|BankOctE]]
 [[Go to the Aboriginal food bank.|IndigeneousOctE]]
 [[Buy the cheapest groceries that you can.|LessOctE]]
@@ -1082,12 +1234,17 @@ tags:
 colorID: 0
 position: -856,17981
 ---
-You spend $150 to buy the cheapest groceries that you can find. <<set $money to $money - 150>> You now have $[$money] remaining.
-The food is not enough. You skip meals so that you can make the groceries last for your children. <<set $food to $food + 2>> Your food insecurity score is now [$food]. 
-Without enough calories, you have very little energy. You cannot keep up with your work and get a low performance review. <<set $well to $well - 20>> Your level of wellbeing is now [$well].
+<<changeBackground Background BudgetGroceryInside>>
+You spend $150 to buy the cheapest groceries that you can find. <<set $money to $money - 150>>
+The food is not enough. Your risk of food insecurity increases as you skip meals to make the food last for your children. <<set $food to $food + 2>> 
+Without enough calories, you have very little energy. You cannot keep up with your work and get a low performance review. <<set $well to $well - 20>>
 What do you want to do for groceries the rest of the month? 
+<<if $money > -300>>
 [[Make healthy meals from scratch to cut costs.|HomemadeOctL]]
+<<endif>>
+<<if $money > -150>>
 [[Buy easy to prepare healthy foods.|EasyOctL]]
+<<endif>>
 [[Find the cheapest way to get food.|CheapOctL]]
 ===
 title: HomemadeOctL
@@ -1095,10 +1252,11 @@ tags:
 colorID: 0
 position: 191,17247
 ---
+<<changeBackground Background GroceryStore>>
 By mid-October, you feel like you are slowly getting into a routine. 
-You spend $200 to buy a bunch of fresh ingredients to make homemade meals. <<set $money to $money - 200>> You now have $[$money] remaining.
-You spend your day off cooking. You make two weeks’ worth of meals.
-You and the children now have plenty of healthy and tasty meals to eat the rest of this month. <<set $well to $well + 10>> Your level of wellbeing is now [$well]. 
+You spend $200 to buy a bunch of fresh ingredients to make homemade meals. <<set $money to $money - 200>>
+You spend your day off cooking to make two weeks’ worth of meals.
+You and the children now have plenty of healthy and tasty meals to eat the rest of this month. <<set $well to $well + 10>>
 [[Next.|DeeBlock9]]
 ===
 title: EasyOctL
@@ -1106,8 +1264,9 @@ tags:
 colorID: 0
 position: -24,17954
 ---
-It costs you $350 in groceries to buy healthy, easy to prepare foods for the rest of October. <<set $money to $money - 350>> You now have $[$money] remaining.
-It is expensive, but it is really nice to have the saved time and convenience right now. <<set $well to $well + 10>> Your level of wellbeing is now [$well]. 
+<<changeBackground Background PreMadeFoods>>
+It costs you $350 in groceries to buy healthy, easy to prepare foods for the rest of October. <<set $money to $money - 350>>
+It is expensive, but it is really nice to have the saved time and convenience right now. <<set $well to $well + 10>>
 [[Next.|DeeBlock9]]
 ===
 title: CheapOctL
@@ -1115,6 +1274,7 @@ tags:
 colorID: 0
 position: -225,17247
 ---
+<<changeBackground Background DoloresRoom>>
 The cheapest way to get food for your family is to rely on food banks and community meals.
 [[Go to the food bank closest to you.|BankOctL]]
 [[Go to the Aboriginal food bank.|IndigeneousOctL]]
@@ -1125,8 +1285,9 @@ tags:
 colorID: 0
 position: 372,17670
 ---
+<<changeBackground Background FoodBankEmpty>>
 The food bank is experiencing a post-Thanksgiving slow down. The food bank is almost empty. 
-You will need to find some other way to feed your family the rest of this month. <<set $food to $food + 0.5>> Your food insecurity score is now [$food].
+You will need to find some other way to feed your family the rest of this month. <<set $food to $food + 0.5>>
 What do you want to do?
 [[Go to the Aboriginal food bank.|IndigineousOctL]]
 [[Go to the Friendship Center.|FoodEventsL]]
@@ -1137,10 +1298,10 @@ tags:
 colorID: 0
 position: 725,17579
 ---
+<<changeBackground Background AboriginalFoodBankOpen>>
 The Aboriginal food bank is open tomorrow night from 5pm to 9pm. Fortunately, you have the night off from work. 
-Travelling to and from the Aboriginal food bank adds an additional $20 in travel costs. <<set $money to $money - 20>> You now have $[$money] remaining.
-When you arrive they have plenty of food options available. You leave the food bank with enough food to get you through the end of October! 
-<<set $well to $well + 10>> Your level of wellbeing is now [$well].
+Because it is so far away, travelling to and from the Aboriginal food bank adds an additional $20 in travel costs. <<set $money to $money - 20>>
+When you arrive they have plenty of food options. You leave the food bank with enough food to get you through the end of October! <<set $well to $well + 10>>
 [[Next.|DeeBlock9]]
 ===
 title: FoodEventsL
@@ -1148,9 +1309,8 @@ tags:
 colorID: 0
 position: -211,18475
 ---
-There are several community meals being offered at the Friendship Center this month, but all of them conflict with your work schedule. 
-Maybe next month you will have more time. <<set $food to $food + 0.5>> Your food insecurity score is now [$food].
-You still need to eat. What do you want to do? 
+<<changeBackground Background FriendshipCentre>>
+There are several community meals being offered at the Friendship Center this month, but all of them conflict with your work schedule. <<set $well to $well - 10>>
 [[Go to the food bank closest to you.|BankOctL]]
 [[Go to the Aboriginal food bank.|IndigeneousOctL]]
 [[Go to the grocery store and buy the cheapest groceries that you can.|LessOctL]]
@@ -1160,9 +1320,10 @@ tags:
 colorID: 0
 position: 1017,18018
 ---
-You spend $150 to buy the cheapest groceries that you can find. <<set $money to $money - 150>> You now have $[$money] remaining.
-The food is not enough. You skip meals so that you can make the groceries last for your children. <<set $food to $food + 2>> Your food insecurity score is now [$food]. 
-Without enough calories, you find yourself becoming irritable and impatient with your children. This is not sustainable! <<set $well to $well - 10>> Your level of wellbeing is now [$well].
+<<changeBackground Background BudgetGroceryInside>>
+You spend $150 to buy the cheapest groceries that you can find. <<set $money to $money - 150>>
+The food is not enough. Your risk of food insecurity is high, as you skip meals to make the food last longer for your children. <<set $food to $food + 2>>
+Without enough calories, you find yourself becoming irritable and impatient with your children. <<set $well to $well - 10>>
 [[Next.|DeeBlock9]]
 ===
 title: DeeBlock9
@@ -1170,8 +1331,9 @@ tags:
 colorID: 0
 position: -412,19219
 ---
+<<changeBackground Background School>>
 You send your sons to school each day with a packed lunch, but your oldest son, Alex, keeps coming home really hungry. 
-You’ve had to start buying extra groceries just to accommodate his appetite. <<set $money to $money - 30>> You now have $[$money] remaining.
+He seems distracted and can’t concentrate. You’ve had to start buying extra groceries just to accommodate his appetite. <<set $money to $money - 30>>
 Your sons’ teachers have requested a conference with you during parent teacher interviews. 
 The parent teacher interviews conflict with your work schedule. What will you do?
 [[See if you can switch a shift so you can go.|SwitchShifts]]
@@ -1182,10 +1344,13 @@ tags:
 colorID: 0
 position: -400,19481
 ---
+<<changeBackground Background School>>
 You find another nurse who is willing to switch you shifts. 
 The only problem is that the new shift would be on a Saturday. You do not have anybody to watch the kids on that day. 
-It will cost you $50 to hire a babysitter to watch the kids while you work the Saturday shift. 
+It will cost you $50 to hire a babysitter to watch the kids while you work the Saturday shift. The babysitter does not take a credit card.
+<<if $money > 50>>
 [[Pay to hire a sitter so you can switch shifts.|PayToGo]]
+<<endif>>
 [[Skip the parent teacher interviews.|SkipTeacher]]
 ===
 title: PayToGo
@@ -1193,7 +1358,8 @@ tags:
 colorID: 0
 position: -400,19765
 ---
-You pay $50 to hire a babysitter. <<set $money to $money - 50>> You now have $[$money] remaining.
+<<changeBackground Background Classroom2>>
+You pay $50 to hire a babysitter. <<set $money to $money - 50>> 
 Your first meeting goes well. Your youngest son Nick is doing well in Grade 1. His teacher has no concerns. 
 Your second meeting goes less well. Alex’s Grade 4 teacher has concerns about the fact that Alex started a fight with another child. 
 [[Ask Alex his side of the story.|AskAlex]]
@@ -1203,11 +1369,11 @@ tags:
 colorID: 0
 position: -753,19482
 ---
-You hate to miss the meeting, but it is just too difficult to switch shifts. 
+<<changeBackground Background DoloresRoom>>
+You hate to miss the meeting, but you do not have the money to hire a babysitter. <<set $well to $well - 5>>
 One week later you receive a note from the teacher that your son was sent to the principal’s office for getting into a fight. 
-When you call the teacher to learn more about the fight, she points out that the problem have been ongoing on for weeks. 
-She had wanted to talk to you about during the parent interviews, but you did not attend. 
-You feel angry that you were not told that the parent interview was high priority. <<set $well to $well - 5>> Your level of wellbeing is now [$well].
+When you call the teacher to learn more about the fight, she points out that the problems have been ongoing for weeks. 
+She had wanted to talk to you about during the parent interviews, but you did not attend. <<set $well to $well - 5>>
 [[Talk to Alex to find out what happened.|AskAlex]]
 ===
 title: AskAlex
@@ -1215,10 +1381,10 @@ tags:
 colorID: 0
 position: -379,20119
 ---
+<<changeBackground Background DoloresRoom>>
 You ask Alex what happened. He tells you that two boys at his school have been picking on him and stealing his lunch. 
-The last time they tried to steal his lunch, he yelled at them to stop. The teacher heard him yelling and sent him to the principal’s office for fighting. 
+The last time they tried to steal his lunch, he yelled at them to stop. The teacher heard him yelling and sent him to the principal’s office. 
 He tried to explain the situation, but neither his teacher nor the principal believed him. 
-This does not seem fair. What do you want to do?
 [[Set up a meeting with the principal.|SetUpMeeting]]
 [[Let it go. You do not have time to deal with this right now.|LetItGo]]
 ===
@@ -1227,10 +1393,12 @@ tags:
 colorID: 0
 position: -373,20521
 ---
+<<changeBackground Background DoloresRoom>>
 You call the school to set up a meeting. The only meeting time that is available is in the evening on a day that you are scheduled to work. 
 You can switch shifts to make it work, but then you will have to hire a sitter to watch the kids. 
-What do you do?
+<<if $money > 50>>
 [[Pay to hire a sitter.|PayMeeting]]
+<<endif>>
 [[Do a phone meeting instead.|SkipMeeting]]
 ===
 title: PayMeeting
@@ -1238,45 +1406,50 @@ tags:
 colorID: 0
 position: -358,20857
 ---
+<<changeBackground Background BusinessOffice>>
 You pay $50 to hire a babysitter. <<set $money to $money - 50>> You now have $[$money] remaining.
 During the meeting, you make it clear that you are very unhappy with how your son has been treated by these other children and the school. 
 You work with Alex’s teacher and the principal to outline an anti-bullying plan for your son.
 You leave the meeting feeling good that you advocated on behalf of your child. <<set $well to $well - 5>> Your level of wellbeing is now [$well].
-[[Next.|DeeBlock10]]
+[[Get your first paycheck.|DeeBlock10]]
 ===
 title: SkipMeeting
 tags: 
 colorID: 0
 position: -19,20516
 ---
+<<changeBackground Background DoloresRoom>>
 You cannot afford to hire a babysitter so that you can switch shifts. You are forced to cancel the meeting and call in instead. 
 Over the phone you try to make it clear that you are very unhappy with how your son has been treated. 
 Still, it is unclear how well your message was received by the teacher and the principal. 
-The stealing stops, but your son continues to hate school. <<set $well to $well - 10>> Your level of wellbeing is now [$well].
-[[Next.|DeeBlock10]]
+The stealing stops, but your son continues to hate school. <<set $well to $well - 10>> 
+[[Get your first paycheck.|DeeBlock10]]
 ===
 title: LetItGo
 tags: 
 colorID: 0
 position: 321,20142
 ---
-You wish you had time to do deal with this, but you are overwhelmed by your new job. 
-Your son continues to be hungry when he gets home and your grocery bill reflects it. <<set $money to $money - 50>> You now have $[$money] remaining.
-At the moment, you feel completely helpless juggling so many things at once! <<set $well to $well - 10>> Your level of wellbeing is now [$well].
-[[Next.|DeeBlock10]]
+<<changeBackground Background DoloresRoom>>
+You wish you had time to deal with this, but you are overwhelmed by your new job. 
+Your son continues to be hungry when he gets home. He is overtired and cannot concentrate. <<set $well to $well - 10>>
+At the moment, you feel completely helpless juggling so many things at once! <<set $well to $well - 10>>
+[[Get your first paycheck.|DeeBlock10]]
 ===
 title: DeeBlock10
 tags: 
 colorID: 0
 position: -374,21557
 ---
+<<changeBackground Background Dollars2>>
 You get your first paycheck! 
-<<set $money to $money + 3500>> You now have $[$money].
-You can finally buy some healthy groceries for the month. 
-<<set $money to $money - 500>> You now have $[$money] remaining.
-It’s also time to pay the next batch of monthly bills. <<set $money to $money - 2000>> You now have $[$money] remaining.
-It’s been a rough past few months! You could use some comfort foods. You would like to celebrate your new job by making a traditional First Nations meal.
-To make this meal, you will need hard to find ingredients such as hickory nuts, fiddleheads, and country meats (such as venison/deer, moose, or caribou). 
+<<set $money to $money + 4500>> You now have $[$money].
+It’s also time to pay the next batch of monthly bills. <<set $money to $money - 2000>> 
+You also have to settle up on the money you owe from last month’s bills. <<set $money to $money - 2000>>
+You now have $[$money].
+<<changeBackground Background DoloresRoom>>
+It’s been a rough past few months! You would like to celebrate your new job by making a traditional First Nations meal.
+To make this meal, you will need hard to find ingredients such as hickory nuts, fiddleheads, and country meats (e.g., venison). 
 The problem is that you have no idea where to get these ingredients in the city. 
 You look online. There is a First Nations community store four hours away. It would cost you $60 to travel there. 
 A few specialty stores sell the ingredients online. But you may need to buy these items in bulk. Shipping and delivery costs could be expensive.
@@ -1290,8 +1463,9 @@ tags:
 colorID: 0
 position: -369,21854
 ---
-You and your kids decide to do a road trip. The transportation costs and ingredients cost you $130. <<set $money to $money - 130>> You now have $[$money] remaining.
-You wish it were easier to get these traditional foods where you live. <<set $food to $food + 0.5>> Your food insecurity score is now [$food]. 
+<<changeBackground Background AboriginalCommunityStore>>
+You and your kids decide to do a road trip. The transportation costs and ingredients cost you $130. <<set $money to $money - 130>>
+You wish it were easier to get these traditional foods where you live. <<set $food to $food + 0.5>>
 [[Make the celebratory meal.|MakeMeal]]
 ===
 title: OrderOnline
@@ -1299,8 +1473,9 @@ tags:
 colorID: 0
 position: -688,21860
 ---
-You find and order all of the foods online. After shipping costs, the total comes to $150. <<set $money to $money - 150>> You now have $[$money] remaining.
-You wish it were easier to get these traditional foods where you live. <<set $food to $food + 0.5>> Your food insecurity score is now [$food]. 
+<<changeBackground Background ComputerRoom>>
+You find and order all of the foods online. After shipping costs, the total comes to $150. <<set $money to $money - 150>>
+You wish it were easier to get these traditional foods where you live. <<set $food to $food + 0.5>>
 [[Make the celebratory meal.|MakeMeal]]
 ===
 title: FindLocally
@@ -1308,12 +1483,11 @@ tags:
 colorID: 0
 position: 68,22248
 ---
-You decide to try the Aboriginal food bank. 
-Travelling to and from the food bank costs you $20 in travel costs. <<set $money to $money - 20>> You now have $[$money] remaining.
-Unfortunately, you are only able to find a few of the ingredients on your list. 
+<<changeBackground Background AboriginalFoodBankOpen>>
+You call the Aboriginal food bank to see if the carry the ingredients. 
+They only have a few of the ingredients on your list. 
 You ask around and learn that there are very few options for finding traditional foods in your city. 
-You wish it were easier to get these traditional foods where you live. <<set $food to $food + 0.5>> Your food insecurity score is now [$food].
-What would you like to do? 
+You wish it were easier to get these traditional foods where you live. <<set $food to $food + 0.5>>
 [[Make do with the ingredients you did find|MakeDo]]
 [[Drive to the community store.|CommunityStore]]
 [[Order the rest of the ingredients online.|OrderOnline]]
@@ -1323,18 +1497,20 @@ tags:
 colorID: 0
 position: -494,22260
 ---
+<<changeBackground Background KitchenNiceBig>>
 You have a great time making and eating the celebratory meal with your children! 
-You love that you can pass your knowledge of traditional foods on to them. <<set $well to $well +10>> Your level of wellbeing is now [$well].
-[[Next.|DeeDebrief]]
+You love that you can pass your knowledge of traditional foods on to them. <<set $well to $well +10>>
+[[Did you succeed in your quest to help Dolores?|DeeDebrief]]
 ===
 title: MakeDo
 tags: 
 colorID: 0
 position: 91,22600
 ---
+<<changeBackground Background KitchenNiceBig>>
 You are not able to make a traditional meal, but you still have fun making a celebratory dinner with your children. 
 You wish you could pass your knowledge of traditional foods on to them. 
-[[Next.|DeeDebrief]]
+[[Did you succeed in your quest to help Dolores?|DeeDebrief]]
 ===
 title: DeeDebrief
 tags: 
