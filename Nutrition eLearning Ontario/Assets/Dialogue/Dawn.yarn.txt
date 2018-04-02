@@ -885,6 +885,13 @@ tags:
 colorID: 0
 position: -399,10859
 ---
+<<startDebrief Dialogue start>>
+===
+title: DawnDebriefTest
+tags: 
+colorID: 0
+position: -399,10859
+---
 Congratulations! You have helped your character navigate the first few months of her Type 2 diagnosis. 
 One of your character’s key goals was to manage her Type 2 diabetes well enough to resume her job as a truck driver. Let’s see how well you did.
 Dawn experienced numerous challenges in accessing adequate, affordable, and nutritious foods as she struggled to adjust to her Type 2 diagnosis. But, did she experience food insecurity?

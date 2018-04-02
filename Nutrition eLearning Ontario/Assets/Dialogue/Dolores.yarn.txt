@@ -1517,6 +1517,13 @@ tags:
 colorID: 0
 position: -450,23238
 ---
+<<startDebrief Dialogue start>>
+===
+title: DeeDebriefTest
+tags: 
+colorID: 0
+position: -450,23238
+---
 Congratulations! You helped Dolores navigate her first few months in a new city. 
 You were tasked with helping Dolores stay food secure as she got settled in a new city.
 Let’s see how you did.

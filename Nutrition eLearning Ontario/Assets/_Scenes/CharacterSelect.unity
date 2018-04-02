@@ -794,7 +794,7 @@ Prefab:
     - target: {fileID: 224546538609219108, guid: d87c791a8204d584ebf69fb23e9855f5,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: -0.0010004
+      value: 0.18
       objectReference: {fileID: 0}
     - target: {fileID: 224546538609219108, guid: d87c791a8204d584ebf69fb23e9855f5,
         type: 2}
@@ -804,23 +804,24 @@ Prefab:
     - target: {fileID: 224546538609219108, guid: d87c791a8204d584ebf69fb23e9855f5,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 381.28
+      value: 483.69
       objectReference: {fileID: 0}
     - target: {fileID: 224546538609219108, guid: d87c791a8204d584ebf69fb23e9855f5,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 303.05
+      value: 303
       objectReference: {fileID: 0}
     - target: {fileID: 114745197211608530, guid: d87c791a8204d584ebf69fb23e9855f5,
         type: 2}
       propertyPath: m_Text
-      value: 'A few weeks ago Dawn fainted while at home. Her roommate took her to
-        the hospital where she was diagnosed with Type 2 diabetes. Her blood sugar
-        was so high she needed to be put on insulin right away. Dawn has been instructed
-        by her doctor to not drive until she can receive further medical assessment.
-        As a truck driver, her inability to drive will mean a loss of income. As a
-        contract worker, she has no employment benefits or health benefits to fall
-        back on. '
+      value: "About Dawn: Single female, age 59, of European background, no children,
+        works as a contract truck driver.\r\n\r\nSituation: Lives in a rural area
+        in Ontario. Has just been diagnosed with Type 2 diabetes. Until her diabetes
+        stabilizes she is unable to drive.\n\nMain strength: Time\r\nMain weakness:
+        Health concerns\r\nStarting money: $1500\r\nStarting wellbeing: 50 points
+        (out of 100)\r\nStarting food insecurity: 0 points (out of 10)\r\n\r\nThe
+        Quest: Help Dawn avoid food insecurity as she learns to manage her diabetes
+        and return to work."
       objectReference: {fileID: 0}
     - target: {fileID: 114066203544760496, guid: d87c791a8204d584ebf69fb23e9855f5,
         type: 2}
@@ -852,6 +853,16 @@ Prefab:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 450684857}
+    - target: {fileID: 224730532137161608, guid: d87c791a8204d584ebf69fb23e9855f5,
+        type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224546538609219108, guid: d87c791a8204d584ebf69fb23e9855f5,
+        type: 2}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d87c791a8204d584ebf69fb23e9855f5, type: 2}
   m_IsPrefabParent: 0
@@ -1680,8 +1691,8 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: "Each year more than 500,000 households in Ontario, Canada experience food
     insecurity.\r\n\r\nCan you help your character stay food secure while keeping
-    out of debt and maintaining your wellbeing?\r\n\r\nClick the metrics above to
-    learn more! "
+    out of debt and maintaining your wellbeing?\r\n\r\nHover above the metrics above
+    to learn more! "
 --- !u!222 &918220917
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2585,12 +2596,12 @@ Prefab:
     - target: {fileID: 224967720503186366, guid: 52d1cb68fa0a0024fb5c69d08ce6b4c9,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: -0.000019072999
+      value: 0.18
       objectReference: {fileID: 0}
     - target: {fileID: 224967720503186366, guid: 52d1cb68fa0a0024fb5c69d08ce6b4c9,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 381.3
+      value: 483.69
       objectReference: {fileID: 0}
     - target: {fileID: 224967720503186366, guid: 52d1cb68fa0a0024fb5c69d08ce6b4c9,
         type: 2}
@@ -2600,7 +2611,7 @@ Prefab:
     - target: {fileID: 224967720503186366, guid: 52d1cb68fa0a0024fb5c69d08ce6b4c9,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 303.11
+      value: 303.1
       objectReference: {fileID: 0}
     - target: {fileID: 224558798578116718, guid: 52d1cb68fa0a0024fb5c69d08ce6b4c9,
         type: 2}
@@ -2625,7 +2636,7 @@ Prefab:
     - target: {fileID: 114711989384004764, guid: 52d1cb68fa0a0024fb5c69d08ce6b4c9,
         type: 2}
       propertyPath: m_FontData.m_Alignment
-      value: 7
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 114711989384004764, guid: 52d1cb68fa0a0024fb5c69d08ce6b4c9,
         type: 2}
@@ -2649,6 +2660,19 @@ Prefab:
       value: 
       objectReference: {fileID: 12800000, guid: 9ea3f48a891fe604293695a803db88b3,
         type: 3}
+    - target: {fileID: 114711989384004764, guid: 52d1cb68fa0a0024fb5c69d08ce6b4c9,
+        type: 2}
+      propertyPath: m_Text
+      value: "About Dolores: First Nations single mother (age 27) with two sons, Alex
+        (age 9) and Nick (age 6).\r\n\r\nSituation: Has just finished her nursing
+        degree and has $25,000 in student loan debt. Is moving with her children to
+        an urban area in Ontario to start a new nursing job.\n\nMain strength: Connection
+        to First Nations identity.\r\nMain weakness: High debt, little time\r\nStarting
+        money: $3,500\r\nStarting wellbeing: 50 points (out of 100)\r\nStarting food
+        insecurity: 0 points (out of 10)\r\nThe Quest: Help Dolores avoid food insecurity
+        and build new community connections as she and her children get settled in
+        a new city."
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 52d1cb68fa0a0024fb5c69d08ce6b4c9, type: 2}
   m_IsPrefabParent: 0
@@ -3269,12 +3293,12 @@ Prefab:
     - target: {fileID: 224983198935896562, guid: ecdccfe84b400aa42b1a5668009f5e41,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: -0.0010175831
+      value: 0.18
       objectReference: {fileID: 0}
     - target: {fileID: 224983198935896562, guid: ecdccfe84b400aa42b1a5668009f5e41,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 381.3
+      value: 483.69
       objectReference: {fileID: 0}
     - target: {fileID: 224983198935896562, guid: ecdccfe84b400aa42b1a5668009f5e41,
         type: 2}
@@ -3284,7 +3308,7 @@ Prefab:
     - target: {fileID: 224983198935896562, guid: ecdccfe84b400aa42b1a5668009f5e41,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 303.06
+      value: 303.1
       objectReference: {fileID: 0}
     - target: {fileID: 224371567978716844, guid: ecdccfe84b400aa42b1a5668009f5e41,
         type: 2}
@@ -3327,6 +3351,19 @@ Prefab:
         type: 2}
       propertyPath: m_FontData.m_MinSize
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114933528343492428, guid: ecdccfe84b400aa42b1a5668009f5e41,
+        type: 2}
+      propertyPath: m_Text
+      value: "About Saad: Age 36, Syrian, former math teacher. Married with three
+        young children. Wife, Aya, is pregnant with their fourth child.\r\n\r\nSituation:
+        Government Assistant Refugees (GARs) from Syria. Aya is on medical bed rest
+        until the end of her pregnancy. The family follows a Halal diet.\n\nMain strength:
+        Time. Strong faith and resiliency\r\nMain weakness: Limited English language
+        skills\r\nStarting money: $500\r\nStarting wellbeing: 30 points (out of 100)\r\nStarting
+        food insecurity: 0 points (out of 10)\r\nThe Quest: Help Saad and his family
+        avoid food insecurity as they learn to live on a fixed income and adjust to
+        life in Canada."
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ecdccfe84b400aa42b1a5668009f5e41, type: 2}
@@ -3587,12 +3624,12 @@ Prefab:
     - target: {fileID: 224983198935896562, guid: ecdccfe84b400aa42b1a5668009f5e41,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: -0.0010175831
+      value: 0.18
       objectReference: {fileID: 0}
     - target: {fileID: 224983198935896562, guid: ecdccfe84b400aa42b1a5668009f5e41,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 381.3
+      value: 483.69
       objectReference: {fileID: 0}
     - target: {fileID: 224983198935896562, guid: ecdccfe84b400aa42b1a5668009f5e41,
         type: 2}
@@ -3602,7 +3639,7 @@ Prefab:
     - target: {fileID: 224983198935896562, guid: ecdccfe84b400aa42b1a5668009f5e41,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 303.06
+      value: 303.1
       objectReference: {fileID: 0}
     - target: {fileID: 224371567978716844, guid: ecdccfe84b400aa42b1a5668009f5e41,
         type: 2}
@@ -3673,6 +3710,20 @@ Prefab:
         type: 2}
       propertyPath: m_Text
       value: Max Story not available yet...
+      objectReference: {fileID: 0}
+    - target: {fileID: 114933528343492428, guid: ecdccfe84b400aa42b1a5668009f5e41,
+        type: 2}
+      propertyPath: m_Text
+      value: "About Maxine: aka \u201CMax\u201D, White, 18 years old, grew up in a
+        working class home. Max\u2019s relationship with her parents has been rocky
+        since she came out to them as a lesbian.  \r\n\r\nSituation: Max is leaving
+        home to attend university in a large city. She is excited to be away from
+        her parents and to live alone. She has limited cooking skills and a nut allergy.\n\nMain
+        Strength: Resilient and resourceful\r\nMain Weaknesses: No money from her
+        family\r\nStarting Money: $1000 + $15,800 financial aid\r\nStarting Wellness:
+        70 (out of 100)\r\nStarting food insecurity: 0 points (out of 10)\r\nThe Quest:
+        Help Max avoid food insecurity as she financially supports herself and embarks
+        on her first year at University. "
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ecdccfe84b400aa42b1a5668009f5e41, type: 2}

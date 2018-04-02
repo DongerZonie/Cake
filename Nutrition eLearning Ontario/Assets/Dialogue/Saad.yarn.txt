@@ -4,7 +4,7 @@ colorID: 0
 position: 548,76
 ---
 <<changeBackground Background SaadBedroomSyria>>
-<<set $money to $500>>
+<<set $money to 500>>
 <<set $well to 30>>
 <<set $food to 0>>
 At present you are living in a hotel room with your wife and daughters. Food preparation is difficult. 
@@ -869,6 +869,13 @@ You know that eventually you will feel more at ease here, but for now, Canada do
 [[Did you succeed in your quest to help Saad?|SaadDebrief]]
 ===
 title: SaadDebrief
+tags: 
+colorID: 0
+position: 4244,12016
+---
+<<startDebrief Dialogue start>>
+===
+title: SaadDebriefTest
 tags: 
 colorID: 0
 position: 4244,12016
