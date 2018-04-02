@@ -747,8 +747,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.0010004, y: 0}
-  m_SizeDelta: {x: 381.3, y: 308.7}
+  m_AnchoredPosition: {x: -0.5, y: -1.5}
+  m_SizeDelta: {x: 368.3, y: 305.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &665460559
 MonoBehaviour:
@@ -777,7 +777,7 @@ MonoBehaviour:
     m_BestFit: 1
     m_MinSize: 14
     m_MaxSize: 17
-    m_Alignment: 4
+    m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
@@ -828,8 +828,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.0010175831, y: 0}
-  m_SizeDelta: {x: 381.3, y: 308.7}
+  m_AnchoredPosition: {x: -0.5, y: -1.5}
+  m_SizeDelta: {x: 368.3, y: 305.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &737336274
 MonoBehaviour:
@@ -858,7 +858,7 @@ MonoBehaviour:
     m_BestFit: 1
     m_MinSize: 14
     m_MaxSize: 17
-    m_Alignment: 4
+    m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
@@ -983,8 +983,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.0010175831, y: 0}
-  m_SizeDelta: {x: 381.3, y: 308.7}
+  m_AnchoredPosition: {x: -0.5, y: -1.5}
+  m_SizeDelta: {x: 368.3, y: 305.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &918220916
 MonoBehaviour:
@@ -1013,15 +1013,15 @@ MonoBehaviour:
     m_BestFit: 1
     m_MinSize: 14
     m_MaxSize: 17
-    m_Alignment: 4
+    m_Alignment: 3
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Congratulations! You helped your character survive\r\nthe first few months
-    of her Type 2 diabetes\r\ndiagnosis.\r\n\r\r\nYour quest was to help Dawn avoid
-    food insecurity\r\nas she learned to manage her diabetes and return to\r\nwork.\r\n\r\nUse
+  m_Text: "Congratulations! You helped your character survive\r the first few months
+    of her Type 2 diabetes\r diagnosis.\r\n\r\r\nYour quest was to help Dawn avoid
+    food insecurity\r as she learned to manage her diabetes and return to\r work.\r\n\r\nUse
     the tabs above to examine how you did\u2026"
 --- !u!222 &918220917
 CanvasRenderer:
@@ -1920,8 +1920,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.000019072999, y: 0}
-  m_SizeDelta: {x: 381.3, y: 308.8}
+  m_AnchoredPosition: {x: -0.5, y: -1.5}
+  m_SizeDelta: {x: 368.3, y: 305.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2005512501
 MonoBehaviour:
@@ -1950,7 +1950,7 @@ MonoBehaviour:
     m_BestFit: 1
     m_MinSize: 14
     m_MaxSize: 17
-    m_Alignment: 4
+    m_Alignment: 0
     m_AlignByGeometry: 1
     m_RichText: 1
     m_HorizontalOverflow: 0

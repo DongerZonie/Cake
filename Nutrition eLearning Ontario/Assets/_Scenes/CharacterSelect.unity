@@ -794,22 +794,22 @@ Prefab:
     - target: {fileID: 224546538609219108, guid: d87c791a8204d584ebf69fb23e9855f5,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 0.18
+      value: 1.7
       objectReference: {fileID: 0}
     - target: {fileID: 224546538609219108, guid: d87c791a8204d584ebf69fb23e9855f5,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 26.878
+      value: 24.8
       objectReference: {fileID: 0}
     - target: {fileID: 224546538609219108, guid: d87c791a8204d584ebf69fb23e9855f5,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 483.69
+      value: 470.5
       objectReference: {fileID: 0}
     - target: {fileID: 224546538609219108, guid: d87c791a8204d584ebf69fb23e9855f5,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 303
+      value: 298.9
       objectReference: {fileID: 0}
     - target: {fileID: 114745197211608530, guid: d87c791a8204d584ebf69fb23e9855f5,
         type: 2}
@@ -861,6 +861,11 @@ Prefab:
     - target: {fileID: 224546538609219108, guid: d87c791a8204d584ebf69fb23e9855f5,
         type: 2}
       propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114745197211608530, guid: d87c791a8204d584ebf69fb23e9855f5,
+        type: 2}
+      propertyPath: m_FontData.m_Alignment
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -1261,8 +1266,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.0010004, y: 0}
-  m_SizeDelta: {x: 381.3, y: 308.7}
+  m_AnchoredPosition: {x: -0.1, y: 0}
+  m_SizeDelta: {x: 367.1, y: 308.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &665460559
 MonoBehaviour:
@@ -1291,7 +1296,7 @@ MonoBehaviour:
     m_BestFit: 1
     m_MinSize: 1
     m_MaxSize: 40
-    m_Alignment: 4
+    m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
@@ -1353,8 +1358,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.0010175831, y: 0}
-  m_SizeDelta: {x: 381.3, y: 308.7}
+  m_AnchoredPosition: {x: 0.1, y: 0}
+  m_SizeDelta: {x: 367.1, y: 308.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &737336274
 MonoBehaviour:
@@ -1383,7 +1388,7 @@ MonoBehaviour:
     m_BestFit: 1
     m_MinSize: 0
     m_MaxSize: 40
-    m_Alignment: 4
+    m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
@@ -1653,8 +1658,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.0010175831, y: 0}
-  m_SizeDelta: {x: 381.3, y: 308.7}
+  m_AnchoredPosition: {x: -0.5, y: -1}
+  m_SizeDelta: {x: 366.1, y: 310.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &918220916
 MonoBehaviour:
@@ -1683,7 +1688,7 @@ MonoBehaviour:
     m_BestFit: 1
     m_MinSize: 0
     m_MaxSize: 40
-    m_Alignment: 4
+    m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
@@ -2596,22 +2601,22 @@ Prefab:
     - target: {fileID: 224967720503186366, guid: 52d1cb68fa0a0024fb5c69d08ce6b4c9,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 0.18
+      value: 1.7
       objectReference: {fileID: 0}
     - target: {fileID: 224967720503186366, guid: 52d1cb68fa0a0024fb5c69d08ce6b4c9,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 483.69
+      value: 470.5
       objectReference: {fileID: 0}
     - target: {fileID: 224967720503186366, guid: 52d1cb68fa0a0024fb5c69d08ce6b4c9,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 26.853542
+      value: 24.8
       objectReference: {fileID: 0}
     - target: {fileID: 224967720503186366, guid: 52d1cb68fa0a0024fb5c69d08ce6b4c9,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 303.1
+      value: 299
       objectReference: {fileID: 0}
     - target: {fileID: 224558798578116718, guid: 52d1cb68fa0a0024fb5c69d08ce6b4c9,
         type: 2}
@@ -2636,7 +2641,7 @@ Prefab:
     - target: {fileID: 114711989384004764, guid: 52d1cb68fa0a0024fb5c69d08ce6b4c9,
         type: 2}
       propertyPath: m_FontData.m_Alignment
-      value: 4
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114711989384004764, guid: 52d1cb68fa0a0024fb5c69d08ce6b4c9,
         type: 2}
@@ -3293,22 +3298,22 @@ Prefab:
     - target: {fileID: 224983198935896562, guid: ecdccfe84b400aa42b1a5668009f5e41,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 0.18
+      value: 1.7
       objectReference: {fileID: 0}
     - target: {fileID: 224983198935896562, guid: ecdccfe84b400aa42b1a5668009f5e41,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 483.69
+      value: 470.5
       objectReference: {fileID: 0}
     - target: {fileID: 224983198935896562, guid: ecdccfe84b400aa42b1a5668009f5e41,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 26.876999
+      value: 24.8
       objectReference: {fileID: 0}
     - target: {fileID: 224983198935896562, guid: ecdccfe84b400aa42b1a5668009f5e41,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 303.1
+      value: 299
       objectReference: {fileID: 0}
     - target: {fileID: 224371567978716844, guid: ecdccfe84b400aa42b1a5668009f5e41,
         type: 2}
@@ -3364,6 +3369,11 @@ Prefab:
         food insecurity: 0 points (out of 10)\r\nThe Quest: Help Saad and his family
         avoid food insecurity as they learn to live on a fixed income and adjust to
         life in Canada."
+      objectReference: {fileID: 0}
+    - target: {fileID: 114933528343492428, guid: ecdccfe84b400aa42b1a5668009f5e41,
+        type: 2}
+      propertyPath: m_FontData.m_Alignment
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ecdccfe84b400aa42b1a5668009f5e41, type: 2}
@@ -3624,22 +3634,22 @@ Prefab:
     - target: {fileID: 224983198935896562, guid: ecdccfe84b400aa42b1a5668009f5e41,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 0.18
+      value: 1.7
       objectReference: {fileID: 0}
     - target: {fileID: 224983198935896562, guid: ecdccfe84b400aa42b1a5668009f5e41,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 483.69
+      value: 470.5
       objectReference: {fileID: 0}
     - target: {fileID: 224983198935896562, guid: ecdccfe84b400aa42b1a5668009f5e41,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 26.876999
+      value: 24.8
       objectReference: {fileID: 0}
     - target: {fileID: 224983198935896562, guid: ecdccfe84b400aa42b1a5668009f5e41,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 303.1
+      value: 299
       objectReference: {fileID: 0}
     - target: {fileID: 224371567978716844, guid: ecdccfe84b400aa42b1a5668009f5e41,
         type: 2}
@@ -3724,6 +3734,11 @@ Prefab:
         70 (out of 100)\r\nStarting food insecurity: 0 points (out of 10)\r\nThe Quest:
         Help Max avoid food insecurity as she financially supports herself and embarks
         on her first year at University. "
+      objectReference: {fileID: 0}
+    - target: {fileID: 114933528343492428, guid: ecdccfe84b400aa42b1a5668009f5e41,
+        type: 2}
+      propertyPath: m_FontData.m_Alignment
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ecdccfe84b400aa42b1a5668009f5e41, type: 2}
@@ -3995,8 +4010,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.000019072999, y: 0}
-  m_SizeDelta: {x: 381.3, y: 308.8}
+  m_AnchoredPosition: {x: 0.1, y: 0}
+  m_SizeDelta: {x: 367.1, y: 308.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2005512501
 MonoBehaviour:
@@ -4025,7 +4040,7 @@ MonoBehaviour:
     m_BestFit: 1
     m_MinSize: 0
     m_MaxSize: 40
-    m_Alignment: 4
+    m_Alignment: 0
     m_AlignByGeometry: 1
     m_RichText: 1
     m_HorizontalOverflow: 0

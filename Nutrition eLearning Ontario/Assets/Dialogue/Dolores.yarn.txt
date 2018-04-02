@@ -1171,7 +1171,7 @@ position: -642,16748
 <<changeBackground Background DoloresRoom>>
 The cheapest way to get food for your family is to rely on food banks and community meals.  
 [[Go to the food bank closest to you.|BankOctE]]
-[[Go to the Aboriginal food bank.|IndigeneousOctE]]
+[[Go to the Aboriginal food bank.|IndigenousOctE]]
 [[Go to the Friendship Center.|FoodEventsE]]
 ===
 title: BankOctE
@@ -1226,7 +1226,7 @@ position: -905,17580
 <<changeBackground Background FriendshipCentre>>
 There are several community meals being offered at the Friendship Center this month, but all of them conflict with your work schedule. <<set $well to $well - 5>>
 [[Go to the food bank closest to you.|BankOctE]]
-[[Go to the Aboriginal food bank.|IndigeneousOctE]]
+[[Go to the Aboriginal food bank.|IndigenousOctE]]
 [[Buy the cheapest groceries that you can.|LessOctE]]
 ===
 title: LessOctE
@@ -1277,7 +1277,7 @@ position: -225,17247
 <<changeBackground Background DoloresRoom>>
 The cheapest way to get food for your family is to rely on food banks and community meals.
 [[Go to the food bank closest to you.|BankOctL]]
-[[Go to the Aboriginal food bank.|IndigeneousOctL]]
+[[Go to the Aboriginal food bank.|IndigenousOctL]]
 [[Go to the Friendship Center.|FoodEventsL]]
 ===
 title: BankOctL
@@ -1289,11 +1289,11 @@ position: 372,17670
 The food bank is experiencing a post-Thanksgiving slow down. The food bank is almost empty. 
 You will need to find some other way to feed your family the rest of this month. <<set $food to $food + 0.5>>
 What do you want to do?
-[[Go to the Aboriginal food bank.|IndigineousOctL]]
+[[Go to the Aboriginal food bank.|IndiginousOctL]]
 [[Go to the Friendship Center.|FoodEventsL]]
 [[Find the cheapest way to get food.|CheapOctL]]
 ===
-title: IndigeneousOctL
+title: IndigenousOctL
 tags: 
 colorID: 0
 position: 725,17579
@@ -1312,7 +1312,7 @@ position: -211,18475
 <<changeBackground Background FriendshipCentre>>
 There are several community meals being offered at the Friendship Center this month, but all of them conflict with your work schedule. <<set $well to $well - 10>>
 [[Go to the food bank closest to you.|BankOctL]]
-[[Go to the Aboriginal food bank.|IndigeneousOctL]]
+[[Go to the Aboriginal food bank.|IndigeeousOctL]]
 [[Go to the grocery store and buy the cheapest groceries that you can.|LessOctL]]
 ===
 title: LessOctL

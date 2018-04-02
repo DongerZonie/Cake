@@ -747,8 +747,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.0010004, y: 0}
-  m_SizeDelta: {x: 381.3, y: 308.7}
+  m_AnchoredPosition: {x: -1, y: -4.5}
+  m_SizeDelta: {x: 367.3, y: 299.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &665460559
 MonoBehaviour:
@@ -777,7 +777,7 @@ MonoBehaviour:
     m_BestFit: 1
     m_MinSize: 1
     m_MaxSize: 40
-    m_Alignment: 4
+    m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
@@ -829,8 +829,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.0010175831, y: 0}
-  m_SizeDelta: {x: 381.3, y: 308.7}
+  m_AnchoredPosition: {x: -1, y: -4.5}
+  m_SizeDelta: {x: 367.3, y: 299.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &737336274
 MonoBehaviour:
@@ -859,7 +859,7 @@ MonoBehaviour:
     m_BestFit: 1
     m_MinSize: 0
     m_MaxSize: 40
-    m_Alignment: 4
+    m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
@@ -984,8 +984,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.0010175831, y: 0}
-  m_SizeDelta: {x: 381.3, y: 308.7}
+  m_AnchoredPosition: {x: -1, y: -4.5}
+  m_SizeDelta: {x: 367.3, y: 299.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &918220916
 MonoBehaviour:
@@ -1014,13 +1014,16 @@ MonoBehaviour:
     m_BestFit: 1
     m_MinSize: 0
     m_MaxSize: 40
-    m_Alignment: 4
+    m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: You done poop
+  m_Text: "Congratulations! You helped Dolores survive her first few months in a new
+    city.\r\n\r\nYour quest was to help Dolores avoid food insecurity and build new
+    community connections as she and her children got settled in a new city.\r\n\r\nUse
+    the tabs above to examine how you did\u2026\r\n"
 --- !u!222 &918220917
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1918,8 +1921,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.000019072999, y: 0}
-  m_SizeDelta: {x: 381.3, y: 308.8}
+  m_AnchoredPosition: {x: -1, y: -4.5}
+  m_SizeDelta: {x: 367.3, y: 299.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2005512501
 MonoBehaviour:
@@ -1948,7 +1951,7 @@ MonoBehaviour:
     m_BestFit: 1
     m_MinSize: 0
     m_MaxSize: 40
-    m_Alignment: 4
+    m_Alignment: 0
     m_AlignByGeometry: 1
     m_RichText: 1
     m_HorizontalOverflow: 0
